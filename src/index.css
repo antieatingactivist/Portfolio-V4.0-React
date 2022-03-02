@@ -6,12 +6,11 @@
   --shadowcolor: #03050c;
 }
 
-* {
-  background-color: var(--bgcolor);
-  color: var(--maincolor);
-}
+
 
 body {
+  background-color: var(--bgcolor);
+  color: var(--maincolor);
   margin: 0;
   font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -43,6 +42,16 @@ nav a {
   
 }
 
+a {
+  transition: all 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  transition: all 0.5s;
+  color: var(--accentcolor);
+}
+
 header {
   transition: all .5s;
   position: fixed;
@@ -65,4 +74,67 @@ header div {
   padding: 10px;
   white-space: nowrap;
   font-size: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 100px; 
+  margin-top: 100px;
+}
+
+footer {
+  position: relative;
+  top: 100px;
+}
+
+#h-stripe {
+  border-style: solid;
+  border-width: 0 0 2px 2px;
+  border-color: var(--accentcolor);
+  border-radius: 0 6px 0px 6px;
+  height: 10px;
+}
+
+
+
+#left section{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  margin-left: 16px;
+  border-style: solid;
+  border-width: 1px ;
+  border-color: var(--accentcolor);
+  border-radius: 6px;
+  box-shadow:  10px 10px 10px var(--shadowcolor);
+}
+
+#left, #right {
+  transition: all 0.5s;
+  position: fixed;
+  top: 45vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  
+}
+
+#v-stripe {
+  position: relative;
+  display: block;
+  width: 2px;
+  height: 100vh;
+  left: 32px;
+  bottom: 0;
+  z-index: 100;
+  border-style: solid;
+  border-width: 0 0 2px 2px;
+  border-color: var(--accentcolor);
+  border-radius: 0 6px 6px 6px;   
+}
+
+aside a {
+  padding: 4px;
 }

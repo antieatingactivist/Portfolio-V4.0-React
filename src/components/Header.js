@@ -5,8 +5,12 @@ import Nav from './Nav';
 
 export default function App() {
     return (
-      
-        <Nav />
-      
+        <header>
+            <div>
+                <span>J.</span> Garrett Corbin
+            </div>
+            
+            <Nav />
+        </header>
     );
   }

@@ -42,3 +42,27 @@ nav a {
   margin-right: 10px;
   
 }
+
+header {
+  transition: all .5s;
+  position: fixed;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: var(--bgcolortransparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: var(--accentcolor);
+  box-shadow:  10px 10px 10px var(--shadowcolor);
+  z-index: 10;
+}
+
+header div {
+  padding: 10px;
+  white-space: nowrap;
+  font-size: 20px;
+}

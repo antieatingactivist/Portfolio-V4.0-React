@@ -1,8 +1,19 @@
+:root {
+  --bgcolor: #060a1c;
+  --bgcolortransparent: #060a1cdd;
+  --maincolor: #bababa;
+  --accentcolor: #8c4040;
+  --shadowcolor: #03050c;
+}
+
+* {
+  background-color: var(--bgcolor);
+  color: var(--maincolor);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +21,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  transition: all 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+span {
+  color: var(--accentcolor);  
+}
+
+nav {
+  position: absolute;
+  padding: 20px;
+  right: 0;
+}
+nav a {
+  margin-right: 10px;
+  
 }

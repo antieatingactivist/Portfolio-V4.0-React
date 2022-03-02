@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio-v4.0-React/static/css/main.68aade9f.css",
-    "main.js": "/Portfolio-v4.0-React/static/js/main.a5ad6a9e.js",
-    "static/js/787.80e9d5a8.chunk.js": "/Portfolio-v4.0-React/static/js/787.80e9d5a8.chunk.js",
-    "static/media/bootstrap-icons.woff?": "/Portfolio-v4.0-React/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
-    "static/media/bootstrap-icons.woff2?": "/Portfolio-v4.0-React/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
-    "index.html": "/Portfolio-v4.0-React/index.html",
-    "main.68aade9f.css.map": "/Portfolio-v4.0-React/static/css/main.68aade9f.css.map",
-    "main.a5ad6a9e.js.map": "/Portfolio-v4.0-React/static/js/main.a5ad6a9e.js.map",
-    "787.80e9d5a8.chunk.js.map": "/Portfolio-v4.0-React/static/js/787.80e9d5a8.chunk.js.map"
+    "main.css": "/portfolio-v4.0-react/static/css/main.9b5d66ca.css",
+    "main.js": "/portfolio-v4.0-react/static/js/main.3aa27994.js",
+    "static/js/787.80e9d5a8.chunk.js": "/portfolio-v4.0-react/static/js/787.80e9d5a8.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/portfolio-v4.0-react/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
+    "static/media/bootstrap-icons.woff2?": "/portfolio-v4.0-react/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
+    "index.html": "/portfolio-v4.0-react/index.html",
+    "main.9b5d66ca.css.map": "/portfolio-v4.0-react/static/css/main.9b5d66ca.css.map",
+    "main.3aa27994.js.map": "/portfolio-v4.0-react/static/js/main.3aa27994.js.map",
+    "787.80e9d5a8.chunk.js.map": "/portfolio-v4.0-react/static/js/787.80e9d5a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.68aade9f.css",
-    "static/js/main.a5ad6a9e.js"
+    "static/css/main.9b5d66ca.css",
+    "static/js/main.3aa27994.js"
   ]
 }

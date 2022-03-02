@@ -32,16 +32,6 @@ span {
   color: var(--accentcolor);  
 }
 
-nav {
-  position: absolute;
-  padding: 20px;
-  right: 0;
-}
-nav a {
-  margin-right: 10px;
-  
-}
-
 a {
   transition: all 0.2s;
   text-decoration: none;

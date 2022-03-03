@@ -40,13 +40,13 @@ a {
   color: inherit;
 }
 
-span {
-  color: var(--accentcolor);  
-}
-
 a:hover {
   transition: all 0.5s;
   color: var(--accentcolor);
+}
+
+span {
+  color: var(--accentcolor);  
 }
 
 header {
@@ -80,6 +80,29 @@ main {
   margin-left: 100px; 
   margin-top: 100px;
   min-height: 100vh;
+  max-width: 800px;  /* added */
+}
+
+main img {
+  margin-left: 50px;
+  width: 500px;
+}
+
+main a {
+  transition: all .1s;
+  background-color: var(--bgcolortransparent);
+  border: 1px solid var(--accentcolor);
+  border-radius: 5px;
+  color: var(--accentcolor);
+  padding: 10px;
+  margin-left: 30px;
+  box-shadow:  2px 2px 8px var(--shadowcolor);
+  font-size: 80%;
+  font-weight: 200;
+}
+main a:hover {
+  transition: all .5s;
+  color: var(--maincolor);
 }
 
 footer {

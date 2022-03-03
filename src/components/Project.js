@@ -1,10 +1,11 @@
 import React from 'react';
+import Image from './Image';
 
-const Image = (props) => {
-    const image = require(`../assets/images/${props.src}`)
+// const Image = (props) => {
+//     const image = require(`../assets/images/${props.src}`)
 
-    return <img src = {image} alt="test" />
-}
+//     return <img src = {image} alt="test" />
+// }
 const projects = [
     {
         name: 'Weather Widget',

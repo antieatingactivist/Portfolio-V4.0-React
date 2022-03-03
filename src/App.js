@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Left from './components/Left';
 import Intro from './components/Intro';
 import Project from './components/Project';
+import About from './components/About';
 
 function App() {
   return (
@@ -14,7 +15,13 @@ function App() {
         <Left />
         <main>
           <Intro />
+
+          <h1><span></span>About Me</h1>
+          <About />
+
+          <h1><span></span>Projects</h1>
           <Project />
+
         </main>
         <Footer />
         

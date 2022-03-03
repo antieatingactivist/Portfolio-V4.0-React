@@ -6,6 +6,7 @@ import Left from './components/Left';
 import Intro from './components/Intro';
 import Project from './components/Project';
 import About from './components/About';
+import projectData from './assets/js/project-data';
 
 function App() {
   return (
@@ -20,13 +21,11 @@ function App() {
           <About />
 
           <h1><span></span>Projects</h1>
-          <Project id="0"/>
-          <Project id="1"/>
-          <Project id="2"/>
-          <Project id="4"/>
-          <Project id="5"/>
-          <Project id="6"/>
           
+          {projectData.map(project => (
+            <Project project={project} key={project.name} />
+          ))}
+                      
 
         </main>
         <Footer />

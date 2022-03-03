@@ -20,7 +20,13 @@ function App() {
           <About />
 
           <h1><span></span>Projects</h1>
-          <Project />
+          <Project id="0"/>
+          <Project id="1"/>
+          <Project id="2"/>
+          <Project id="4"/>
+          <Project id="5"/>
+          <Project id="6"/>
+          
 
         </main>
         <Footer />

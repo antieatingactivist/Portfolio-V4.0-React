@@ -13,8 +13,8 @@ body {
   color: var(--maincolor);
   margin: 0;
   font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
@@ -116,4 +116,13 @@ footer {
   z-index: 100;
   height: 40px;
   margin-left: 32px;
+}
+
+img {
+  transition: all 0.3s;
+  filter: grayscale(.96);
+}
+img:hover {
+  transition: all 1s;
+  filter: grayscale(0);
 }

@@ -44,10 +44,10 @@ export default function Left() {
     return (
         <aside id="left" style={leftStyle}>
             <section style={sectionStyle}>
-                <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" class="bi bi-github"> </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="bi bi-twitter"> </a>
-                <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" class="bi bi-linkedin"> </a>
-                <a href="mailto:garrett@linkedin.com" class="bi bi-envelope"> </a>
+                <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github"> </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bi bi-twitter"> </a>
+                <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin"> </a>
+                <a href="mailto:garrett@linkedin.com" className="bi bi-envelope"> </a>
             </section>
         <div id="v-stripe" style={stripeStyle}></div>
         </aside>

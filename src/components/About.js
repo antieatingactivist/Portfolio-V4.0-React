@@ -6,7 +6,7 @@ import Image from './Image';
 export default function About() {
 
     return (
-        <section id="about">
+        <section>
             <div>
                 <Image src="photo.jpg" />
             </div>

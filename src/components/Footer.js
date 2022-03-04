@@ -11,7 +11,7 @@ export default function Footer() {
       }
 
     return (
-        <footer>
+        <footer id="contact">
             <div id="h-stripe" style={stripeStyle}></div>
         </footer>
     );

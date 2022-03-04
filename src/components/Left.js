@@ -1,14 +1,27 @@
-import React from 'react';
+import { useEffect, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 
 export default function Left() {
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+    };
+
+    useEffect(() => {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
 
     const leftStyle = {
-        transition: 'all 0.5s',
+        // transition: 'all 0.5s',
         position: 'fixed',
-        top: '45vh',
+        top: `calc(45vh + ${scrollPosition/-20}px)`,
         display: 'flex',
         flexDirection: 'column',
         zIndex: 1

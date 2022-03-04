@@ -3,6 +3,7 @@ import Image from './Image';
 
 
 export default function Project(prop) {
+    
     const projectStyle = {
         transition: 'all 2s',
         // padding: '35vh 0 0vh 0'

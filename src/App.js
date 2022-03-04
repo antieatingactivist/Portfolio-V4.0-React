@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
-import { Link, animateScroll as scroll } from "react-scroll";
-
+// import { Link, animateScroll as scroll } from "react-scroll";
+import { useEffect, useState } from "react";
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,15 +15,13 @@ function App() {
 
 
 
-
-
   return (
     <div className="App">
       
-        <Header />
+        <Header data={"data"} />
         <Left />
         <main>
- 
+  
           <Intro />
           <h1 id="about"><span></span>About Me</h1>
           <About />

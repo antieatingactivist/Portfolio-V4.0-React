@@ -23,8 +23,9 @@ function App() {
 
   };
 
+  
  
-  if(scrollPosition > furthestDown) {
+  if(scrollPosition > 60 && scrollPosition > furthestDown) {
     setFurthestDown(scrollPosition);
     setHeaderHidden(true);
   } 
@@ -34,7 +35,7 @@ function App() {
   } 
 
   
-  // console.log([scrollPosition, furthestDown]);
+  console.log([scrollPosition, furthestDown]);
   
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

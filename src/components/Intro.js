@@ -1,23 +1,21 @@
-import React from 'react';
-
-
+const introStyle = {
+    padding: '25vh 0 0vh 0'
+}
+const spanStyle = {
+    position: 'relative',
+    top: '-50px',
+    left: '50px',
+    fontSize: '70%',
+    whiteSpace: 'nowrap'
+}
+const pStyle = {
+    position: 'relative',
+    top: '-50px',
+    left: '60px'
+}
 
 export default function Intro() {
-    const introStyle = {
-        padding: '25vh 0 0vh 0'
-    }
-    const spanStyle = {
-        position: 'relative',
-        top: '-50px',
-        left: '50px',
-        fontSize: '70%',
-        whiteSpace: 'nowrap'
-    }
-    const pStyle = {
-        position: 'relative',
-        top: '-50px',
-        left: '60px'
-    }
+
     return (
         <section id="intro" style={introStyle}>
             <h1>Hi, I'm Garrett.</h1>

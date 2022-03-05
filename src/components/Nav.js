@@ -1,26 +1,24 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 
 
 
+const navStyle = {
+  position: 'absolute',
+  padding: '20px',
+  right: 0
+}
+const regular = {
+  marginRight: '10px'
+}
+const highlighted = {
+marginRight: '10px',
+color: 'yellow'
+}
 
-// console.log(window.pageYOffset);
 
 export default function Nav() {
 
-
-    const navStyle = {
-        position: 'absolute',
-        padding: '20px',
-        right: 0
-      }
-    const regular = {
-        marginRight: '10px'
-    }
-    const highlighted = {
-      marginRight: '10px',
-      color: 'yellow'
-    }
     return (
       <nav style={navStyle}>
             {/* <a style={linkPadding} href="#about"><span>./</span>About</a> */}

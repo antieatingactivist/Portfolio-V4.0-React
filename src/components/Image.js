@@ -1,7 +1,6 @@
-import React from 'react';
 
-export default function Image(props) {
-    const image = require(`../assets/images/${props.src}`)
+export default function Image({src}) {
 
-    return <img src = {image} alt="test" />
+    const image = require(`../assets/images/${src}`)
+    return <img src = {image} alt="project" />
 }

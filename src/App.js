@@ -12,14 +12,44 @@ import projectData from './assets/js/project-data';
 
 
 function App() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [furthestDown, setFurthestDown] = useState(0);
+  const [headerHidden, setHeaderHidden] = useState(false);
+  const handleScroll = () => {
 
+    
+    setScrollPosition(window.pageYOffset);
+
+
+  };
+
+ 
+  if(scrollPosition > furthestDown) {
+    setFurthestDown(scrollPosition);
+    setHeaderHidden(true);
+  } 
+  if(scrollPosition < furthestDown-100) {
+      setFurthestDown(scrollPosition);
+      setHeaderHidden(false);
+  } 
+
+  
+  // console.log([scrollPosition, furthestDown]);
+  
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
 
   return (
     <div className="App">
       
-        <Header data={"data"} />
-        <Left />
+        <Header hidden={headerHidden} scrollPosition={scrollPosition}/>
+        <Left scrollPosition={scrollPosition} />
         <main>
   
           <Intro />

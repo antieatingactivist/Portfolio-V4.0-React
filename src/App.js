@@ -7,9 +7,9 @@ import Footer from './components/Footer';
 import Left from './components/Left';
 import Right from './components/Right';
 import Intro from './components/Intro';
-import Project from './components/Project';
+import Projects from './components/Projects';
 import About from './components/About';
-import projectData from './assets/js/project-data';
+// import projectData from './assets/js/project-data';
 
 
 function App() {
@@ -42,27 +42,24 @@ function App() {
   }, []);
 
 
+
   return (
     <div className="App">
       
         <Header hidden={headerHidden} scrollPosition={scrollPosition}/>
         <Left scrollPosition={scrollPosition} />
         <Right />
+        
         <main>
   
           <Intro />
-          <h1 id="about"><span></span>About Me</h1>
+          
           <About />
           
-
-          <h1 id="projects"><span></span>Projects</h1>
+          <Projects />
           
-          {projectData.map(project => (
-            <Project project={project} key={project.name} />
-          ))}
-                      
-
         </main>
+
         <Footer />
         
 

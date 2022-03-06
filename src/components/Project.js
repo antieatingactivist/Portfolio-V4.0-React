@@ -1,7 +1,7 @@
 import Image from './Image';
 
 const projectStyle = {
-    transition: 'all 2s',
+    // transition: 'all 2s',
     // padding: '35vh 0 0vh 0'
     position: 'relative',
     marginBottom: '100px'

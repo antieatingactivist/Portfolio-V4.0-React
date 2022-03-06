@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+// import { useEffect, useState, useRef } from "react";
 import { Link } from "react-scroll";
 
 
@@ -15,7 +15,7 @@ const regular = {
 
 
 export default function Nav() {
-
+    
     return (
       <nav style={navStyle}>
             {/* <a style={linkPadding} href="#about"><span>./</span>About</a> */}
@@ -51,7 +51,8 @@ export default function Nav() {
               duration={500}
             ><span>./</span>Contact</Link>
 
-            <Link style={regular} href="./assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer"><span>./</span>Resume</Link>
+            {/* possible issue */}
+            <Link style={regular} to="./assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer"><span>./</span>Resume</Link>
 
             
       </nav>

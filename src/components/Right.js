@@ -3,7 +3,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 
-export default function Left( {scrollPosition} ) {
+export default function Right( {introHidden, aboutHidden} ) {
 
 
     const rightStyle = {
@@ -17,22 +17,40 @@ export default function Left( {scrollPosition} ) {
         zIndex: 1
     };
 
+    const introStyle = {
+        marginRight: '10px',
+        textAlign: 'right',
+        marginTop: '50vh',
+        transition: 'all 0.5s'
+    }
+
     const aboutStyle = {
         marginRight: '10px',
         textAlign: 'right',
-        marginTop: '60vh',
-        // transition: 'all 0.5s'
+        marginTop: '50vh',
+        transition: 'all 0.5s'
     }
 
     const projectStyle = {
-        marginTop: '60vh'
+        marginTop: '30vh',
+        transition: 'all 0.5s'
+    }
+    if (introHidden) {
+        introStyle.marginTop = '-35px';
+        projectStyle.marginTop = '100vh';
+    }
+    if (aboutHidden) {
+        introStyle.marginTop = '-65px';
+        aboutStyle.marginTop = '-30px';
+        projectStyle.marginTop = '40vh';
+        
     }
 
 
     return (
         <aside id="right" style={rightStyle}>
         <section>
-            <div style={aboutStyle}>
+            <div style={introStyle}>
                 <p><span>{"<<"}</span>Intro</p>
             </div>
             <div style={aboutStyle}>

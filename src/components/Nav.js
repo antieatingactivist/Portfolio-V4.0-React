@@ -1,5 +1,6 @@
 // import { useEffect, useState, useRef } from "react";
 import { Link } from "react-scroll";
+import resume from "../assets/pdf/resume.pdf";
 
 
 
@@ -51,8 +52,8 @@ export default function Nav() {
               duration={500}
             ><span>./</span>Contact</Link>
 
-            {/* possible issue */}
-            <Link style={regular} to="./assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer"><span>./</span>Resume</Link>
+         
+            <a style={regular} href={resume} target="_blank" rel="noopener noreferrer"><span>./</span>Resume</a>
 
             
       </nav>

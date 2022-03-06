@@ -11,10 +11,7 @@ const navStyle = {
 const regular = {
   marginRight: '10px'
 }
-const highlighted = {
-marginRight: '10px',
-color: 'yellow'
-}
+
 
 
 export default function Nav() {
@@ -54,7 +51,7 @@ export default function Nav() {
               duration={500}
             ><span>./</span>Contact</Link>
 
-            <a style={regular} href="./assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer"><span>./</span>Resume</a>
+            <Link style={regular} href="./assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer"><span>./</span>Resume</Link>
 
             
       </nav>

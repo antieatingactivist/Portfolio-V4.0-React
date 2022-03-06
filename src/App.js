@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Left from './components/Left';
+import Right from './components/Right';
 import Intro from './components/Intro';
 import Project from './components/Project';
 import About from './components/About';
@@ -16,16 +17,11 @@ function App() {
   const [furthestDown, setFurthestDown] = useState(0);
   const [headerHidden, setHeaderHidden] = useState(false);
   const handleScroll = () => {
-
-    
     setScrollPosition(window.pageYOffset);
-
-
   };
 
-  
- 
-  if(scrollPosition > 60 && scrollPosition > furthestDown) {
+
+  if(scrollPosition > 200 && scrollPosition > furthestDown) {
     setFurthestDown(scrollPosition);
     setHeaderHidden(true);
   } 
@@ -35,7 +31,7 @@ function App() {
   } 
 
   
-  console.log([scrollPosition, furthestDown]);
+  // console.log([scrollPosition, furthestDown]);
   
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -51,6 +47,7 @@ function App() {
       
         <Header hidden={headerHidden} scrollPosition={scrollPosition}/>
         <Left scrollPosition={scrollPosition} />
+        <Right />
         <main>
   
           <Intro />

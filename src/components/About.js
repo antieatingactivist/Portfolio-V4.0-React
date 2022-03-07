@@ -1,12 +1,10 @@
 import Image from './Image';
-
 const aboutStyle = {
     transition: 'all 2s',
     padding: '40vh 0 0vh 0'
 }
 
 export default function About() {
-
     return (
         <section style={aboutStyle}>
             <h1 id="about"><span></span>About Me</h1>

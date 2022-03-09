@@ -1,5 +1,7 @@
+
 import Project from './Project';
 import projectData from '../assets/js/project-data';
+
 
 
 const projectsStyle = {
@@ -8,15 +10,18 @@ const projectsStyle = {
 }
 
 
-export default function Projects() {
 
-    
+export default function Projects() {
+  
     return (
-        <section style={projectsStyle}>
+        <section style={projectsStyle} >
             <h1 id="projects"><span></span>Projects</h1>
             
             {projectData.map(project => (
-                <Project project={project} key={project.name} />
+                
+              
+                    <Project project={project} key={project.name}/>
+              
             ))}
         </section>
     );

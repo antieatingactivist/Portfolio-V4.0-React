@@ -1,7 +1,8 @@
 import Image from './Image';
 const aboutStyle = {
     transition: 'all 2s',
-    padding: '40vh 0 0vh 0'
+    padding: '40vh 0 0vh 0',
+    width: '600px'
 }
 
 export default function About() {

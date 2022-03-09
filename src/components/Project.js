@@ -4,7 +4,8 @@ const projectStyle = {
     // transition: 'all 2s',
     // padding: '35vh 0 0vh 0'
     position: 'relative',
-    marginBottom: '100px'
+    marginBottom: '100px',
+    width: '600px'
 }
 
 

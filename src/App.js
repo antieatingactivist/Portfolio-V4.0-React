@@ -71,7 +71,7 @@ function App() {
 
     
   }
-  // console.log([scrollPosition, aboutOffset, windowHeight]);
+  
 
   
   useEffect(() => {

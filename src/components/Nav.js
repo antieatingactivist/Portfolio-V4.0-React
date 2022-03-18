@@ -28,7 +28,7 @@ export default function Nav() {
               smooth={true}
               offset={-70}
               duration={500}
-            ><span>./</span>JGC</Link>
+            ><span>./</span>About</Link>
             {/* <a style={linkPadding} href="#projects"><span>./</span>Projects</a> */}
             <Link
               style={regular}

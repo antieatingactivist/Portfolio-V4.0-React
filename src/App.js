@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 // import { Link, animateScroll as scroll } from "react-scroll";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useTitle } from "react";
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -78,6 +78,7 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     handleResize();
+    document.title = "J. Garrett Corbin";  
     
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -86,7 +87,6 @@ function App() {
   }, []);
 
   
-
 
   return (
     <div className="App">

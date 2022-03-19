@@ -17,6 +17,7 @@ export default function Header({hidden, scrollPosition}) {
         boxShadow: '10px 10px 10px var(--shadowcolor)',
         backgroundColor: 'var(--bgcolortransparent)',
     }
+    
 
     if (hidden) {
 
@@ -31,7 +32,7 @@ export default function Header({hidden, scrollPosition}) {
 
     return (
         <header style={style}>
-            <div>
+            <div style={{marginTop: "6px", marginLeft: "6px"}}>
                 <span>J.</span> Garrett Corbin
             </div>
 

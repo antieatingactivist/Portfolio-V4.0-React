@@ -10,7 +10,8 @@ const navStyle = {
   right: 0
 }
 const regular = {
-  marginRight: '10px'
+  marginRight: '10px',
+  cursor: 'pointer'
 }
 
 

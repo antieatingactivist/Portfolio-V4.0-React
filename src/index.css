@@ -47,6 +47,7 @@ a {
 a:hover {
   transition: all 0.5s;
   color: var(--accentcolor);
+  cursor: pointer;
 }
 
 span {
@@ -126,6 +127,7 @@ img:hover {
   transition: all 1s;
   filter: grayscale(0);
 }
+
 
 /* div {
   background-color: #ffffff33;

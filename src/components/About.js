@@ -10,7 +10,7 @@ export default function About() {
         <section style={aboutStyle}>
             <h1 id="about"><span></span>About Me</h1>
             <div>
-                <Image src="photo.jpg" />
+                <Image src="photo2.jpg" />
             </div>
             <p>
                 My name is Garrett Corbin and I am a Developer from Richmond, Virginia and currently reside in Oakland, California. I develop interactive websites as well as other applications.

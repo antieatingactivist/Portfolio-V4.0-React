@@ -108,7 +108,7 @@ function App() {
           </div>
 
           <div ref={projectsRef} style={projectsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
-            <Projects />
+            <Projects scrollPosition={scrollPosition} windowHeight={windowHeight} />
           </div>
           
         </main>

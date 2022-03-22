@@ -1,5 +1,6 @@
 // import { useEffect, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import projectData from '../assets/js/project-data';
 
 
 
@@ -58,14 +59,13 @@ export default function Right( {introHidden, aboutHidden} ) {
             </div>
             <div style={projectStyle}>
                 <p>Projects/</p>
+                {projectData.map(project => (
+                    
+            
+                        <p><span>├─</span> <a>{project.name}</a></p> 
+                ))}
                  
-                <p><span>├─</span> <a>Bender's Quiz</a></p>  
-                <p><span>├─</span> <a>Weather Widget</a></p>   
-                <p><span>├─</span> <a>Sound Lane</a></p>
-                <p><span>├─</span> <a>Tetris</a></p>
-                <p><span>├─</span> <a>Quizinator</a></p>
-                <p><span>├─</span> <a>Portfolio-V2</a></p>
-                <p><span>├─</span> <a>Portfolio-V1</a></p>  
+               
             </div>
             
         </section>

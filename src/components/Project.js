@@ -1,4 +1,5 @@
 import Image from './Image';
+import { useEffect, useRef, useState } from 'react';
 
 const projectStyle = {
     // transition: 'all 2s',
@@ -34,24 +35,32 @@ const descriptionStyle = {
     
 }
 
-export default function Project(props) {
+export default function Project({project, scrollPosition, windowHeight}) {
+    const projectRef = useRef(null);
+    const [projectOffset, setProjectOffset] = useState(0);
     
+    useEffect(() => {
+        setProjectOffset(projectRef.current.getBoundingClientRect().top);
+    }, [scrollPosition])
     return (
-        <section style = {projectStyle}>
+        <section style={projectOffset<windowHeight/1.2 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
+        <div style = {projectStyle} ref={projectRef}>
+      
             <h2>
-                <span>./</span>{props.project.name}
+                <span>./</span>{project.name}
             </h2>
             <div style={imageFrameStyle}>
-                <Image src={props.project.imgSrc} />
+                <Image src={project.imgSrc} />
             </div>
             <div style={descriptionStyle}>
-                <p>{props.project.description}</p>
+                <p>{project.description}</p>
                 <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-                    <a href={props.project.gitHub}  target="_blank" rel="noopener noreferrer">Project on GitHub</a>
-                    <a href={props.project.liveLink} target="_blank" rel="noopener noreferrer">Live Link</a>
+                    <a href={project.gitHub}  target="_blank" rel="noopener noreferrer">Project on GitHub</a>
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Link</a>
                 </div>
             </div>
             
+        </div>
         </section>
     );
   }

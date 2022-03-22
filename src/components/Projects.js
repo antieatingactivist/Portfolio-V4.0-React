@@ -11,17 +11,18 @@ const projectsStyle = {
 
 
 
-export default function Projects() {
+export default function Projects({scrollPosition, windowHeight}) {
+
   
     return (
         <section style={projectsStyle} >
             <h1 id="projects"><span></span>Projects</h1>
             
             {projectData.map(project => (
-                
-              
-                    <Project project={project} key={project.name}/>
-              
+                <>
+             
+                    <Project scrollPosition={scrollPosition} project={project} windowHeight={windowHeight} key={project.name}/>
+                </>
             ))}
         </section>
     );

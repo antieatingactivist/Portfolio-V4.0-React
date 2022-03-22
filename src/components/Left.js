@@ -7,13 +7,21 @@ export default function Left( {scrollPosition} ) {
 
 
     const leftStyle = {
-        // transition: 'all 0.5s',
+        transition: 'top 0.2s',
         position: 'fixed',
         top: `calc(45vh + ${scrollPosition/-20}px)`,
         display: 'flex',
         flexDirection: 'column',
         zIndex: 1
     };
+
+    // console.log([scrollPosition, document.body.scrollHeight-window.innerHeight]);
+    if (scrollPosition > document.body.scrollHeight-window.innerHeight) {
+        // setTimeout(() => {
+            // leftStyle.top = '140vh';
+        // }, 1000)
+        
+    }
 
     const sectionStyle = {
         display: 'flex',

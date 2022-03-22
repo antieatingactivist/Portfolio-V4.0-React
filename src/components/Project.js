@@ -23,6 +23,7 @@ const imageFrameStyle = {
 }
 
 const descriptionStyle = {
+
     position: 'relative',
     fontSize: '.8em',
     backgroundColor: '#33333322',
@@ -32,6 +33,7 @@ const descriptionStyle = {
     borderRadius: '3px',
     border: '1px solid #33333388',
     boxShadow: '3px 3px 5px var(--shadowcolor)' ,
+
     
 }
 
@@ -42,14 +44,14 @@ export default function Project({project, scrollPosition, windowHeight, setOnScr
     useEffect(() => {
         setProjectOffset(projectRef.current.getBoundingClientRect().top);
         
-        if (projectOffset<windowHeight/1.2) {
+        if (projectOffset<windowHeight/1.5) {
             setOnScreenProject(project.name);
         }
 
     }, [project.name, projectOffset, scrollPosition, setOnScreenProject, windowHeight])
     return (
-        <section style={projectOffset<windowHeight/1.2 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
-            <div style ={projectStyle} ref={projectRef}>
+        <section style={projectOffset<windowHeight/1.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
+            <div id={project.name} style={projectStyle} ref={projectRef}>
         
                 <h2>
                     <span>./</span>{project.name}

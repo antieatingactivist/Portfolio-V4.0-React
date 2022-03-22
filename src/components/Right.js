@@ -1,10 +1,11 @@
 // import { useEffect, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import projectData from '../assets/js/project-data';
+import { Link } from "react-scroll";
 
 
 
-export default function Right( {introHidden, aboutHidden, onScreenProject } ) {
+export default function Right( {windowHeight, introHidden, aboutHidden, onScreenProject } ) {
 
 
     const rightStyle = {
@@ -62,9 +63,19 @@ export default function Right( {introHidden, aboutHidden, onScreenProject } ) {
                 {projectData.map(project => (
                     
             
-                        <p>
-                            { project.name===onScreenProject ? <span>&nbsp;&nbsp;&nbsp;&lt;&lt;</span> : <span>&nbsp;├─</span>} 
-                            <a href="#f">{project.name}</a>
+                        <p key={project.name}>
+                            { project.name===onScreenProject ? <span>&nbsp;&nbsp;&nbsp;&lt;&lt;&nbsp;</span> : <span>&nbsp;├─</span>} 
+                            {/* <a href="#f">{project.name}</a> */}
+                            <Link
+                                
+                                activeClass="active"
+                                to={project.name}
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                            >{project.name}
+                            </Link>
                         </p> 
                 ))}
                  

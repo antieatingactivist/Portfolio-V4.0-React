@@ -82,7 +82,7 @@ function App() {
       
         <Header hidden={headerHidden} scrollPosition={scrollPosition}/>
         <Left scrollPosition={scrollPosition} />
-        <Right introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
+        <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
         
         <main>
           

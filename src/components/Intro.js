@@ -1,24 +1,51 @@
-const introStyle = {
-    padding: '25vh 0 0vh 0'
-}
-const spanStyle = {
-    position: 'relative',
-    top: '-50px',
-    left: '50px',
-    fontSize: '70%',
-    whiteSpace: 'nowrap'
-}
-const pStyle = {
-    position: 'relative',
-    top: '-50px',
-    left: '60px'
-}
+import { useEffect, useState } from 'react';
+
+
+
 
 export default function Intro() {
+    const [introOpacity, setIntroOpacity] = useState(0);
+    const [spanOpacity, setSpanOpacity] = useState(0);
+    const [pOpacity, setPOpacity] = useState(0);
+    const introStyle = {
+        
+        padding: '25vh 0 0vh 0',
+        
+    }
+    const h1Style = {
+        
+        transition: 'opacity 1.5s',
+        transitionDelay: '.1s',
+        opacity: introOpacity,
+    }
+    const spanStyle = {
+        transition: 'opacity 1.5s',
+        transitionDelay: '.3s',
+        position: 'relative',
+        top: '-50px',
+        left: '50px',
+        fontSize: '70%',
+        whiteSpace: 'nowrap',
+        opacity: spanOpacity,
+    }
+    const pStyle = {
+        transition: 'opacity 3s',
+        transitionDelay: '1s',
+        position: 'relative',
+        top: '-50px',
+        left: '60px',
+        opacity: pOpacity,
+    }
+    
+    useEffect(() => {
+        setIntroOpacity(1);
+        setSpanOpacity(1);
+        setPOpacity(1);
+    }, []);
 
     return (
         <section id="intro" style={introStyle}>
-            <h1>Hi, I'm Garrett.</h1>
+            <h1 style={h1Style}>Hi, I'm Garrett.</h1>
             <h1><span style={spanStyle}>Developer, and builder of many things.</span></h1>
             <p style={pStyle}>scroll down and have a look.</p>
         </section>

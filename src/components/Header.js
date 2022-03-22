@@ -16,6 +16,7 @@ export default function Header({hidden, scrollPosition}) {
         borderColor: 'var(--accentcolor)',
         boxShadow: '10px 10px 10px var(--shadowcolor)',
         backgroundColor: 'var(--bgcolortransparent)',
+        zIndex: '100'
     }
     
 

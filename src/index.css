@@ -94,20 +94,23 @@ main img {
 }
 
 main a {
+
   transition: all .1s;
-  background-color: var(--bgcolortransparent);
+  /* background-color: var(--bgcolortransparent); */
   border: 1px solid var(--accentcolor);
   border-radius: 5px;
   color: var(--accentcolor);
   padding: 10px;
-  margin-left: 30px;
+  margin-left: 10px;
   box-shadow:  2px 2px 8px var(--shadowcolor);
-  font-size: 80%;
+  font-size: 1em;
   font-weight: 200;
+  z-index: 1000;
 }
 main a:hover {
   transition: all .5s;
   color: var(--maincolor);
+  z-index: 1000;
 }
 
 footer {

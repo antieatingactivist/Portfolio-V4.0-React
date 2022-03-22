@@ -78,6 +78,7 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     handleResize();
+    handleScroll();
     document.title = "J. Garrett Corbin";  
     
     return () => {

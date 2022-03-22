@@ -11,7 +11,7 @@ const projectsStyle = {
 
 
 
-export default function Projects({scrollPosition, windowHeight}) {
+export default function Projects({scrollPosition, windowHeight, setOnScreenProject}) {
 
   
     return (
@@ -19,10 +19,10 @@ export default function Projects({scrollPosition, windowHeight}) {
             <h1 id="projects"><span></span>Projects</h1>
             
             {projectData.map(project => (
-                <>
+          
              
-                    <Project scrollPosition={scrollPosition} project={project} windowHeight={windowHeight} key={project.name}/>
-                </>
+                    <Project scrollPosition={scrollPosition} project={project} windowHeight={windowHeight} setOnScreenProject={setOnScreenProject} key={project.name}/>
+             
             ))}
         </section>
     );

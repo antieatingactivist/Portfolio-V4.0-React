@@ -25,8 +25,10 @@ function App() {
   const [aboutOffset, setAboutOffest] = useState(0);
   const [projectsOffset, setProjectOffset] = useState(0);
   const [introHidden, setIntroHidden] = useState(false);  
-  const [aboutHidden, setAboutHidden] = useState(false);  
-  // const [projectsHidden, setProjectsHidden] = useState(false);  
+  const [aboutHidden, setAboutHidden] = useState(false);
+  const [onScreenProject, setOnScreenProject] = useState(0);
+  // console.log(onScreenProject);
+
   const handleScroll = () => {
     setScrollPosition(window.pageYOffset);
     setAboutOffest(aboutRef.current.getBoundingClientRect().top);
@@ -34,42 +36,28 @@ function App() {
     setProjectOffset(projectsRef.current.getBoundingClientRect().top);
   };
   const handleResize = () => {
-    // handleScroll();
     setWindowHeight(window.innerHeight);
   };
  
-
   if(scrollPosition > 200 && scrollPosition > furthestDown) {
     setFurthestDown(scrollPosition);
     setHeaderHidden(true);
-    
   } 
   if(scrollPosition < furthestDown-100) {
       setFurthestDown(scrollPosition);
-      setHeaderHidden(false);
-      
+      setHeaderHidden(false); 
   } 
   if (aboutOffset < 100 && !introHidden) {
     setIntroHidden(true);
-
-    // console.log(aboutOffset);
-    
   } 
   if (aboutOffset >= 300 && introHidden) {
     setIntroHidden(false);
-
-    // console.log(aboutOffset);
-    
   } 
   if (projectsOffset < 100 && !aboutHidden) {
     setAboutHidden(true);
-
-    
   }
   if (projectsOffset >= 300 && aboutHidden) {
     setAboutHidden(false);
-
-    
   }
   
 
@@ -94,7 +82,7 @@ function App() {
       
         <Header hidden={headerHidden} scrollPosition={scrollPosition}/>
         <Left scrollPosition={scrollPosition} />
-        <Right introHidden={introHidden} aboutHidden={aboutHidden} />
+        <Right introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
         
         <main>
           
@@ -108,7 +96,7 @@ function App() {
           </div>
 
           <div ref={projectsRef} style={projectsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
-            <Projects scrollPosition={scrollPosition} windowHeight={windowHeight} />
+            <Projects scrollPosition={scrollPosition} windowHeight={windowHeight} setOnScreenProject={setOnScreenProject} />
           </div>
           
         </main>

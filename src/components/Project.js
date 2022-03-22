@@ -35,32 +35,37 @@ const descriptionStyle = {
     
 }
 
-export default function Project({project, scrollPosition, windowHeight}) {
+export default function Project({project, scrollPosition, windowHeight, setOnScreenProject}) {
     const projectRef = useRef(null);
     const [projectOffset, setProjectOffset] = useState(0);
     
     useEffect(() => {
         setProjectOffset(projectRef.current.getBoundingClientRect().top);
-    }, [scrollPosition])
+        
+        if (projectOffset<windowHeight/1.2) {
+            setOnScreenProject(project.name);
+        }
+
+    }, [project.name, projectOffset, scrollPosition, setOnScreenProject, windowHeight])
     return (
         <section style={projectOffset<windowHeight/1.2 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
-        <div style = {projectStyle} ref={projectRef}>
-      
-            <h2>
-                <span>./</span>{project.name}
-            </h2>
-            <div style={imageFrameStyle}>
-                <Image src={project.imgSrc} />
-            </div>
-            <div style={descriptionStyle}>
-                <p>{project.description}</p>
-                <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-                    <a href={project.gitHub}  target="_blank" rel="noopener noreferrer">Project on GitHub</a>
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Link</a>
+            <div style ={projectStyle} ref={projectRef}>
+        
+                <h2>
+                    <span>./</span>{project.name}
+                </h2>
+                <div style={imageFrameStyle}>
+                    <Image src={project.imgSrc} />
                 </div>
+                <div style={descriptionStyle}>
+                    <p>{project.description}</p>
+                    <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+                        <a href={project.gitHub}  target="_blank" rel="noopener noreferrer">Project on GitHub</a>
+                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Link</a>
+                    </div>
+                </div>
+                
             </div>
-            
-        </div>
         </section>
     );
   }

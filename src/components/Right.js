@@ -4,7 +4,7 @@ import projectData from '../assets/js/project-data';
 
 
 
-export default function Right( {introHidden, aboutHidden} ) {
+export default function Right( {introHidden, aboutHidden, onScreenProject } ) {
 
 
     const rightStyle = {
@@ -62,7 +62,10 @@ export default function Right( {introHidden, aboutHidden} ) {
                 {projectData.map(project => (
                     
             
-                        <p><span>├─</span> <a>{project.name}</a></p> 
+                        <p>
+                            { project.name===onScreenProject ? <span>&nbsp;&nbsp;&nbsp;&lt;&lt;</span> : <span>&nbsp;├─</span>} 
+                            <a href="#f">{project.name}</a>
+                        </p> 
                 ))}
                  
                

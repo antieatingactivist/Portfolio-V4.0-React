@@ -1,11 +1,12 @@
 // import { useEffect, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import {useEffect, useState} from "react";
 
 
 
 export default function Left( {scrollPosition} ) {
 
-
+    const [spin, setSpin] = useState('rotateY(0deg)');
     const leftStyle = {
         transition: 'top 0.2s',
         position: 'fixed',
@@ -24,6 +25,7 @@ export default function Left( {scrollPosition} ) {
     }
 
     const sectionStyle = {
+        transition: 'transform 1s ease-out',
         display: 'flex',
         flexDirection: 'column',
         fontSize: '25px',
@@ -33,7 +35,8 @@ export default function Left( {scrollPosition} ) {
         borderColor: 'var(--accentcolor)',
         borderRadius: '6px',
         boxShadow:  '10px 10px 10px var(--shadowcolor)',
-        padding: '4px'
+        padding: '4px',
+        transform: spin
     };
 
     const stripeStyle = {
@@ -48,7 +51,11 @@ export default function Left( {scrollPosition} ) {
         borderWidth: '0 0 1px 1px',
         borderColor: 'var(--accentcolor)',
         borderRadius: '0 6px 6px 6px'   
-      }
+    }
+
+    useEffect(() => {
+        setSpin('rotateY(1080deg)');
+    }, [])
 
     return (
         <aside id="left" style={leftStyle}>

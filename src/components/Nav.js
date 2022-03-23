@@ -6,7 +6,7 @@ import resume from "../assets/pdf/resume.pdf";
 
 const navStyle = {
   position: 'absolute',
-  padding: '20px',
+  padding: '10px',
   right: 0
 }
 const regular = {
@@ -16,7 +16,7 @@ const regular = {
 
 
 
-export default function Nav() {
+export default function Nav({windowHeight}) {
     
     return (
       <nav style={navStyle}>
@@ -27,7 +27,7 @@ export default function Nav() {
               to="about"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={windowHeight/-4}
               duration={500}
             ><span>./</span>About</Link>
             {/* <a style={linkPadding} href="#projects"><span>./</span>Projects</a> */}
@@ -37,7 +37,7 @@ export default function Nav() {
               to="projects"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={windowHeight/-4}
               duration={500}
             ><span>./</span>Projects</Link>
 
@@ -49,7 +49,7 @@ export default function Nav() {
               to="contact"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={windowHeight/-4}
               duration={500}
             ><span>./</span>Contact</Link>
 

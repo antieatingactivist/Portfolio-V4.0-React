@@ -45,7 +45,7 @@ export default function Left( {scrollPosition} ) {
         bottom: 0,
         zIndex: 100,
         borderStyle: 'solid',
-        borderWidth: '0 0 2px 2px',
+        borderWidth: '0 0 1px 1px',
         borderColor: 'var(--accentcolor)',
         borderRadius: '0 6px 6px 6px'   
       }

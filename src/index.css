@@ -29,14 +29,11 @@ h1 {
 
 }
 h2 {
-  margin-left: 160px;
+  margin-left: 20px;
   font-weight: 200;
 }
 
-h2 {
-  margin-left: 160px;
-  font-weight: 200;
-}
+
 
 a {
   transition: all 0.2s;
@@ -61,7 +58,7 @@ header {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 60px;
+  height: 40px;
   background-color: var(--bgcolortransparent);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -73,7 +70,7 @@ header {
 }
 
 header div {
-  padding: 10px;
+  padding: 3px;
   white-space: nowrap;
   font-size: 20px;
 }

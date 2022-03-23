@@ -3,11 +3,9 @@ import Nav from './Nav';
 
 
 
-export default function Header({hidden, scrollPosition}) {
+export default function Header({hidden, scrollPosition, windowHeight}) {
 
-    
-    // const hidden = (scrollPosition > 100 && scrollPosition > furthestDown-100);
-    // console.log(hidden);
+
     const noBorder = (scrollPosition < 4);
     const style = {
         top: '0px',
@@ -37,7 +35,7 @@ export default function Header({hidden, scrollPosition}) {
                 <span>J.</span> Garrett Corbin
             </div>
 
-            <Nav  />
+            <Nav windowHeight={windowHeight} />
         </header>
     );
   }

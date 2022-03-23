@@ -29,8 +29,8 @@ export default function Intro() {
         opacity: spanOpacity,
     }
     const pStyle = {
-        transition: 'opacity 3s',
-        transitionDelay: '1s',
+        transition: 'opacity 5s',
+        transitionDelay: '2s',
         position: 'relative',
         top: '-50px',
         left: '60px',

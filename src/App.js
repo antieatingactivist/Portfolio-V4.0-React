@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 // import { Link, animateScroll as scroll } from "react-scroll";
-import { useEffect, useState, useRef, useTitle } from "react";
+import { useEffect, useState, useRef } from "react";
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -80,7 +80,7 @@ function App() {
   return (
     <div className="App">
       
-        <Header hidden={headerHidden} scrollPosition={scrollPosition}/>
+        <Header hidden={headerHidden} scrollPosition={scrollPosition} windowHeight={windowHeight}/>
         <Left scrollPosition={scrollPosition} />
         <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
         

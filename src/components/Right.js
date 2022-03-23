@@ -65,14 +65,14 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
             
                         <p key={project.name}>
                             { project.name===onScreenProject ? <span>&nbsp;&nbsp;&nbsp;&lt;&lt;&nbsp;</span> : <span>&nbsp;├─</span>} 
-                            {/* <a href="#f">{project.name}</a> */}
+          
                             <Link
                                 
                                 activeClass="active"
                                 to={project.name}
                                 spy={true}
                                 smooth={true}
-                                offset={-100}
+                                offset={windowHeight/-4}
                                 duration={500}
                             >{project.name}
                             </Link>

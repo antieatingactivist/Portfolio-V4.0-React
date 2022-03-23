@@ -3,7 +3,9 @@ import Nav from './Nav';
 
 
 
+
 export default function Header({hidden, scrollPosition, windowHeight}) {
+
 
 
     const noBorder = (scrollPosition < 4);

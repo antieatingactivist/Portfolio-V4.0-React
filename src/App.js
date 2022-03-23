@@ -17,11 +17,12 @@ function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
 
+  const [initialHeaderShow, setInitialHeaderShow] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
   const [furthestDown, setFurthestDown] = useState(0);
-  const [headerHidden, setHeaderHidden] = useState(false);  
-  const [introOffset, setIntroOffest] = useState(0);
+  const [headerHidden, setHeaderHidden] = useState(true);  
+  // const [introOffset, setIntroOffest] = useState(0);
   const [aboutOffset, setAboutOffest] = useState(0);
   const [projectsOffset, setProjectOffset] = useState(0);
   const [introHidden, setIntroHidden] = useState(false);  
@@ -32,7 +33,7 @@ function App() {
   const handleScroll = () => {
     setScrollPosition(window.pageYOffset);
     setAboutOffest(aboutRef.current.getBoundingClientRect().top);
-    setIntroOffest(introRef.current.getBoundingClientRect().top);
+    // setIntroOffest(introRef.current.getBoundingClientRect().top);
     setProjectOffset(projectsRef.current.getBoundingClientRect().top);
   };
   const handleResize = () => {
@@ -41,7 +42,7 @@ function App() {
  
   if(scrollPosition > 200 && scrollPosition > furthestDown) {
     setFurthestDown(scrollPosition);
-    setHeaderHidden(true);
+    if (initialHeaderShow) setHeaderHidden(true);
   } 
   if(scrollPosition < furthestDown-100) {
       setFurthestDown(scrollPosition);
@@ -67,7 +68,11 @@ function App() {
     window.addEventListener("resize", handleResize);
     handleResize();
     handleScroll();
-    document.title = "J. Garrett Corbin";  
+    setTimeout(() => {
+      setInitialHeaderShow(true);
+      setHeaderHidden(false);
+    }, 100)
+
     
     return () => {
       window.removeEventListener("scroll", handleScroll);

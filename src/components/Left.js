@@ -25,7 +25,7 @@ export default function Left( {scrollPosition} ) {
     }
 
     const sectionStyle = {
-        transition: 'transform 1s ease-out',
+        transition: 'transform 3s cubic-bezier(0,.11,0,1)',
         display: 'flex',
         flexDirection: 'column',
         fontSize: '25px',
@@ -53,10 +53,15 @@ export default function Left( {scrollPosition} ) {
         borderRadius: '0 6px 6px 6px'   
     }
 
-    useEffect(() => {
-        setSpin('rotateY(1080deg)');
-    }, [])
 
+
+    useEffect(() => {
+        setSpin('rotateY(2880deg)');
+        setTimeout(() => {
+            setSpin('rotateY(0deg)');
+        }, 100000);
+    }, [])
+   
     return (
         <aside id="left" style={leftStyle}>
             <section style={sectionStyle}>

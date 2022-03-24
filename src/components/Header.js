@@ -34,7 +34,7 @@ export default function Header({hidden, scrollPosition, windowHeight}) {
     return (
         <header style={style}>
             <div style={{marginTop: "6px", marginLeft: "6px"}}>
-                <span>J.</span> Garrett Corbin
+                <span className="accent">J.</span> Garrett Corbin
             </div>
 
             <Nav windowHeight={windowHeight} />

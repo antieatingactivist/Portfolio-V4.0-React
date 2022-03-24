@@ -21,6 +21,7 @@ export default function Nav({windowHeight}) {
     return (
       <nav style={navStyle}>
             {/* <a style={linkPadding} href="#about"><span>./</span>About</a> */}
+          <code>
             <Link
               style={regular}
               activeClass="active"
@@ -29,7 +30,7 @@ export default function Nav({windowHeight}) {
               smooth={true}
               offset={windowHeight/-4}
               duration={500}
-            ><span>./</span>About</Link>
+            ><span className="accent">./</span>About</Link>
             {/* <a style={linkPadding} href="#projects"><span>./</span>Projects</a> */}
             <Link
               style={regular}
@@ -39,7 +40,7 @@ export default function Nav({windowHeight}) {
               smooth={true}
               offset={windowHeight/-4}
               duration={500}
-            ><span>./</span>Projects</Link>
+            ><span className="accent">./</span>Projects</Link>
 
 
             {/* <a style={linkPadding} href="#contact"><span>./</span>Contact</a> */}
@@ -51,12 +52,12 @@ export default function Nav({windowHeight}) {
               smooth={true}
               offset={windowHeight/-4}
               duration={500}
-            ><span>./</span>Contact</Link>
+            ><span className="accent">./</span>Contact</Link>
 
          
-            <a style={regular} href={resume} target="_blank" rel="noopener noreferrer"><span>./</span>Resume</a>
+            <a style={regular} href={resume} target="_blank" rel="noopener noreferrer"><span className="accent">./</span>Resume</a>
 
-            
+          </code>   
       </nav>
     );
   }

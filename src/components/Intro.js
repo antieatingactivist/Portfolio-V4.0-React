@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import Typewriter from 'typewriter-effect';
 
 
 
@@ -29,6 +29,7 @@ export default function Intro() {
         opacity: spanOpacity,
     }
     const pStyle = {
+        
         transition: 'opacity 5s',
         transitionDelay: '2s',
         position: 'relative',
@@ -45,9 +46,21 @@ export default function Intro() {
 
     return (
         <section id="intro" style={introStyle}>
+        
             <h1 style={h1Style}>Hi, I'm Garrett.</h1>
-            <h1><span style={spanStyle}>Developer, and builder of many things.</span></h1>
-            <p style={pStyle}>scroll down and have a look.</p>
+            <h1><span style={spanStyle} className="accent">Developer, and builder of many things.</span></h1>
+            {/* <code><p style={pStyle}>scroll down and have a look.</p></code> */}
+            <code style={pStyle}>
+                <Typewriter
+                    onInit={(typewriter) => {
+                        typewriter.typeString('scroll down and have a look.')
+                       
+                       
+                        
+                        .start();
+                    }}
+                />
+            </code>
         </section>
     );
   }

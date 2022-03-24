@@ -9,7 +9,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
 
 
     const rightStyle = {
-        transition: 'all 0.5s',
+        transition: 'all 0.5s cubic-bezier(0,.11,0,1)',
         position: 'fixed',
         // top: `calc(45vh + ${scrollPosition/-20}px)`,
         top: '0',
@@ -23,19 +23,19 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
         marginRight: '10px',
         textAlign: 'right',
         marginTop: '50vh',
-        transition: 'all 0.5s'
+        transition: 'all 0.5s cubic-bezier(0,.11,0,1)'
     }
 
     const aboutStyle = {
         marginRight: '10px',
         textAlign: 'right',
         marginTop: '50vh',
-        transition: 'all 0.5s'
+        transition: 'all 0.5s cubic-bezier(0,.11,0,1)'
     }
 
     const projectStyle = {
         marginTop: '30vh',
-        transition: 'all 0.5s'
+        transition: 'all 0.5s cubic-bezier(0,.11,0,1)'
     }
     if (introHidden) {
         introStyle.marginTop = '-35px';
@@ -51,12 +51,13 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
 
     return (
         <aside id="right" style={rightStyle}>
+        <code>
         <section>
             <div style={introStyle}>
-                <p><span>{"<<"}</span>Intro</p>
+                <p><span className="accent">{"<<"}</span>Intro</p>
             </div>
             <div style={aboutStyle}>
-                <p><span>{"<<"}</span>About</p>
+                <p><span className="accent">{"<<"}</span>About</p>
             </div>
             <div style={projectStyle}>
                 <p>Projects/</p>
@@ -64,7 +65,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
                     
             
                         <p key={project.name}>
-                            { project.name===onScreenProject ? <span>&nbsp;&nbsp;&nbsp;&lt;&lt;&nbsp;</span> : <span>&nbsp;├─</span>} 
+                            { project.name===onScreenProject ? <span className="accent">&lt;&lt;&nbsp;</span> : <span className="accent">&nbsp;├─</span>} 
           
                             <Link
                                 
@@ -83,6 +84,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
             </div>
             
         </section>
+        </code>
   
 
     </aside>

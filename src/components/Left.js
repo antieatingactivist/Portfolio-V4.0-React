@@ -7,22 +7,16 @@ import {useEffect, useState} from "react";
 export default function Left( {scrollPosition} ) {
 
     const [spin, setSpin] = useState('rotateY(0deg)');
+    const [height, setHeight] = useState('0px');
     const leftStyle = {
-        transition: 'top 0.2s',
+        transition: 'top .5s cubic-bezier(0,.11,0,1)',
         position: 'fixed',
-        top: `calc(45vh + ${scrollPosition/-20}px)`,
+        top: height,
         display: 'flex',
         flexDirection: 'column',
         zIndex: 1
     };
 
-    // console.log([scrollPosition, document.body.scrollHeight-window.innerHeight]);
-    if (scrollPosition > document.body.scrollHeight-window.innerHeight) {
-        // setTimeout(() => {
-            // leftStyle.top = '140vh';
-        // }, 1000)
-        
-    }
 
     const sectionStyle = {
         transition: 'transform 3s cubic-bezier(0,.11,0,1)',
@@ -34,7 +28,7 @@ export default function Left( {scrollPosition} ) {
         borderWidth: '1px',
         borderColor: 'var(--accentcolor)',
         borderRadius: '6px',
-        boxShadow:  '10px 10px 10px var(--shadowcolor)',
+        boxShadow:  '3px 3px 3px var(--shadowcolor)',
         padding: '4px',
         transform: spin
     };
@@ -60,7 +54,11 @@ export default function Left( {scrollPosition} ) {
         setTimeout(() => {
             setSpin('rotateY(0deg)');
         }, 100000);
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        setHeight(`calc(45vh + ${scrollPosition/-20}px)`);
+    }, [scrollPosition])
    
     return (
         <aside id="left" style={leftStyle}>

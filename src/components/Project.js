@@ -58,7 +58,7 @@ export default function Project({project, scrollPosition, windowHeight, setOnScr
                 
                 <div style={imageFrameStyle}>
                     <h2>
-                        <span>./</span>{project.name}
+                        <span className="accent">./</span>{project.name}
                     </h2>
                     <Image src={project.imgSrc} />
                 </div>

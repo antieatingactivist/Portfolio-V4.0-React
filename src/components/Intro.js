@@ -49,15 +49,16 @@ export default function Intro() {
         
             <h1 style={h1Style}>Hi, I'm Garrett.</h1>
             <h1><span style={spanStyle} className="accent">Developer, and builder of many things.</span></h1>
-            {/* <code><p style={pStyle}>scroll down and have a look.</p></code> */}
+
             <code style={pStyle}>
                 <Typewriter
                     onInit={(typewriter) => {
-                        typewriter.typeString('scroll down and have a look.')
-                       
-                       
-                        
+                        typewriter.typeString('scroll down and have a look.')        
                         .start();
+                    }}
+                    options={{
+                        delay: 'natural'
+                      
                     }}
                 />
             </code>

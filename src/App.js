@@ -16,6 +16,7 @@ function App() {
   const introRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
+  const footerRef = useRef(null);
 
   const [initialHeaderShow, setInitialHeaderShow] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -25,6 +26,8 @@ function App() {
   // const [introOffset, setIntroOffest] = useState(0);
   const [aboutOffset, setAboutOffest] = useState(0);
   const [projectsOffset, setProjectOffset] = useState(0);
+  const [footerOffset, setFooterOffset] = useState(0);
+  const [footerExpand, setFooterExpand] = useState(false);
   const [introHidden, setIntroHidden] = useState(false);  
   const [aboutHidden, setAboutHidden] = useState(false);
   const [onScreenProject, setOnScreenProject] = useState(0);
@@ -35,7 +38,10 @@ function App() {
     setAboutOffest(aboutRef.current.getBoundingClientRect().top);
     // setIntroOffest(introRef.current.getBoundingClientRect().top);
     setProjectOffset(projectsRef.current.getBoundingClientRect().top);
+    setFooterOffset(footerRef.current.getBoundingClientRect().top);
   };
+
+
   const handleResize = () => {
     setWindowHeight(window.innerHeight);
   };
@@ -60,8 +66,13 @@ function App() {
   if (projectsOffset >= 300 && aboutHidden) {
     setAboutHidden(false);
   }
-  
-
+  if (footerOffset <= windowHeight-20 && !footerExpand) {
+    setFooterExpand(true);
+  }
+  if (footerOffset >= windowHeight+20 && footerExpand) {
+    setFooterExpand(false);
+  }
+  console.log(footerOffset, windowHeight)
   
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -86,7 +97,7 @@ function App() {
     <div className="App">
       
         <Header hidden={headerHidden} scrollPosition={scrollPosition} windowHeight={windowHeight}/>
-        <Left scrollPosition={scrollPosition} />
+        <Left scrollPosition={scrollPosition} footerExpand={footerExpand} windowHeight={windowHeight}/>
         <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
         
         <main>
@@ -105,8 +116,10 @@ function App() {
           </div>
           
         </main>
-
-        <Footer />
+        <div ref={footerRef}>
+          {footerExpand ? <></> : <Footer/>}
+        </div>
+        
         
 
       

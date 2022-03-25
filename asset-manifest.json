@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.8f3d7344.css",
-    "main.js": "/static/js/main.55efee99.js",
+    "main.css": "/static/css/main.dc7f6da5.css",
+    "main.js": "/static/js/main.ca28a769.js",
     "static/js/787.80e9d5a8.chunk.js": "/static/js/787.80e9d5a8.chunk.js",
     "static/media/quizinator.png": "/static/media/quizinator.1f85a57bfcd1bf66857a.png",
     "static/media/soundlane.png": "/static/media/soundlane.717bbcbf59279e1193a0.png",
     "static/media/portfolio1.png": "/static/media/portfolio1.9656aaec0416d89bd202.png",
     "static/media/bender.png": "/static/media/bender.b81fa863e3797c595386.png",
     "static/media/portfolio2.png": "/static/media/portfolio2.c01214679f651ac9540e.png",
+    "static/media/techblog.png": "/static/media/techblog.947a60551ae2ab620f70.png",
     "static/media/weather.png": "/static/media/weather.8b7df73295192f847d0d.png",
     "static/media/photo2.jpg": "/static/media/photo2.02c9eda74694ef55f316.jpg",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
@@ -16,12 +17,12 @@
     "static/media/tetris.png": "/static/media/tetris.9d34f496eeb5b2f596b0.png",
     "static/media/resume.pdf": "/static/media/resume.d741308028a792e04bf8.pdf",
     "index.html": "/index.html",
-    "main.8f3d7344.css.map": "/static/css/main.8f3d7344.css.map",
-    "main.55efee99.js.map": "/static/js/main.55efee99.js.map",
+    "main.dc7f6da5.css.map": "/static/css/main.dc7f6da5.css.map",
+    "main.ca28a769.js.map": "/static/js/main.ca28a769.js.map",
     "787.80e9d5a8.chunk.js.map": "/static/js/787.80e9d5a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f3d7344.css",
-    "static/js/main.55efee99.js"
+    "static/css/main.dc7f6da5.css",
+    "static/js/main.ca28a769.js"
   ]
 }

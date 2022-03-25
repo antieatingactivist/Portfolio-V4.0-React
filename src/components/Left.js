@@ -84,11 +84,11 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
                 setExpandedContact(false);
             // }, 250);
         }
-        else {
+        if (footerExpand)  {
             setHeight(`calc(100vh - ${sectionRef.current.getBoundingClientRect().bottom - sectionRef.current.getBoundingClientRect().y + 20}px)`);
             setTimeout(() => {
                 setWidth('calc(100vw - 50px)');
-                // setExpandedContact(true);
+                
             }, 250);
             setTimeout(() => {
                 setExpandedContact(true);
@@ -96,7 +96,7 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
             
         }
   
-    }, [footerExpand, scrollPosition, width])
+    }, [expandedContact, footerExpand, scrollPosition, width])
 //    console.log(scrollPosition);
     return (
         <aside id="left" style={leftStyle}>

@@ -6,7 +6,7 @@ import projectData from '../assets/js/project-data';
 
 const projectsStyle = {
     transition: 'all 2s',
-    padding: '35vh 0 0vh 0'
+    padding: '35vh 0 50vh 0'
 }
 
 

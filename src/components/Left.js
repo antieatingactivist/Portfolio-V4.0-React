@@ -41,7 +41,7 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
         padding: '4px',
         transform: spin,
         // width: 'calc(100vw - 50px)',
-        height: '115px',
+        height: '120px',
         width: width
         
         // bottom: 0,

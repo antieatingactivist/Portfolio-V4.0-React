@@ -17,16 +17,19 @@ export default function Intro() {
         transition: 'opacity 1.5s',
         transitionDelay: '.1s',
         opacity: introOpacity,
+        lineHeight: 1,
+        // marginBottom: '-50%'
     }
     const spanStyle = {
         transition: 'opacity 1.5s',
         transitionDelay: '.3s',
         position: 'relative',
-        top: '-50px',
+        top: '-40px',
         left: '50px',
         fontSize: '70%',
-        whiteSpace: 'nowrap',
+        // whiteSpace: 'nowrap',
         opacity: spanOpacity,
+      
     }
     const pStyle = {
         
@@ -48,7 +51,7 @@ export default function Intro() {
         <section id="intro" style={introStyle}>
         
             <h1 style={h1Style}>Hi, I'm Garrett.</h1>
-            <h1><span style={spanStyle} className="accent">Developer, and builder of many things.</span></h1>
+            <h1><span style={spanStyle} className="accent">Developer, and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span></h1>
 
             <code style={pStyle}>
                 <Typewriter

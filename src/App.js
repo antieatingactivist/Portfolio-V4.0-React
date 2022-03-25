@@ -66,10 +66,10 @@ function App() {
   if (projectsOffset >= 300 && aboutHidden) {
     setAboutHidden(false);
   }
-  if (footerOffset <= windowHeight-20 && !footerExpand) {
+  if (footerOffset <= windowHeight-50 && !footerExpand) {
     setFooterExpand(true);
   }
-  if (footerOffset >= windowHeight+20 && footerExpand) {
+  if (footerOffset >= windowHeight+150 && footerExpand) {
     setFooterExpand(false);
   }
   console.log(footerOffset, windowHeight)
@@ -97,8 +97,13 @@ function App() {
     <div className="App">
       
         <Header hidden={headerHidden} scrollPosition={scrollPosition} windowHeight={windowHeight}/>
-        <Left scrollPosition={scrollPosition} footerExpand={footerExpand} windowHeight={windowHeight}/>
-        <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
+        <div className="noMobile">
+          <Left scrollPosition={scrollPosition} footerExpand={footerExpand} windowHeight={windowHeight}/>
+        </div>
+        <div className="noMobile">
+          <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
+        </div>
+   
         
         <main>
           

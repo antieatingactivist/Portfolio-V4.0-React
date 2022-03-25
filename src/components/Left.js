@@ -14,6 +14,7 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
 
     const leftStyle = {
         transition: 'top .5s cubic-bezier(0,.11,0,1)',
+        
         position: 'fixed',
         top: height,
         display: 'flex',
@@ -113,16 +114,16 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
                         
                         <div style={{display: 'flex', flexDirection: 'column', width: '50%'}}>
                             <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github">
-                                <span style={{fontSize: '.6em'}}> Check out some of my work on GitHub.</span> 
+                                <span style={{fontSize: '.6em'}}> &nbsp; Check out some of my work on GitHub.</span> 
                             </a>
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bi bi-twitter">
-                                <span style={{fontSize: '.6em'}}> XXXXXX on Twitter.</span> 
+                                <span style={{fontSize: '.6em'}}> &nbsp; XXXXXX on Twitter.</span> 
                             </a>
                             <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin">
-                                <span style={{fontSize: '.6em'}}> Connect with me on Linkedin.</span> 
+                                <span style={{fontSize: '.6em'}}> &nbsp; Connect with me on Linkedin.</span> 
                             </a>
                             <a href="mailto:garrett@linkedin.com" className="bi bi-envelope">
-                            <span style={{fontSize: '.6em'}}> Send me an e-mail.</span> 
+                            <span style={{fontSize: '.6em'}}> &nbsp; Send me an e-mail.</span> 
                             </a>
 
                         </div>

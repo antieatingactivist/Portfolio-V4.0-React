@@ -8,7 +8,7 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
     const sectionRef = useRef(null);
     // console.log( sectionRef.current.getBoundingClientRect().top);
     const [spin, setSpin] = useState('rotateY(0deg)');
-    const [height, setHeight] = useState('0px');
+    const [height, setHeight] = useState('100vh');
     const [width, setWidth] = useState('25px');
     const [expandedContact, setExpandedContact] = useState(false)
 
@@ -26,7 +26,7 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
 
     const sectionStyle = {
         // position: 'absolute',
-        // transitionDelay: '0s, .5s',
+        transitionDelay: '1.6s, 0s',
         transitionProperty: 'transform, width',
         transitionDuration: '3s, .1s',
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',

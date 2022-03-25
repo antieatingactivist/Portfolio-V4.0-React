@@ -5,8 +5,9 @@ import Typewriter from 'typewriter-effect';
 
 export default function Intro() {
     const [introOpacity, setIntroOpacity] = useState(0);
-    const [spanOpacity, setSpanOpacity] = useState(0);
-    const [pOpacity, setPOpacity] = useState(0);
+    // const [spanOpacity, setSpanOpacity] = useState(0);
+    const [spanLeft, setSpanLeft] = useState('-1000px')
+    // const [pOpacity, setPOpacity] = useState(0);
     const introStyle = {
         
         padding: '25vh 0 0vh 0',
@@ -18,45 +19,54 @@ export default function Intro() {
         transitionDelay: '.1s',
         opacity: introOpacity,
         lineHeight: 1,
+        display: 'inline'
         // marginBottom: '-50%'
     }
     const spanStyle = {
-        transition: 'opacity 1.5s',
-        transitionDelay: '.3s',
+        transition: 'left .8s cubic-bezier(.4,.43,0,1.23)',
+        transitionDelay: '1.4s',
         position: 'relative',
         top: '-40px',
-        left: '50px',
+        left: spanLeft,
         fontSize: '70%',
         // whiteSpace: 'nowrap',
-        opacity: spanOpacity,
+        // opacity: spanOpacity,
       
     }
     const pStyle = {
         
-        transition: 'opacity 5s',
-        transitionDelay: '2s',
+        // transition: 'opacity 5s',
+        // transitionDelay: '2s',
         position: 'relative',
         top: '-50px',
         left: '60px',
-        opacity: pOpacity,
+        // opacity: 1,
     }
     
     useEffect(() => {
         setIntroOpacity(1);
-        setSpanOpacity(1);
-        setPOpacity(1);
+        // setSpanOpacity(1);
+        setSpanLeft('50px');
+        // setPOpacity(1);
     }, []);
 
     return (
         <section id="intro" style={introStyle}>
         
-            <h1 style={h1Style}>Hi, I'm Garrett.</h1>
-            <h1><span style={spanStyle} className="accent">Developer, and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span></h1>
+            <h1 style={h1Style}>Hi,</h1><h1 style={{...h1Style, transitionDelay: '1s'}}>I'm Garrett.</h1>
+            <h1>
+                <span style={spanStyle} className="accent">Developer, </span>
+                <span style={{...spanStyle, transitionDelay: '1.6s',}} className="accent">and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span>
+            
+            </h1>
 
             <code style={pStyle}>
                 <Typewriter
                     onInit={(typewriter) => {
-                        typewriter.typeString('scroll down and have a look.')        
+                        typewriter
+                        .pauseFor(2000) 
+                        .typeString('scroll down and have a look.')
+                               
                         .start();
                     }}
                     options={{

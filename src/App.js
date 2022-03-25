@@ -72,7 +72,7 @@ function App() {
   if (footerOffset >= windowHeight+150 && footerExpand) {
     setFooterExpand(false);
   }
-  console.log(footerOffset, windowHeight)
+
   
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

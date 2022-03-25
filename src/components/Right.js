@@ -9,7 +9,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
 
 
     const rightStyle = {
-        transition: 'all 0.5s cubic-bezier(0,.11,0,1)',
+        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
         position: 'fixed',
         // top: `calc(45vh + ${scrollPosition/-20}px)`,
         top: '0',
@@ -23,19 +23,19 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
         marginRight: '10px',
         textAlign: 'right',
         marginTop: '50vh',
-        transition: 'all 0.5s cubic-bezier(0,.11,0,1)'
+        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)'
     }
 
     const aboutStyle = {
         marginRight: '10px',
         textAlign: 'right',
         marginTop: '50vh',
-        transition: 'all 0.5s cubic-bezier(0,.11,0,1)'
+        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)'
     }
 
     const projectStyle = {
         marginTop: '30vh',
-        transition: 'all 0.5s cubic-bezier(0,.11,0,1)'
+        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)'
     }
     if (introHidden) {
         introStyle.marginTop = '-35px';
@@ -54,10 +54,10 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
         <code>
         <section>
             <div style={introStyle}>
-                <p><span className="accent">{"<<"}</span>Intro</p>
+                <p><span className="accent">{"<< "}</span>Intro</p>
             </div>
             <div style={aboutStyle}>
-                <p><span className="accent">{"<<"}</span>About</p>
+                <p><span className="accent">{"<< "}</span>About</p>
             </div>
             <div style={projectStyle}>
                 <p>Projects/</p>

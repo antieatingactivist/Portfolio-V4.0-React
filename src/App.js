@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import { Link, animateScroll as scroll } from "react-scroll";
 import { useEffect, useState, useRef } from "react";
-import './App.css';
+// import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Left from './components/Left';

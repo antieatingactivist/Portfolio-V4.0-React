@@ -23,7 +23,7 @@ export default function Intro() {
         // marginBottom: '-50%'
     }
     const spanStyle = {
-        transition: 'left .8s cubic-bezier(.4,.43,0,1.23)',
+        transition: 'left .4s cubic-bezier(.4,.43,0,1.23)',
         transitionDelay: '1.4s',
         position: 'relative',
         top: '-40px',

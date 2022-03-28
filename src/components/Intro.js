@@ -6,7 +6,8 @@ import Typewriter from 'typewriter-effect';
 export default function Intro() {
     const [introOpacity, setIntroOpacity] = useState(0);
     // const [spanOpacity, setSpanOpacity] = useState(0);
-    const [spanLeft, setSpanLeft] = useState('-1000px')
+    const [spanLeft, setSpanLeft] = useState('-1000px');
+    const [skew, setSkew] = useState('skewX(30deg)');
     // const [pOpacity, setPOpacity] = useState(0);
     const introStyle = {
         
@@ -29,32 +30,29 @@ export default function Intro() {
         top: '-40px',
         left: spanLeft,
         fontSize: '70%',
-        // whiteSpace: 'nowrap',
-        // opacity: spanOpacity,
-      
+    
     }
     const pStyle = {
         
-        // transition: 'opacity 5s',
-        // transitionDelay: '2s',
+   
         position: 'relative',
         top: '-50px',
         left: '60px',
-        // opacity: 1,
+    
     }
     
     useEffect(() => {
         setIntroOpacity(1);
-        // setSpanOpacity(1);
         setSpanLeft('50px');
-        // setPOpacity(1);
+        setSkew('skewX(0deg)');
+ 
     }, []);
 
     return (
         <section id="intro" style={introStyle}>
         
             <h1 style={h1Style}>Hi,</h1><h1 style={{...h1Style, transitionDelay: '1s'}}>I'm Garrett.</h1>
-            <h1>
+            <h1 style={{transition: 'transform .1s', transitionDelay: '1.8s' , transform: skew}}>
                 <span style={spanStyle} className="accent">Developer, </span>
                 <span style={{...spanStyle, transitionDelay: '1.6s',}} className="accent">and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span>
             

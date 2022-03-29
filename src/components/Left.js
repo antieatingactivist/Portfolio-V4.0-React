@@ -1,12 +1,11 @@
-// import { useEffect, useState } from "react";
+
 import "bootstrap-icons/font/bootstrap-icons.css";
 import {useEffect, useState, useRef} from "react";
 
 
 
-export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
+export default function Left( {scrollPosition, footerExpand } ) {
     const sectionRef = useRef(null);
-    // console.log( sectionRef.current.getBoundingClientRect().top);
     const [spin, setSpin] = useState('rotateY(0deg)');
     const [height, setHeight] = useState('100vh');
     const [width, setWidth] = useState('25px');
@@ -25,7 +24,6 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
 
 
     const sectionStyle = {
-        // position: 'absolute',
         transitionDelay: '1.6s, 0s',
         transitionProperty: 'transform, width',
         transitionDuration: '3s, .1s',
@@ -41,11 +39,8 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
         boxShadow:  '3px 3px 3px var(--shadowcolor)',
         padding: '4px',
         transform: spin,
-        // width: 'calc(100vw - 50px)',
         height: '120px',
         width: width
-        
-        // bottom: 0,
     };
 
     const stripeStyle = {
@@ -62,13 +57,8 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
         borderRadius: '0 6px 6px 6px'   
     }
 
-    
-
     useEffect(() => {
         setSpin('rotateY(2880deg)');
-        // setTimeout(() => {
-        //     setSpin('rotateY(0deg)');
-        // }, 10000);
     }, []);
 
     useEffect(() => {
@@ -78,7 +68,7 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
             // }, 50);
 
             // setTimeout(() => {
-                setHeight(`calc(45vh + ${scrollPosition/-20}px)`);
+                setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
                 
             // }, 250);
             // setTimeout(() => {
@@ -137,4 +127,4 @@ export default function Left( {scrollPosition, footerExpand, windowHeight} ) {
         <div id="v-stripe" style={stripeStyle}></div>
         </aside>
     );
-  }
+}

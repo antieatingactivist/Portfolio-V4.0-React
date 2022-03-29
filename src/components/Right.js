@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import projectData from '../assets/js/project-data';
+import projectData from '../assets/json/project-data';
 import { Link } from "react-scroll";
 
 

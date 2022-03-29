@@ -1,7 +1,5 @@
-// import logo from './logo.svg';
-// import { Link, animateScroll as scroll } from "react-scroll";
+
 import { useEffect, useState, useRef } from "react";
-// import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Left from './components/Left';
@@ -9,7 +7,7 @@ import Right from './components/Right';
 import Intro from './components/Intro';
 import Projects from './components/Projects';
 import About from './components/About';
-// import projectData from './assets/js/project-data';
+
 
 
 function App() {
@@ -23,7 +21,6 @@ function App() {
   const [windowHeight, setWindowHeight] = useState(0);
   const [furthestDown, setFurthestDown] = useState(0);
   const [headerHidden, setHeaderHidden] = useState(true);  
-  // const [introOffset, setIntroOffest] = useState(0);
   const [aboutOffset, setAboutOffest] = useState(0);
   const [projectsOffset, setProjectOffset] = useState(0);
   const [footerOffset, setFooterOffset] = useState(0);
@@ -31,12 +28,11 @@ function App() {
   const [introHidden, setIntroHidden] = useState(false);  
   const [aboutHidden, setAboutHidden] = useState(false);
   const [onScreenProject, setOnScreenProject] = useState(0);
-  // console.log(onScreenProject);
+
 
   const handleScroll = () => {
     setScrollPosition(window.pageYOffset);
     setAboutOffest(aboutRef.current.getBoundingClientRect().top);
-    // setIntroOffest(introRef.current.getBoundingClientRect().top);
     setProjectOffset(projectsRef.current.getBoundingClientRect().top);
     setFooterOffset(footerRef.current.getBoundingClientRect().top);
   };
@@ -98,7 +94,7 @@ function App() {
       
         <Header hidden={headerHidden} scrollPosition={scrollPosition} windowHeight={windowHeight}/>
         <div className="noMobile">
-          <Left scrollPosition={scrollPosition} footerExpand={footerExpand} windowHeight={windowHeight}/>
+          <Left scrollPosition={scrollPosition} footerExpand={footerExpand} />
         </div>
         <div className="noMobile">
           <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />

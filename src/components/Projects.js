@@ -1,6 +1,6 @@
 
 import Project from './Project';
-import projectData from '../assets/js/project-data';
+import projectData from '../assets/json/project-data';
 
 
 

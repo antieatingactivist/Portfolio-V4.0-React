@@ -121,7 +121,7 @@ function App() {
           
         </main>
         <div ref={footerRef}>
-          {/* {footerExpand ? <></> : <Footer/>} */}
+          {footerExpand ? <></> : <Footer/>}
         </div>
         
         

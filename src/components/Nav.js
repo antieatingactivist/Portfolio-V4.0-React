@@ -1,4 +1,3 @@
-// import { useEffect, useState, useRef } from "react";
 import { Link } from "react-scroll";
 import resume from "../assets/pdf/resume.pdf";
 
@@ -10,12 +9,7 @@ const navStyle = {
   right: 0
 }
 
-const navStyleMobile = {
-  position: 'relative',
-  padding: '10px',
-  textAlign: 'center',
 
-}
 
 
 const regular = {

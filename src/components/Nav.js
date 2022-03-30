@@ -9,6 +9,15 @@ const navStyle = {
   padding: '10px',
   right: 0
 }
+
+const navStyleMobile = {
+  position: 'relative',
+  padding: '10px',
+  textAlign: 'center',
+
+}
+
+
 const regular = {
   marginRight: '10px',
   cursor: 'pointer'
@@ -16,10 +25,11 @@ const regular = {
 
 
 
-export default function Nav({windowHeight}) {
+export default function Nav({windowHeight, windowWidth}) {
     
     return (
-      <nav style={navStyle}>
+      // <nav style={windowWidth < 500 ? navStyleMobile : navStyle}>
+        <nav style={navStyle}>
             {/* <a style={linkPadding} href="#about"><span>./</span>About</a> */}
           <code>
             <Link

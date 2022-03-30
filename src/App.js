@@ -19,6 +19,7 @@ function App() {
   const [initialHeaderShow, setInitialHeaderShow] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
   const [furthestDown, setFurthestDown] = useState(0);
   const [headerHidden, setHeaderHidden] = useState(true);  
   const [aboutOffset, setAboutOffest] = useState(0);
@@ -40,6 +41,7 @@ function App() {
 
   const handleResize = () => {
     setWindowHeight(window.innerHeight);
+    setWindowWidth(window.innerWidth);
   };
  
   if(scrollPosition > 200 && scrollPosition > furthestDown) {
@@ -92,33 +94,34 @@ function App() {
   return (
     <div className="App">
       
-        <Header hidden={headerHidden} scrollPosition={scrollPosition} windowHeight={windowHeight}/>
-        <div className="noMobile">
-          <Left scrollPosition={scrollPosition} footerExpand={footerExpand} />
-        </div>
-        <div className="noMobile">
-          <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
-        </div>
+        <Header hidden={headerHidden} scrollPosition={scrollPosition} windowHeight={windowHeight} windowWidth={windowWidth}/>
+
+        { windowWidth < 940 ? <></> :
+          <div className="noMobile">
+            <Left scrollPosition={scrollPosition} footerExpand={footerExpand} />
    
+            <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
+          </div>
+        }
         
         <main>
           
           <div ref={introRef} >
-            <Intro />
+            <Intro windowWidth={windowWidth} />
           </div>
           
 
           <div ref={aboutRef} style={aboutOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
-            <About />
+            <About windowWidth={windowWidth}/>
           </div>
 
           <div ref={projectsRef} style={projectsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
-            <Projects scrollPosition={scrollPosition} windowHeight={windowHeight} setOnScreenProject={setOnScreenProject} />
+            <Projects scrollPosition={scrollPosition} windowHeight={windowHeight} windowWidth={windowWidth} setOnScreenProject={setOnScreenProject} />
           </div>
           
         </main>
         <div ref={footerRef}>
-          {footerExpand ? <></> : <Footer/>}
+          {/* {footerExpand ? <></> : <Footer/>} */}
         </div>
         
         

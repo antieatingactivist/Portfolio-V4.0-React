@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MobileFooter from './components/MobileFooter';
 import Left from './components/Left';
 import Right from './components/Right';
 import Intro from './components/Intro';
@@ -120,8 +121,19 @@ function App() {
           </div>
           
         </main>
+
+        
         <div ref={footerRef}>
-          {footerExpand ? <></> : <Footer/>}
+          {windowWidth < 500 ?
+            <>
+              <MobileFooter />
+            </>
+            :
+            <>
+              {footerExpand ? <></> : <Footer/>}
+            </>
+          }
+          
         </div>
         
         

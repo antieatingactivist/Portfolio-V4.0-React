@@ -17,6 +17,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
     const imageFrameStyle = {
         position: 'relative',
         maxWidth: '90vw',
+        paddingLeft: windowWidth < 500 ? 0 : '40px',
         borderStyle: 'solid',
         borderColor: 'var(--bgcolor)',
         borderRadius: '0 0 3px 0',
@@ -61,7 +62,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
         
                 
                 <div style={imageFrameStyle}>
-                    <h2>
+                    <h2 style={{marginLeft: windowWidth < 500 ?  0: '-30px' }}>
                         <span className="accent">./</span>{project.name}
                     </h2>
                     <Image src={project.imgSrc} />

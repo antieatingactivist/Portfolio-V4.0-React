@@ -132,8 +132,7 @@ function App() {
             <>
               {footerExpand ? <></> : <Footer/>}
             </>
-          }
-          
+          }  
         </div>
         
         

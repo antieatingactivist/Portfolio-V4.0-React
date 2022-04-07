@@ -17,7 +17,7 @@ export default function Projects({scrollPosition, windowHeight, windowWidth, set
             {projectData.map(project => (
           
              
-                    <Project scrollPosition={scrollPosition} project={project} windowHeight={windowHeight} windowWidth={windowWidth} setOnScreenProject={setOnScreenProject} key={project.name}/>
+                <Project scrollPosition={scrollPosition} project={project} windowHeight={windowHeight} windowWidth={windowWidth} setOnScreenProject={setOnScreenProject} key={project.name}/>
              
             ))}
         </section>

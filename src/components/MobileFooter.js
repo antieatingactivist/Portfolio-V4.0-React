@@ -13,8 +13,8 @@ export default function MobileFooter() {
                             <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github">
                                 <span style={{fontSize: '1em'}}> &nbsp; Check out some of my work on GitHub.</span> 
                             </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bi bi-twitter">
-                                <span style={{fontSize: '1em'}}> &nbsp; XXXXXX on Twitter.</span> 
+                            <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter">
+                                <span style={{fontSize: '1em'}}> &nbsp; @platevoltage on Twitter.</span> 
                             </a>
                             <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin">
                                 <span style={{fontSize: '1em'}}> &nbsp; Connect with me on Linkedin.</span> 

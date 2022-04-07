@@ -19,7 +19,7 @@ export default function MobileFooter() {
                             <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin">
                                 <span style={{fontSize: '1em'}}> &nbsp; Connect with me on Linkedin.</span> 
                             </a>
-                            <a href="mailto:garrett@linkedin.com" className="bi bi-envelope">
+                            <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope">
                             <span style={{fontSize: '1em'}}> &nbsp; Send me an e-mail.</span> 
                             </a>
 

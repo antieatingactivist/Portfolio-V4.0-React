@@ -97,7 +97,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
                         <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github"> </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bi bi-twitter"> </a>
                         <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin"> </a>
-                        <a href="mailto:garrett@linkedin.com" className="bi bi-envelope"> </a>
+                        <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope"> </a>
                     </> :
 
                     <div style={{display: 'flex'}}>
@@ -112,7 +112,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
                             <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin">
                                 <span style={{fontSize: '.6em'}}> &nbsp; Connect with me on Linkedin.</span> 
                             </a>
-                            <a href="mailto:garrett@linkedin.com" className="bi bi-envelope">
+                            <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope">
                             <span style={{fontSize: '.6em'}}> &nbsp; Send me an e-mail.</span> 
                             </a>
 

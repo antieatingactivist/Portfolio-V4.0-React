@@ -1,4 +1,5 @@
 import Image from './Image';
+import resume from "../assets/pdf/resume.pdf";
 const aboutStyle = {
     transition: 'all 2s',
     padding: '40vh 10px 0vh 10px',
@@ -19,7 +20,7 @@ export default function About({windowWidth}) {
             </p>
             <div style={{display: 'flex', justifyContent: windowWidth < 500 ? 'center' : 'flex-start'}}>
                 <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer">Visit my GitHub</a>
-                <a href="./assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer">See my Resume</a>
+                <a href={resume} target="_blank" rel="noopener noreferrer">See my Resume</a>
             </div>
         </section>
     );

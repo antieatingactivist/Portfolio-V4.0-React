@@ -7,20 +7,7 @@ This is the 4th and possibly final candidate for my professional portfolio. It's
 
 
 
-- 
-
-```
-
-```
-
-- 
-
-```
-
-```
-
-![portfolio](https://user-images.githubusercontent.com/1414728/154644036-c6d5457b-4020-4b5c-a218-e010b16506e6.gif)
-
+![portfolio](https://user-images.githubusercontent.com/1414728/162526987-19d9ea33-8341-4f31-8144-f79a9a309d5b.gif)
 
 
 

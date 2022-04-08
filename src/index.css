@@ -1,7 +1,8 @@
 :root {
   --bgcolor: #060a1c;
   --bgcolortransparent: #060a1cdd;
-  --maincolor: #bababa;
+  /* --maincolor: #bababa; */
+  --maincolor: #ffffff;
   --accentcolor: #8c4040;
   --shadowcolor: #03050c;
 }

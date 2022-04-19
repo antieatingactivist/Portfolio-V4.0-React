@@ -73,7 +73,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
         
         setAngle('rotateZ(20deg)');
         setTimeout(() => {
-            window.scrollTo(0, 0);
+            // window.scrollTo(0, 0);
             setLeft('-20px');
             
         }, 100);

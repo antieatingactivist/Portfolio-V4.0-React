@@ -79,18 +79,22 @@ function App() {
   }, [scrollPosition]);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    
     window.addEventListener("resize", handleResize);
     handleResize();
     handleScroll();
     setTimeout(() => {
+      window.scrollTo(0, 0);
       setIntroHidden(false);
       setAboutHidden(false);
-    }, 10);
+      
+      // setFooterExpand(false);
+    }, 100);
     setTimeout(() => {
       setInitialHeaderShow(true);
       setHeaderHidden(false);
-   
+      window.addEventListener("scroll", handleScroll);
+  
       
     }, 1000);
 

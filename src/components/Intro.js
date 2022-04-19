@@ -11,7 +11,7 @@ export default function Intro({windowWidth}) {
     // const [pOpacity, setPOpacity] = useState(0);
     const introStyle = {
         
-        padding: '25vh 0 0vh 0',
+        paddingTop: 'calc(45vh - 140px)',
         // maxWidth: "calc(100vw - 60px)"
         // maxWidth: '80vw'
         
@@ -28,7 +28,7 @@ export default function Intro({windowWidth}) {
     }
     const spanStyle = {
         transition: 'left .4s cubic-bezier(.4,.43,0,1.23)',
-        transitionDelay: '1.4s',
+        transitionDelay: '3.6s',
         position: 'relative',
         top: '-40px',
         left: windowWidth < 500 ? `${spanLeft-50}px` : `${spanLeft}px`,
@@ -58,9 +58,9 @@ export default function Intro({windowWidth}) {
         <section id="intro" style={introStyle}>
         
             <h1 style={h1Style}>Hi,</h1><h1 style={{...h1Style, transitionDelay: '1s'}}>I'm Garrett.</h1>
-            <h1 style={{transition: 'transform .1s', transitionDelay: '1.8s' , transform: skew, whiteSpace: 'nowrap'}}>
+            <h1 style={{transition: 'transform .1s', transitionDelay: '4s' , transform: skew, whiteSpace: 'nowrap'}}>
                 <span style={spanStyle} className="accent">Developer, </span>
-                <span style={{...spanStyle, transitionDelay: '1.6s',}} className="accent">and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span>
+                <span style={{...spanStyle, transitionDelay: '3.8s',}} className="accent">and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span>
             
             </h1>
 
@@ -68,7 +68,7 @@ export default function Intro({windowWidth}) {
                 <Typewriter
                     onInit={(typewriter) => {
                         typewriter
-                        .pauseFor(2000) 
+                        .pauseFor(5000) 
                         .typeString('scroll down and have a look.')
                                
                         .start();

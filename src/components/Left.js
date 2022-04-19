@@ -7,12 +7,19 @@ import {useEffect, useState, useRef} from "react";
 export default function Left( {scrollPosition, footerExpand } ) {
     const sectionRef = useRef(null);
     const [spin, setSpin] = useState('rotateY(0deg)');
-    const [height, setHeight] = useState('100vh');
+    const [height, setHeight] = useState(`calc(45vh + ${scrollPosition/-30}px)`);
+    const [stripeHeight, setStripeHeight] = useState('0px');
+    const [angle, setAngle] = useState('rotateZ(0deg)')
     const [width, setWidth] = useState('25px');
-    const [expandedContact, setExpandedContact] = useState(false)
+    const [left, setLeft] = useState('-54px');
+    const [expandedContact, setExpandedContact] = useState(false);
+    const [leftTransitionDuration, setLeftTransitionDuration] = useState('3s');
+    const [sectionTransitionDuration, setSectionTransitionDuration] = useState('.3s, .1s, .3s');
 
     const leftStyle = {
-        transition: 'top .5s cubic-bezier(0,.11,0,1)',
+        transitionDuration: leftTransitionDuration,
+        transitionProperty: 'top',
+        transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
         
         position: 'fixed',
         top: height,
@@ -24,41 +31,75 @@ export default function Left( {scrollPosition, footerExpand } ) {
 
 
     const sectionStyle = {
-        transitionDelay: '1.6s, 0s',
-        transitionProperty: 'transform, width',
-        transitionDuration: '3s, .1s',
-        transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
+        transitionDelay: '.1s, 0s, 0s',
+        transitionProperty: 'transform, width, margin-left',
+        transitionDuration: sectionTransitionDuration,
+        // transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
         display: 'flex',
         flexDirection: 'column',
         fontSize: '25px',
-        marginLeft: '16px',
+        marginLeft: left,
         borderStyle: 'solid',
         borderWidth: '1px',
         borderColor: 'var(--accentcolor)',
         borderRadius: '6px',
         boxShadow:  '3px 3px 3px var(--shadowcolor)',
         padding: '4px',
-        transform: spin,
+        transform: spin + angle,
         height: '120px',
         width: width
     };
 
     const stripeStyle = {
+        transitionProperty: 'height',
+        transitionDuration: '3s',
+        transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
         position: 'relative',
         display: 'block',
         width: '2px',
-        height: '100vh',
+        height: stripeHeight,
         left: '32px',
         bottom: 0,
         zIndex: 100,
         borderStyle: 'solid',
         borderWidth: '0 0 1px 1px',
         borderColor: 'var(--accentcolor)',
-        borderRadius: '0 6px 6px 6px'   
+        // borderRadius: '0 6px 6px 6px'   
     }
 
     useEffect(() => {
-        setSpin('rotateY(2880deg)');
+        // setSpin('rotateY(2880deg)');
+        
+        setAngle('rotateZ(20deg)');
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+            setLeft('-20px');
+            
+        }, 100);
+        setTimeout(() => {
+            
+            setAngle('rotateZ(0deg)');
+            setLeft('16px');
+            setHeight(`calc(10vh)`);
+            
+        }, 3000);
+        setTimeout(() => {
+            setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
+        }, 3100);
+        setTimeout(() => {
+            setStripeHeight('100vh');
+        }, 3200);
+        setTimeout(() => {
+       
+            setLeftTransitionDuration('.5s');
+            setSectionTransitionDuration('3s, .1s, .3s');
+            setSpin('rotateY(2880deg)');
+            
+
+        }, 3600);
+
+
+
     }, []);
 
     useEffect(() => {
@@ -74,6 +115,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
             // setTimeout(() => {
                 setExpandedContact(false);
             // }, 250);
+               
         }
         if (footerExpand)  {
             setHeight(`calc(100vh - ${sectionRef.current.getBoundingClientRect().bottom - sectionRef.current.getBoundingClientRect().y + 20}px)`);

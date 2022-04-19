@@ -74,6 +74,7 @@ function App() {
 
   
   useEffect(() => {
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     handleResize();

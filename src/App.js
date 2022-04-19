@@ -27,8 +27,8 @@ function App() {
   const [projectsOffset, setProjectOffset] = useState(0);
   const [footerOffset, setFooterOffset] = useState(0);
   const [footerExpand, setFooterExpand] = useState(false);
-  const [introHidden, setIntroHidden] = useState(false);  
-  const [aboutHidden, setAboutHidden] = useState(false);
+  const [introHidden, setIntroHidden] = useState(true);  
+  const [aboutHidden, setAboutHidden] = useState(true);
   const [onScreenProject, setOnScreenProject] = useState(0);
 
 
@@ -44,45 +44,55 @@ function App() {
     setWindowHeight(window.innerHeight);
     setWindowWidth(window.innerWidth);
   };
- 
-  if(scrollPosition > 200 && scrollPosition > furthestDown) {
-    setFurthestDown(scrollPosition);
-    if (initialHeaderShow) setHeaderHidden(true);
-  } 
-  if(scrollPosition < furthestDown-100) {
+  const handleRightNav = () => {
+    if(scrollPosition > 200 && scrollPosition > furthestDown) {
       setFurthestDown(scrollPosition);
-      setHeaderHidden(false); 
-  } 
-  if (aboutOffset < 100 && !introHidden) {
-    setIntroHidden(true);
-  } 
-  if (aboutOffset >= 300 && introHidden) {
-    setIntroHidden(false);
-  } 
-  if (projectsOffset < 100 && !aboutHidden) {
-    setAboutHidden(true);
-  }
-  if (projectsOffset >= 300 && aboutHidden) {
-    setAboutHidden(false);
-  }
-  if (footerOffset <= windowHeight-50 && !footerExpand) {
-    setFooterExpand(true);
-  }
-  if (footerOffset >= windowHeight+150 && footerExpand) {
-    setFooterExpand(false);
+      if (initialHeaderShow) setHeaderHidden(true);
+    } 
+    if(scrollPosition < furthestDown-100) {
+        setFurthestDown(scrollPosition);
+        setHeaderHidden(false); 
+    } 
+    if (aboutOffset < 100 && !introHidden) {
+      setIntroHidden(true);
+    } 
+    if (aboutOffset >= 300 && introHidden) {
+      setIntroHidden(false);
+    } 
+    if (projectsOffset < 100 && !aboutHidden) {
+      setAboutHidden(true);
+    }
+    if (projectsOffset >= 300 && aboutHidden) {
+      setAboutHidden(false);
+    }
+    if (footerOffset <= windowHeight-50 && !footerExpand) {
+      setFooterExpand(true);
+    }
+    if (footerOffset >= windowHeight+150 && footerExpand) {
+      setFooterExpand(false);
+    }
   }
 
   
   useEffect(() => {
+    handleRightNav();
+  }, [scrollPosition]);
 
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     handleResize();
     handleScroll();
     setTimeout(() => {
+      setIntroHidden(false);
+      setAboutHidden(false);
+    }, 10);
+    setTimeout(() => {
       setInitialHeaderShow(true);
       setHeaderHidden(false);
-    }, 100)
+   
+      
+    }, 1000);
 
     
     return () => {

@@ -9,6 +9,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
     const [spin, setSpin] = useState('rotateY(0deg)');
     const [height, setHeight] = useState(`calc(45vh + ${scrollPosition/-30}px)`);
     const [stripeHeight, setStripeHeight] = useState('0px');
+    const [stripeHide, setStripeHide] = useState(true);
     const [angle, setAngle] = useState('rotateZ(0deg)')
     const [width, setWidth] = useState('25px');
     const [left, setLeft] = useState('-54px');
@@ -55,7 +56,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
         transitionDuration: '3s',
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
         position: 'relative',
-        display: 'block',
+        display: stripeHide ? 'none' : 'block',
         width: '2px',
         height: stripeHeight,
         left: '32px',
@@ -85,8 +86,10 @@ export default function Left( {scrollPosition, footerExpand } ) {
         }, 3000);
         setTimeout(() => {
             setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
+            setStripeHide(false);
         }, 3100);
         setTimeout(() => {
+            
             setStripeHeight('100vh');
         }, 3200);
         setTimeout(() => {

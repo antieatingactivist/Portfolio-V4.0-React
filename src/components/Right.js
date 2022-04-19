@@ -52,38 +52,38 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
     return (
         <aside id="right" style={rightStyle}>
         <code>
-        <section>
-            <div style={introStyle}>
-                <p><span className="accent">{"<< "}</span>Intro</p>
-            </div>
-            <div style={aboutStyle}>
-                <p><span className="accent">{"<< "}</span>About</p>
-            </div>
-            <div style={projectStyle}>
-                <p>Projects/</p>
-                {projectData.map(project => (
+            <section>
+                <div style={introStyle}>
+                    <p><span className="accent">{"<< "}</span>Intro</p>
+                </div>
+                <div style={aboutStyle}>
+                    <p><span className="accent">{"<< "}</span>About</p>
+                </div>
+                <div style={projectStyle}>
+                    <p>Projects/</p>
+                    {projectData.map(project => (
+                        
+                
+                            <p key={project.name}>
+                                { project.name===onScreenProject ? <span className="accent">&lt;&lt;&nbsp;</span> : <span className="accent">&nbsp;├─</span>} 
+            
+                                <Link
+                                    
+                                    activeClass="active"
+                                    to={project.name}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={windowHeight/-4}
+                                    duration={500}
+                                >{project.name}
+                                </Link>
+                            </p> 
+                    ))}
                     
-            
-                        <p key={project.name}>
-                            { project.name===onScreenProject ? <span className="accent">&lt;&lt;&nbsp;</span> : <span className="accent">&nbsp;├─</span>} 
-          
-                            <Link
-                                
-                                activeClass="active"
-                                to={project.name}
-                                spy={true}
-                                smooth={true}
-                                offset={windowHeight/-4}
-                                duration={500}
-                            >{project.name}
-                            </Link>
-                        </p> 
-                ))}
-                 
-               
-            </div>
-            
-        </section>
+                
+                </div>
+                
+            </section>
         </code>
   
 

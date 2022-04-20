@@ -21,7 +21,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
     const leftStyle = {
         transitionDuration: leftTransitionDuration,
         transitionProperty: 'top',
-        transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
+        transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',
         
         position: 'fixed',
         top: height,
@@ -33,10 +33,10 @@ export default function Left( {scrollPosition, footerExpand } ) {
 
 
     const sectionStyle = {
-        transitionDelay: '.1s, 0s, 0s',
+        // transitionDelay: '.1s, 0s, 0s',
         transitionProperty: 'transform, width, margin-left',
         transitionDuration: sectionTransitionDuration,
-        // transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
+        transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',
         position: 'absolute',
         display: 'flex',
         flexDirection: 'column',
@@ -82,11 +82,12 @@ export default function Left( {scrollPosition, footerExpand } ) {
         setTimeout(() => {
             
      
-            setSpin(0);
+            
             
         }, 2800);
         setTimeout(() => {
-            
+            setSectionTransitionDuration('.5s, .1s, .3s');
+            setSpin(0);
             setAngle(0);
             setLeft('16px');
             setHeight(`calc(10vh)`);
@@ -106,7 +107,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
             
             setLeftTransitionDuration('.5s');
             setSectionTransitionDuration('3s, .1s, .3s');
-            setSpin(2880);
+            setSpin(7200);
             
 
         }, 3600);
@@ -148,7 +149,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
         }
   
     }, [expandedContact, footerExpand, scrollPosition, width])
-//    console.log(scrollPosition);
+
     return (
         <aside id="left" style={leftStyle}>
             <section style={{...sectionStyle, transform: `rotateX(${rotation}deg) rotateY(${spin + 180}deg) rotateZ(${angle}deg)`}}>

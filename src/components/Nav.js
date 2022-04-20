@@ -46,15 +46,12 @@ export default function Nav({windowHeight, windowWidth}) {
               duration={500}
             ><span className="accent">./</span>Projects</Link>
 
-
-            {/* <a style={linkPadding} href="#contact"><span>./</span>Contact</a> */}
             <Link
               style={regular}
               activeClass="active"
               to="contact"
               spy={true}
               smooth={true}
-              offset={windowHeight/-4}
               duration={500}
             ><span className="accent">./</span>Contact</Link>
 

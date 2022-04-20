@@ -6,11 +6,12 @@ import {useEffect, useState, useRef} from "react";
 
 export default function Left( {scrollPosition, footerExpand } ) {
     const sectionRef = useRef(null);
-    const [spin, setSpin] = useState('rotateY(0deg)');
+    const [spin, setSpin] = useState(180);
+    const [angle, setAngle] = useState(0);
+    const [rotation, setRotation] = useState(0);
     const [height, setHeight] = useState(`calc(45vh + ${scrollPosition/-30}px)`);
     const [stripeHeight, setStripeHeight] = useState('0px');
     const [stripeHide, setStripeHide] = useState(true);
-    const [angle, setAngle] = useState('rotateZ(0deg)')
     const [width, setWidth] = useState('25px');
     const [left, setLeft] = useState('-54px');
     const [expandedContact, setExpandedContact] = useState(false);
@@ -36,6 +37,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
         transitionProperty: 'transform, width, margin-left',
         transitionDuration: sectionTransitionDuration,
         // transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
+        position: 'absolute',
         display: 'flex',
         flexDirection: 'column',
         fontSize: '25px',
@@ -44,11 +46,13 @@ export default function Left( {scrollPosition, footerExpand } ) {
         borderWidth: '1px',
         borderColor: 'var(--accentcolor)',
         borderRadius: '6px',
+        backgroundColor: 'var(--bgcolor)',
         boxShadow:  '3px 3px 3px var(--shadowcolor)',
         padding: '4px',
-        transform: spin + angle,
+        transform: `rotateX(${rotation}deg) rotateY(${spin}deg) rotateZ(${angle}deg)`,
         height: '120px',
-        width: width
+        width: width,
+        backfaceVisibility: 'hidden',
     };
 
     const stripeStyle = {
@@ -58,30 +62,35 @@ export default function Left( {scrollPosition, footerExpand } ) {
         position: 'relative',
         display: stripeHide ? 'none' : 'block',
         width: '2px',
-        height: stripeHeight,
+        height: `calc(${stripeHeight} + 120px)`,
+        top: '130px',
         left: '32px',
         bottom: 0,
         zIndex: 100,
         borderStyle: 'solid',
         borderWidth: '0 0 1px 1px',
-        borderColor: 'var(--accentcolor)',
-        // borderRadius: '0 6px 6px 6px'   
+        borderColor: 'var(--accentcolor)', 
     }
 
     useEffect(() => {
-        // setSpin('rotateY(2880deg)');
         
-        setAngle('rotateZ(20deg)');
         setTimeout(() => {
-            // window.scrollTo(0, 0);
             setLeft('-20px');
-            
-        }, 100);
+            setAngle(20);
+        }, 1000);
+
         setTimeout(() => {
             
-            setAngle('rotateZ(0deg)');
+     
+            setSpin(0);
+            
+        }, 2800);
+        setTimeout(() => {
+            
+            setAngle(0);
             setLeft('16px');
             setHeight(`calc(10vh)`);
+          
             
         }, 3000);
         setTimeout(() => {
@@ -91,15 +100,24 @@ export default function Left( {scrollPosition, footerExpand } ) {
         setTimeout(() => {
             
             setStripeHeight('100vh');
+            
         }, 3200);
         setTimeout(() => {
-       
+            
             setLeftTransitionDuration('.5s');
             setSectionTransitionDuration('3s, .1s, .3s');
-            setSpin('rotateY(2880deg)');
+            setSpin(2880);
             
 
         }, 3600);
+        setTimeout(() => {
+            
+          
+            setSectionTransitionDuration('.3s, .1s, .3s');
+         
+            
+
+        }, 6000);
 
 
 
@@ -107,28 +125,25 @@ export default function Left( {scrollPosition, footerExpand } ) {
 
     useEffect(() => {
         if (!footerExpand) {
-            // setTimeout(() => {
                 setWidth('25px');
-            // }, 50);
-
-            // setTimeout(() => {
                 setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
-                
-            // }, 250);
-            // setTimeout(() => {
-                setExpandedContact(false);
-            // }, 250);
-               
+                setExpandedContact(false); 
+                setAngle(0);
+                setRotation(0);
         }
         if (footerExpand)  {
             setHeight(`calc(100vh - ${sectionRef.current.getBoundingClientRect().bottom - sectionRef.current.getBoundingClientRect().y + 20}px)`);
             setTimeout(() => {
+                setAngle(180);
+                setRotation(180);
+            }, 10);
+            setTimeout(() => {
                 setWidth('calc(100vw - 50px)');
                 
-            }, 250);
+            }, 350);
             setTimeout(() => {
                 setExpandedContact(true);
-            }, 350);
+            }, 450);
             
         }
   
@@ -136,15 +151,10 @@ export default function Left( {scrollPosition, footerExpand } ) {
 //    console.log(scrollPosition);
     return (
         <aside id="left" style={leftStyle}>
-            <section style={sectionStyle} ref={sectionRef}>
+            <section style={{...sectionStyle, transform: `rotateX(${rotation}deg) rotateY(${spin + 180}deg) rotateZ(${angle}deg)`}}>
                 { !expandedContact ?
-                    <>
-                        <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github"> </a>
-                        <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter"> </a>
-                        <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin"> </a>
-                        <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope"> </a>
-                    </> :
-
+                    <span style={{fontSize: '16px'}}>˙ ͜ʟ˙</span>
+                    :
                     <div style={{display: 'flex'}}>
                         
                         <div style={{display: 'flex', flexDirection: 'column', width: '50%'}}>
@@ -168,6 +178,15 @@ export default function Left( {scrollPosition, footerExpand } ) {
                         </div>
                     </div>
                 }
+            </section>
+            <section style={sectionStyle} ref={sectionRef}>
+              
+                    <>
+                        <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github"> </a>
+                        <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter"> </a>
+                        <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin"> </a>
+                        <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope"> </a>
+                    </>
             </section>
         <div id="v-stripe" style={stripeStyle}></div>
         </aside>

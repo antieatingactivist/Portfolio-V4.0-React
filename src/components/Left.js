@@ -6,6 +6,7 @@ import {useEffect, useState, useRef} from "react";
 
 export default function Left( {scrollPosition, footerExpand } ) {
     const sectionRef = useRef(null);
+    const [count, setCount] = useState(0);
     const [spin, setSpin] = useState(540);
     const [angle, setAngle] = useState(0);
     const [rotation, setRotation] = useState(0);
@@ -17,6 +18,8 @@ export default function Left( {scrollPosition, footerExpand } ) {
     const [expandedContact, setExpandedContact] = useState(false);
     const [leftTransitionDuration, setLeftTransitionDuration] = useState('3s');
     const [sectionTransitionDuration, setSectionTransitionDuration] = useState('.3s, .1s, .3s');
+    const [face, setFace] = useState('˙ ͜ʟ˙');
+    
 
     const leftStyle = {
         transitionDuration: leftTransitionDuration,
@@ -88,6 +91,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
             setHeight(`calc(10vh)`);  
         }, 3000);
         setTimeout(() => {
+            setFace('˙0˙');
             setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
             setStripeHide(false);
         }, 3100);
@@ -105,12 +109,42 @@ export default function Left( {scrollPosition, footerExpand } ) {
 
         }, 3600);
         setTimeout(() => {
-            setSectionTransitionDuration('.3s, .1s, .3s');
-        }, 6000);
+            setFace('˙ ͜ʟ˙');
+            setSectionTransitionDuration('0s, .1s, .3s');
+            setSpin(0);
+        }, 8000);
+        setTimeout(() => {
+            setSectionTransitionDuration('.5s, .1s, .3s');
 
 
+        }, 8200);
 
     }, []);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setCount(count+1);
+        },30000)
+            if (!footerExpand && count > 0) {
+
+                setSectionTransitionDuration('.5s, .1s, .3s');
+                setSpin(720);
+                setHeight(`calc(45vh + ${scrollPosition/-30-50}px)`);
+                setTimeout(() => {
+                    setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
+                },100)
+                setTimeout(() => {
+                    setSectionTransitionDuration('0s, .1s, .3s');
+                    setSpin(0);
+                    
+                },3000);
+                setTimeout(() => {
+                    setSectionTransitionDuration('.5s, .1s, .3s');
+                
+                },3200)
+            }
+       
+    },[count]);
 
     useEffect(() => {
         if (!footerExpand) {
@@ -142,7 +176,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
         <aside id="left" style={leftStyle}>
             <section style={{...sectionStyle, transform: `rotateX(${rotation}deg) rotateY(${spin + 180}deg) rotateZ(${angle}deg)`}} >
                 { !expandedContact ?
-                    <span style={{fontSize: '16px'}}>˙ ͜ʟ˙</span>
+                    <span style={{fontSize: '16px'}}>{face}</span>
                     :
                     <div style={{display: 'flex'}}>
                         

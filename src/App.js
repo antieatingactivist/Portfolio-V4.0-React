@@ -65,7 +65,7 @@ function App() {
     if (projectsOffset >= 300 && aboutHidden) {
       setAboutHidden(false);
     }
-    if (footerOffset <= windowHeight && !footerExpand) {
+    if (footerOffset <= windowHeight-50 && !footerExpand) {
       setFooterExpand(true);
     }
     if (footerOffset >= windowHeight+150 && footerExpand) {
@@ -87,7 +87,8 @@ function App() {
       window.scrollTo(0, 0);
       setIntroHidden(false);
       setAboutHidden(false);
-
+      
+      // setFooterExpand(false);
     }, 100);
     setTimeout(() => {
       setInitialHeaderShow(true);
@@ -109,7 +110,7 @@ function App() {
   return (
     <div className="App">
       
-        <Header hidden={headerHidden} scrollPosition={scrollPosition} windowHeight={windowHeight} windowWidth={windowWidth} />
+        <Header hidden={headerHidden} scrollPosition={scrollPosition} windowHeight={windowHeight} windowWidth={windowWidth}/>
 
         { windowWidth < 940 ? <></> :
           <div className="noMobile">

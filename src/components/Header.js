@@ -48,7 +48,7 @@ export default function Header({hidden, scrollPosition, windowHeight, windowWidt
             </div>
 
             {/* { windowWidth < 500 ? <></> : <Nav windowHeight={windowHeight} windowWidth={windowWidth} /> } */}
-            <Nav windowHeight={windowHeight} windowWidth={windowWidth}/> 
+            <Nav windowHeight={windowHeight} windowWidth={windowWidth} /> 
         </header>
     );
   }

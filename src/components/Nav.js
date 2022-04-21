@@ -52,7 +52,7 @@ export default function Nav({windowHeight, windowWidth}) {
               to="contact"
               spy={true}
               smooth={true}
-              duration={1500}
+              duration={500}
             ><span className="accent">./</span>Contact</Link>
 
          

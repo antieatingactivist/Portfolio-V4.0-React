@@ -75,7 +75,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
         borderColor: 'var(--accentcolor)', 
     }
 
- 
+    // ˙ ͜ʟ˙
 
     useEffect(() => {
         
@@ -83,6 +83,12 @@ export default function Left( {scrollPosition, footerExpand } ) {
             setLeft('-20px');
             setAngle(20);
         }, 1000);
+        setTimeout(() => {
+            setFace('˙ ͜ʟ¯');
+        }, 1800);
+        setTimeout(() => {
+            setFace('˙ ͜ʟ˙');
+        }, 2000);
         setTimeout(() => {
             setSectionTransitionDuration('.3s, .1s, .3s');
             setSpin(0);
@@ -142,17 +148,16 @@ export default function Left( {scrollPosition, footerExpand } ) {
                     setSectionTransitionDuration('.5s, .1s, .3s');
                 
                 },3200)
-            }
-       
+            } 
     },[count]);
 
     useEffect(() => {
         if (!footerExpand) {
-                setWidth('25px');
-                setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
-                setExpandedContact(false); 
-                setAngle(0);
-                setRotation(0);
+            setWidth('25px');
+            setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
+            setExpandedContact(false); 
+            setAngle(0);
+            setRotation(0);
         }
         if (footerExpand)  {
             setHeight(`calc(100vh - ${sectionRef.current.getBoundingClientRect().bottom - sectionRef.current.getBoundingClientRect().y + 20}px)`);

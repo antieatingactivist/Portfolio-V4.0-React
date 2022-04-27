@@ -55,6 +55,13 @@
         "liveLink": "https://stark-scrubland-48398.herokuapp.com/"
     },
     {
+        "name": "Socialite API",
+        "description": "This is a backend for a social media site called Socialite. It Express.js to serve up data from MongoDB through the Mongoose ODM. REST routes are included for adding Users, Users befriending other users, making posts called \"Thoughts\", and adding comments called \"Reactions\"",
+        "imgSrc": "socialite.png",
+        "gitHub": "https://github.com/antieatingactivist/Socialite-API",
+        "liveLink": "https://antieatingactivist.github.io/Socialite-API/"
+    },
+    {
    
         "name": "Portfolio-V2",
         "description": "This is my second attempt at a portfolio. I realized a few days into this project that maybe the idea I had in my head was a bit too ambitious. I make use of perspective quite a bit in this page.",

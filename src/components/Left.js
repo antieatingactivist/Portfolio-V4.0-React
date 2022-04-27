@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import {useEffect, useState, useRef} from "react";

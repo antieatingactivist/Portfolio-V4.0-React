@@ -41,6 +41,7 @@ export default function Header({hidden, scrollPosition, windowHeight, windowWidt
         style.backgroundColor = '#00000000';
     }
 
+
     return (
         <header style={style}>
             <div style={titleStyle}>

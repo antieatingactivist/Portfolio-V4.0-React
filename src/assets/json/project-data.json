@@ -15,6 +15,13 @@
         "gitHub": "https://github.com/antieatingactivist/Tech-Blog",
         "liveLink": "https://guarded-springs-42532.herokuapp.com/"
     },
+    {
+        "name": "Story Factory",
+        "description": "A writing game with a time attack game that lets you build stories with friends or strangers. This was the final project in my coding boot camp and was a collaberation with 2 other talented developers. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
+        "imgSrc": "storyfactory.png",
+        "gitHub": "https://github.com/antieatingactivist/Story-Factory",
+        "liveLink": "https://quiet-sierra-37143.herokuapp.com/"
+    },
     {   
        
         "name": "Weather Widget",

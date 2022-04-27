@@ -69,6 +69,13 @@
         "liveLink": "https://antieatingactivist.github.io/Socialite-API/"
     },
     {
+        "name": "HR helping Hand",
+        "description": "A tool to help a product manager build an html representing their team using node.js and inquirer. The user is prompted with questions about themself, and their team. An html file is generated with cards for each of your team members.",
+        "imgSrc": "hr.png",
+        "gitHub": "https://github.com/antieatingactivist/HR-Helping-Hand",
+        "liveLink": "https://antieatingactivist.github.io/HR-Helping-Hand/"
+    },
+    {
    
         "name": "Portfolio-V2",
         "description": "This is my second attempt at a portfolio. I realized a few days into this project that maybe the idea I had in my head was a bit too ambitious. I make use of perspective quite a bit in this page.",

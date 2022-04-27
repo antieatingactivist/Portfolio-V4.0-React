@@ -34,7 +34,7 @@
         "description": "This is an app for keeping track of Employees, Job Titles, Departments, and Salaries at your business. It uses an elegant command line interface using node.js and inquirer. Data is stored using a mySQL database.",
         "imgSrc": "workplacetracker.png",
         "gitHub": "https://github.com/antieatingactivist/Workplace-Tracker",
-        "liveLink": "https://antieatingactivist.github.io/Workplace-Tracker/"
+        "demoVideo": "https://antieatingactivist.github.io/Workplace-Tracker/"
     },
     {   
        
@@ -73,14 +73,14 @@
         "description": "This is a backend for a social media site called Socialite. It Express.js to serve up data from MongoDB through the Mongoose ODM. REST routes are included for adding Users, Users befriending other users, making posts called \"Thoughts\", and adding comments called \"Reactions\"",
         "imgSrc": "socialite.png",
         "gitHub": "https://github.com/antieatingactivist/Socialite-API",
-        "liveLink": "https://antieatingactivist.github.io/Socialite-API/"
+        "demoVideo": "https://antieatingactivist.github.io/Socialite-API/"
     },
     {
         "name": "HR helping Hand",
         "description": "A tool to help a product manager build an html representing their team using node.js and inquirer. The user is prompted with questions about themself, and their team. An html file is generated with cards for each of your team members.",
         "imgSrc": "hr.png",
         "gitHub": "https://github.com/antieatingactivist/HR-Helping-Hand",
-        "liveLink": "https://antieatingactivist.github.io/HR-Helping-Hand/"
+        "demoVideo": "https://antieatingactivist.github.io/HR-Helping-Hand/"
     },
     {
    

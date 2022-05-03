@@ -4,7 +4,7 @@
         "description": "This is a web app built with React that communicates with an ESP8266 microcontroller to operate addressable RGBW led strips. Adafruit's Neopixel library is used to communicate with the strips. I am currently working on this project.",
         "imgSrc": "rgb.png",
         "gitHub": "https://github.com/antieatingactivist/RGB-strip-controller",
-        "liveLink": "https://antieatingactivist.github.io/RGB-strip-controller/"
+        "demoVideo": "https://antieatingactivist.github.io/RGB-strip-controller/"
     },
     {
      

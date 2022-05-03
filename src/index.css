@@ -124,43 +124,18 @@ footer {
   margin-left: 32px;
 }
 
-img {
-  transition: all 0.3s;
-  filter: grayscale(.96);
-}
-img:hover {
-  transition: all 1s;
-  filter: grayscale(0);
-}
-
 
 
 
 
 @media (max-width:940px)  {
     
-  /* .noMobile {
-    display: none;
-  } */
+
   main {
 
     margin-left: 0px; 
 
   }
-  /* h1 {
 
-    width: 100vw;
-    margin: 10px;
-    font-size: 12vw;
-    font-weight: 300;
-
-  
-  }
-  h1 span {
-
-
-    font-size: 5vw !important;
-    left: 0 !important;
-  }   */
 } 
 

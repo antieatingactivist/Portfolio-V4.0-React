@@ -7,7 +7,7 @@ export default function Projects({scrollPosition, windowHeight, windowWidth, set
 
     const projectsStyle = {
         transition: 'all 2s',
-        padding: windowWidth < 500 ? '35vh 10px 20vh 10px' : '35vh 10px 50vh 10px'
+        padding: windowWidth < 500 ? '35vh 10px 20vh 10px' : '35vh 10px 20vh 10px'
     }
   
     return (

@@ -25,7 +25,6 @@ export default function Header({hidden, scrollPosition, windowHeight, windowWidt
         marginTop: "6px", 
         marginLeft: "6px", 
         fontSize: "1.5em",
-        // textAlign: 'center'
 
     }
     

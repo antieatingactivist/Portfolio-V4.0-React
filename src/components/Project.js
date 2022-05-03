@@ -65,7 +65,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
                     <h2 style={{marginLeft: windowWidth < 500 ?  0: '-30px' }}>
                         <span className="accent">./</span>{project.name}
                     </h2>
-                    <Image src={project.imgSrc} isHidden={isHidden} />
+                    <Image src={project.imgSrc} isHidden={isHidden}s />
                 </div>
                 <div style={ isHidden ? {...descriptionStyle, transitionDuration: '1.5s', opacity: '1', transitionDelay: '.5s' } : {...descriptionStyle, transitionDuration: '.8s', transitionDelay: '.5s', opacity: '0' } }>
                     <p style={ isHidden ? {transitionDuration: '2.5s', opacity: '1', transitionDelay: '1s' } : {transitionDuration: '1.8s', transitionDelay: '1s', opacity: '0' } }>{project.description}</p>

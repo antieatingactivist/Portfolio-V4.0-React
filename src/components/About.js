@@ -12,7 +12,7 @@ export default function About({windowWidth}) {
     return (
         <section style={aboutStyle}>
             {/* <h1 id="about" style={{textAlign: windowWidth < 500 ? 'center' : 'left'}}>About Me</h1> */}
-            <div>
+            <div id="about">
                 <Image src="photo2.jpg" />
             </div>
             <p>

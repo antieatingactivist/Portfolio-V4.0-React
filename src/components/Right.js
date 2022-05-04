@@ -68,10 +68,10 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
     useEffect(() => {
         setTimeout(() => {
             if (arrowFlip === 1080) {
-                        setArrowFlip(0);
-                    } else {
-                        setArrowFlip(1080);
-                    }
+                setArrowFlip(0);
+            } else {
+                setArrowFlip(1080);
+            }
 
         }, 50);
        
@@ -83,10 +83,16 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
             <code>
                 <section>
                     <div style={introStyle} >
-                        <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}><span className="accent">{"<< "}</span></div><div>Intro</div>
+                        <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}>
+                            <span className="accent">{"<< "}</span>
+                        </div>
+                        <div>Intro</div>
                     </div>
                     <div style={aboutStyle}>
-                        <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}><span className="accent">{"<< "}</span></div><div>About</div>
+                        <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}>
+                            <span className="accent">{"<< "}</span>
+                        </div>
+                        <div>About</div>
                     </div>
                     <div style={projectBlockStyle}>
                         <p>Projects/</p>
@@ -94,7 +100,12 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
                             
                     
                                 <div key={project.name} style={projectStyle}>
-                                    { project.name===onScreenProject ? <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}><span className="accent">{"<< "}</span></div> : <span className="accent">&nbsp;├─</span>} 
+                                    { project.name===onScreenProject ? 
+                                        <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}>
+                                            <span className="accent">{"<< "}</span>
+                                        </div> : 
+                                        <span className="accent">&nbsp;├─</span>
+                                    } 
                 
                                     <Link
                                         
@@ -109,13 +120,11 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
                                 </div> 
                         ))}
                         
-                    
                     </div>
                     
                 </section>
             </code>
   
-
         </aside>
     );
   }

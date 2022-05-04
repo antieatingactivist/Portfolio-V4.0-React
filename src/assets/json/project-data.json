@@ -17,7 +17,7 @@
     {
      
         "name": "Tech Blog",
-        "description": "This is a full stack blog website that supports multiple users. Users can view comment on other user's posts. The dashboard allows for content creation and deletion. It incorperates a retro Tron-like design using perspective and css instead of static assets. Sequelise is used to interact with a mySQL database to store content and user data and Handlebars is used to render the content. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
+        "description": "This is a full stack blog website that supports multiple users. Users can view comment on other user's posts. The dashboard allows for content creation and deletion. It incorperates a retro Tron-like design using perspective and css instead of static assets. Sequelize is used to interact with a mySQL database to store content and user data and Handlebars is used to render the content. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
         "imgSrc": "techblog.png",
         "gitHub": "https://github.com/antieatingactivist/Tech-Blog",
         "liveLink": "https://guarded-springs-42532.herokuapp.com/"

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.55dd38da.css",
-    "main.js": "/static/js/main.8c9c23f0.js",
+    "main.js": "/static/js/main.ee582f67.js",
     "static/media/workplacetracker.png": "/static/media/workplacetracker.a75a1c447bc706ef98ea.png",
     "static/media/quizinator.png": "/static/media/quizinator.1f85a57bfcd1bf66857a.png",
     "static/media/soundlane.png": "/static/media/soundlane.717bbcbf59279e1193a0.png",
@@ -19,13 +19,13 @@
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
     "static/media/photo.jpg": "/static/media/photo.39c13fed959621bb0976.jpg",
     "static/media/tetris.png": "/static/media/tetris.9d34f496eeb5b2f596b0.png",
-    "static/media/resume.pdf": "/static/media/resume.592ddc3ae50016839e63.pdf",
+    "static/media/resume.pdf": "/static/media/resume.688a1dd5bbf0b59acc94.pdf",
     "index.html": "/index.html",
     "main.55dd38da.css.map": "/static/css/main.55dd38da.css.map",
-    "main.8c9c23f0.js.map": "/static/js/main.8c9c23f0.js.map"
+    "main.ee582f67.js.map": "/static/js/main.ee582f67.js.map"
   },
   "entrypoints": [
     "static/css/main.55dd38da.css",
-    "static/js/main.8c9c23f0.js"
+    "static/js/main.ee582f67.js"
   ]
 }

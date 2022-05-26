@@ -197,7 +197,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
                                 <span style={{fontSize: '.6em'}}> &nbsp; Connect with me on Linkedin.</span> 
                             </a>
                             <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope">
-                            <span style={{fontSize: '.6em'}}> &nbsp; Send me an e-mail.</span> 
+                            <span style={{fontSize: '.6em'}}> &nbsp; jgarrettcorbin@gmail.com</span> 
                             </a>
 
                         </div>

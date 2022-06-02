@@ -28,19 +28,16 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     const leftStyle: any = {
         transitionDuration: leftTransitionDuration,
         transitionProperty: 'top',
-        transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',
-        
+        transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',    
         position: 'fixed',
         top: height,
         display: 'flex',
         flexDirection: 'column',
-        zIndex: 1
-        
+        zIndex: 1    
     };
 
 
     const sectionStyle: any = {
-        // transitionDelay: '.1s, 0s, 0s',
         transitionProperty: 'transform, width, margin-left',
         transitionDuration: sectionTransitionDuration,
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',
@@ -79,8 +76,6 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
         borderColor: 'var(--accentcolor)', 
     }
 
-    // ˙ ͜ʟ˙
-
     useEffect(() => {
         
         setTimeout(() => {
@@ -106,17 +101,12 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
             setStripeHide(false);
         }, 3100);
         setTimeout(() => {
-            
             setStripeHeight('100vh');
-            
         }, 3200);
         setTimeout(() => {
-            
             setLeftTransitionDuration('.5s');
             setSectionTransitionDuration('3s, .1s, .3s');
             setSpin(7200);
-            
-
         }, 3600);
         setTimeout(() => {
             setFace('˙ ͜ʟ˙');
@@ -125,8 +115,6 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
         }, 8000);
         setTimeout(() => {
             setSectionTransitionDuration('.5s, .1s, .3s');
-
-
         }, 8200);
 
     }, []);

@@ -86,15 +86,12 @@ function App() {
       window.scrollTo(0, 0);
       setIntroHidden(false);
       setAboutHidden(false);
-      
-      // setFooterExpand(false);
+
     }, 100);
     setTimeout(() => {
       setInitialHeaderShow(true);
       setHeaderHidden(false);
-      window.addEventListener("scroll", handleScroll);
-  
-      
+      window.addEventListener("scroll", handleScroll);  
     }, 1000);
 
     

@@ -102,8 +102,6 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
                     <div style={projectBlockStyle}>
                         <p>Projects/</p>
                         {projectData.map(project => (
-                            
-                    
                                 <div key={project.name} style={projectStyle}>
                                     { project.name===onScreenProject ? 
                                         <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}>

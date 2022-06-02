@@ -7,16 +7,11 @@ type Props = {
 
 export default function Intro({windowWidth}: Props) {
     const [introOpacity, setIntroOpacity] = useState(0);
-    // const [spanOpacity, setSpanOpacity] = useState(0);
     const [spanLeft, setSpanLeft] = useState(-1000);
     const [skew, setSkew] = useState('skewX(30deg)');
-    // const [pOpacity, setPOpacity] = useState(0);
-    const introStyle = {
-        
-        paddingTop: 'calc(45vh - 140px)',
-        // maxWidth: "calc(100vw - 60px)"
-        // maxWidth: '80vw'
-        
+    
+    const introStyle = {     
+        paddingTop: 'calc(45vh - 140px)',      
     }
     const h1Style: any = {
         
@@ -26,7 +21,6 @@ export default function Intro({windowWidth}: Props) {
         lineHeight: 1,
         display: 'inline',
         whiteSpace: 'nowrap'
-        // marginBottom: '-50%'
     }
     const spanStyle: any = {
         transition: 'left .4s cubic-bezier(.4,.43,0,1.23)',
@@ -38,15 +32,11 @@ export default function Intro({windowWidth}: Props) {
     
     }
     const pStyle: any = {
-        
-   
+
         position: 'relative',
         top: '-50px',
         left: windowWidth < 500 ? '0' :'60px',
         textAlign: windowWidth < 500 ? 'center' : 'left'
-        // paddingLeft: '10px'
-        
-    
     }
     
     useEffect(() => {
@@ -71,13 +61,11 @@ export default function Intro({windowWidth}: Props) {
                     onInit={(typewriter) => {
                         typewriter
                         .pauseFor(5000) 
-                        .typeString('scroll down and have a look.')
-                               
+                        .typeString('scroll down and have a look.')    
                         .start();
                     }}
                     options={{
                         delay: 'natural'
-                      
                     }}
                 />
             </code>

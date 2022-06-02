@@ -51,9 +51,7 @@ export default function Header({hidden, scrollPosition, windowHeight, windowWidt
             <div style={titleStyle}>
                 {windowWidth < 500 ? <><span className="accent">J</span>GC</> : <><span className="accent">J.</span> Garrett Corbin</> }
             </div>
-
-            {/* { windowWidth < 500 ? <></> : <Nav windowHeight={windowHeight} windowWidth={windowWidth} /> } */}
-            <Nav windowHeight={windowHeight} windowWidth={windowWidth} /> 
+            <Nav windowHeight={windowHeight} /> 
         </header>
     );
   }

@@ -20,11 +20,8 @@ export default function Projects({scrollPosition, windowHeight, windowWidth, set
         <section style={projectsStyle} >
             <h1 id="projects" style={{textAlign: windowWidth < 500 ? 'center' : 'left'}}>Projects</h1>
             
-            {projectData.map(project => (
-          
-             
-                <Project scrollPosition={scrollPosition} project={project} windowHeight={windowHeight} windowWidth={windowWidth} setOnScreenProject={setOnScreenProject} key={project.name}/>
-             
+            {projectData.map(project => (  
+                <Project scrollPosition={scrollPosition} project={project} windowHeight={windowHeight} windowWidth={windowWidth} setOnScreenProject={setOnScreenProject} key={project.name}/>    
             ))}
         </section>
     );

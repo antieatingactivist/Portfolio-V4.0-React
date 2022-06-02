@@ -13,7 +13,6 @@ type Props = {
 export default function About({ windowWidth }: Props) {
     return (
         <section style={aboutStyle}>
-            {/* <h1 id="about" style={{textAlign: windowWidth < 500 ? 'center' : 'left'}}>About Me</h1> */}
             <div id="about">
                 <Image src="photo2.jpg" isHidden={false} />
             </div>

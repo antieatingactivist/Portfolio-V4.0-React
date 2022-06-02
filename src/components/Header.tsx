@@ -1,18 +1,23 @@
 
 import Nav from './Nav';
 
+type Props = {
+    hidden: boolean;
+    scrollPosition: number;
+    windowHeight: number;
+    windowWidth: number;
+}
 
 
-
-export default function Header({hidden, scrollPosition, windowHeight, windowWidth}) {
+export default function Header({hidden, scrollPosition, windowHeight, windowWidth}: Props) {
 
 
 
     const noBorder = (scrollPosition < 4);
-    const style = {
+    const style: any = {
         
         display: 'flex',
-        flexDirection: windowWidth < 500 ? 'column' : 'row',
+        flexDirection: (windowWidth < 500 ? 'column' : 'row'),
         top: '0px',
         borderStyle: 'solid',
         borderWidth: '0 0 1px 0',

@@ -1,6 +1,10 @@
 
+type Props = {
+    src: string,
+    isHidden: boolean,
+}
 
-export default function Image({src, isHidden}) {
+export default function Image({src, isHidden}: Props) {
 
 
     let imgStyle = {

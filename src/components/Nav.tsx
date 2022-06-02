@@ -2,7 +2,6 @@ import { Link } from "react-scroll";
 import resume from "../assets/pdf/resume.pdf";
 
 type Props = {
-  windowWidth: number,
   windowHeight: number
 }
 
@@ -12,22 +11,16 @@ const navStyle: any = {
   right: 0
 }
 
-
-
-
 const regular = {
   marginRight: '10px',
   cursor: 'pointer'
 }
 
-
-
-export default function Nav({windowHeight, windowWidth}: Props) {
+export default function Nav({windowHeight}: Props) {
     
     return (
-      // <nav style={windowWidth < 500 ? navStyleMobile : navStyle}>
+
         <nav style={navStyle}>
-            {/* <a style={linkPadding} href="#about"><span>./</span>About</a> */}
           <code>
             <Link
               style={regular}
@@ -38,7 +31,6 @@ export default function Nav({windowHeight, windowWidth}: Props) {
               offset={windowHeight/-4}
               duration={500}
             ><span className="accent">./</span>About</Link>
-            {/* <a style={linkPadding} href="#projects"><span>./</span>Projects</a> */}
             <Link
               style={regular}
               activeClass="active"
@@ -48,7 +40,6 @@ export default function Nav({windowHeight, windowWidth}: Props) {
               offset={windowHeight/-4}
               duration={500}
             ><span className="accent">./</span>Projects</Link>
-
             <Link
               style={regular}
               activeClass="active"
@@ -57,10 +48,7 @@ export default function Nav({windowHeight, windowWidth}: Props) {
               smooth={true}
               duration={1500}
             ><span className="accent">./</span>Contact</Link>
-
-         
             <a style={regular} href={resume} target="_blank" rel="noopener noreferrer"><span className="accent">./</span>Resume</a>
-
           </code>   
       </nav>
     );

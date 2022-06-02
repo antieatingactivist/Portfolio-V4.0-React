@@ -1,5 +1,5 @@
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, MutableRefObject } from "react";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MobileFooter from './components/MobileFooter';
@@ -12,10 +12,10 @@ import About from './components/About';
 
 
 function App() {
-  const introRef = useRef(null);
-  const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
-  const footerRef = useRef(null);
+  const introRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const aboutRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const projectsRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const footerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
   const [initialHeaderShow, setInitialHeaderShow] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);

@@ -1,12 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import "bootstrap-icons/font/bootstrap-icons.css";
-import {useEffect, useState, useRef} from "react";
+import {useEffect, useState, useRef, MutableRefObject} from "react";
 
+type Props = {
+    scrollPosition: number,
+    footerExpand: boolean,
+}
 
-
-export default function Left( {scrollPosition, footerExpand } ) {
-    const sectionRef = useRef(null);
+export default function Left( {scrollPosition, footerExpand }: Props ) {
+    const sectionRef = useRef() as MutableRefObject<HTMLDivElement>;
     const [count, setCount] = useState(0);
     const [spin, setSpin] = useState(540);
     const [angle, setAngle] = useState(0);
@@ -22,7 +25,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
     const [face, setFace] = useState('˙ ͜ʟ˙');
     
 
-    const leftStyle = {
+    const leftStyle: any = {
         transitionDuration: leftTransitionDuration,
         transitionProperty: 'top',
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',
@@ -36,7 +39,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
     };
 
 
-    const sectionStyle = {
+    const sectionStyle: any = {
         // transitionDelay: '.1s, 0s, 0s',
         transitionProperty: 'transform, width, margin-left',
         transitionDuration: sectionTransitionDuration,
@@ -59,7 +62,7 @@ export default function Left( {scrollPosition, footerExpand } ) {
         backfaceVisibility: 'hidden',
     };
 
-    const stripeStyle = {
+    const stripeStyle: any = {
         transitionProperty: 'height',
         transitionDuration: '3s',
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',

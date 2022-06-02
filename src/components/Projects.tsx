@@ -1,9 +1,15 @@
 
 import Project from './Project';
-import projectData from '../assets/json/project-data';
+import projectData from '../assets/json/project-data.json';
 
+type Props = {
+    scrollPosition: number,
+    windowHeight: number,
+    windowWidth: number,
+    setOnScreenProject: any
+}
 
-export default function Projects({scrollPosition, windowHeight, windowWidth, setOnScreenProject}) {
+export default function Projects({scrollPosition, windowHeight, windowWidth, setOnScreenProject}: Props) {
 
     const projectsStyle = {
         transition: 'all 2s',

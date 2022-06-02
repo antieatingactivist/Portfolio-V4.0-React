@@ -1,5 +1,5 @@
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, MutableRefObject } from "react";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MobileFooter from './components/MobileFooter';
@@ -10,26 +10,25 @@ import Projects from './components/Projects';
 import About from './components/About';
 
 
-
 function App() {
-  const introRef = useRef(null);
-  const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
-  const footerRef = useRef(null);
+  const introRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const aboutRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const projectsRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const footerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
-  const [initialHeaderShow, setInitialHeaderShow] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(0);
-  const [furthestDown, setFurthestDown] = useState(0);
-  const [headerHidden, setHeaderHidden] = useState(true);  
-  const [aboutOffset, setAboutOffest] = useState(0);
-  const [projectsOffset, setProjectOffset] = useState(0);
-  const [footerOffset, setFooterOffset] = useState(0);
-  const [footerExpand, setFooterExpand] = useState(false);
-  const [introHidden, setIntroHidden] = useState(true);  
-  const [aboutHidden, setAboutHidden] = useState(true);
-  const [onScreenProject, setOnScreenProject] = useState(0);
+  const [initialHeaderShow, setInitialHeaderShow] = useState<boolean>(false);
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
+  const [windowHeight, setWindowHeight] = useState<number>(0);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [furthestDown, setFurthestDown] = useState<number>(0);
+  const [headerHidden, setHeaderHidden] = useState<boolean>(true);  
+  const [aboutOffset, setAboutOffest] = useState<number>(0);
+  const [projectsOffset, setProjectOffset] = useState<number>(0);
+  const [footerOffset, setFooterOffset] = useState<number>(0);
+  const [footerExpand, setFooterExpand] = useState<boolean>(false);
+  const [introHidden, setIntroHidden] = useState<boolean>(true);  
+  const [aboutHidden, setAboutHidden] = useState<boolean>(true);
+  const [onScreenProject, setOnScreenProject] = useState<string>("");
 
 
   const handleScroll = () => {

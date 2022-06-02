@@ -1,14 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import projectData from '../assets/json/project-data';
+import projectData from '../assets/json/project-data.json';
 import { Link } from "react-scroll";
 
+type Props = {
+    windowHeight: number,
+    introHidden: boolean,
+    aboutHidden: boolean,
+    onScreenProject: string,
+}
 
-
-export default function Right( {windowHeight, introHidden, aboutHidden, onScreenProject } ) {
+export default function Right( {windowHeight, introHidden, aboutHidden, onScreenProject }: Props ) {
     const [arrowFlip, setArrowFlip] = useState(0);
 
-    const rightStyle = {
+    const rightStyle: any = {
         transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
         position: 'fixed',
         top: '0',

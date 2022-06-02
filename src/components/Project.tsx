@@ -1,20 +1,24 @@
 import Image from './Image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, MutableRefObject } from 'react';
+
+type Props = {
+    project: any,
+    scrollPosition: number,
+    windowHeight: number,
+    windowWidth: number,
+    setOnScreenProject: any,
+}
 
 
-
-
-export default function Project({project, scrollPosition, windowHeight, windowWidth, setOnScreenProject}) {
-    const projectStyle = {
-        // transition: 'all 2s',
-        // padding: '35vh 0 0vh 0'
+export default function Project({project, scrollPosition, windowHeight, windowWidth, setOnScreenProject}: Props) {
+    const projectStyle: any = {
         position: 'relative',
         marginBottom: windowWidth < 500 ? '0vh' : '10vh',
         maxWidth: '600px'
     }
     
     
-    const imageFrameStyle = {
+    const imageFrameStyle: any = {
         position: 'relative',
         maxWidth: '90vw',
         paddingLeft: windowWidth < 500 ? 0 : '40px',
@@ -26,7 +30,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
         zIndex: '1',
      
     }
-    const descriptionStyle = {
+    const descriptionStyle: any = {
     
         position: 'relative',
         fontSize: '.8em',
@@ -43,7 +47,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
     }
    
     
-    const projectRef = useRef(null);
+    const projectRef = useRef() as MutableRefObject<HTMLDivElement>;
     const [projectOffset, setProjectOffset] = useState(0);
     const isHidden = projectOffset < windowHeight/1.5 && projectOffset > -500 ;
     
@@ -65,7 +69,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
                     <h2 style={{marginLeft: windowWidth < 500 ?  0: '-30px' }}>
                         <span className="accent">./</span>{project.name}
                     </h2>
-                    <Image src={project.imgSrc} isHidden={isHidden}s />
+                    <Image src={project.imgSrc} isHidden={isHidden} />
                 </div>
                 <div style={ isHidden ? {...descriptionStyle, transitionDuration: '1.5s', opacity: '1', transitionDelay: '.5s' } : {...descriptionStyle, transitionDuration: '.8s', transitionDelay: '.5s', opacity: '0' } }>
                     <p style={ isHidden ? {transitionDuration: '2.5s', opacity: '1', transitionDelay: '1s' } : {transitionDuration: '1.8s', transitionDelay: '1s', opacity: '0' } }>{project.description}</p>

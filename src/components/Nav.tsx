@@ -1,9 +1,12 @@
 import { Link } from "react-scroll";
 import resume from "../assets/pdf/resume.pdf";
 
+type Props = {
+  windowWidth: number,
+  windowHeight: number
+}
 
-
-const navStyle = {
+const navStyle: any = {
   position: 'absolute',
   padding: '10px',
   right: 0
@@ -19,7 +22,7 @@ const regular = {
 
 
 
-export default function Nav({windowHeight, windowWidth}) {
+export default function Nav({windowHeight, windowWidth}: Props) {
     
     return (
       // <nav style={windowWidth < 500 ? navStyleMobile : navStyle}>

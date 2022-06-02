@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 
+type Props = {
+    windowWidth: number;
+}
 
-
-export default function Intro({windowWidth}) {
+export default function Intro({windowWidth}: Props) {
     const [introOpacity, setIntroOpacity] = useState(0);
     // const [spanOpacity, setSpanOpacity] = useState(0);
     const [spanLeft, setSpanLeft] = useState(-1000);
@@ -16,7 +18,7 @@ export default function Intro({windowWidth}) {
         // maxWidth: '80vw'
         
     }
-    const h1Style = {
+    const h1Style: any = {
         
         transition: 'opacity 1.5s',
         transitionDelay: '.1s',
@@ -26,7 +28,7 @@ export default function Intro({windowWidth}) {
         whiteSpace: 'nowrap'
         // marginBottom: '-50%'
     }
-    const spanStyle = {
+    const spanStyle: any = {
         transition: 'left .4s cubic-bezier(.4,.43,0,1.23)',
         transitionDelay: '3.6s',
         position: 'relative',
@@ -35,7 +37,7 @@ export default function Intro({windowWidth}) {
         fontSize: windowWidth < 500 ? '6vw' : '70%',
     
     }
-    const pStyle = {
+    const pStyle: any = {
         
    
         position: 'relative',

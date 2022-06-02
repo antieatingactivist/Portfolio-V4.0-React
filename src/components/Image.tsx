@@ -18,5 +18,5 @@ export default function Image({src, isHidden}: Props) {
     
 
     const image = require(`../assets/images/${src}`)
-    return <img src = {image} alt="project" style={imgStyle}/>
+    return <img src={image} alt="project" style={imgStyle}/>
 }

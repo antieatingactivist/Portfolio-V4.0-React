@@ -193,7 +193,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
 
                         </div>
                         <div style={{fontSize: '.6em', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center'}}>
-                            <p>This site was built by Garrett Corbin in 2022 using React.js.</p>
+                            <p>This site was built by Garrett Corbin in 2022 using React.js and Typescript.</p>
                             <a href="https://github.com/antieatingactivist/portfolio-v4.0-react" target="_blank" rel="noopener noreferrer">view the source code on GitHub</a>
                         </div>
                     </div>

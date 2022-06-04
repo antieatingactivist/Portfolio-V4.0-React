@@ -15,7 +15,7 @@ This is the 4th and possibly final candidate for my professional portfolio. It's
 
 * [React.js](https://reactjs.org)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Typescript](https://www.typescriptlang.org)
 * [Bootstrap Icons](https://icons.getbootstrap.com)
 
 

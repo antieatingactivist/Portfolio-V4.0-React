@@ -1,4 +1,5 @@
 
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState, useRef, MutableRefObject } from "react";
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -72,9 +73,9 @@ function App() {
     }
   }
 
-  
   useEffect(() => {
     handleRightNav();
+    
   }, [scrollPosition]);
 
   useEffect(() => {

@@ -54,6 +54,14 @@
     },
     {   
        
+        "name": "Platformer Engine",
+        "description": "A canvas based Mario Bros style platforming engine. I make extensive use of Classes to create instances of enemies, platforms, walls, and blocks. The app uses ES6 and is compliled with Webpack. The Arrow keys are used for movement and the space bar is for jumping.",
+        "imgSrc": "platformer.png",
+        "gitHub": "https://github.com/antieatingactivist/platformer/",
+        "liveLink": "https://antieatingactivist.github.io/platformer/"
+    },
+    {   
+       
         "name": "Tetris",
         "description": "This relatively simple Javascript based Tetris app was the product my love for games and my impatience. I build this between the time I signed up for my Bootcamp and the time that classes started. It uses a single canvas element and uses a grid of objects that are manipulated to create the game play.",
         "imgSrc": "tetris.png",

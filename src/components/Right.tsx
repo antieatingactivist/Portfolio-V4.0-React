@@ -12,6 +12,7 @@ type Props = {
 
 export default function Right( {windowHeight, introHidden, aboutHidden, onScreenProject }: Props ) {
     const [arrowFlip, setArrowFlip] = useState(0);
+    const [toTopButtonShow, setToTopButtonShow] = useState(0);
 
     const rightStyle: any = {
         transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
@@ -83,10 +84,17 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
 
     }, [introHidden, aboutHidden, onScreenProject]);
 
+    useEffect(() => {
+        setToTopButtonShow(0);
+        setTimeout(() => {
+            setToTopButtonShow(1);
+        }, 1000);
+    }, [introHidden, aboutHidden]);
+
     return (
         <aside id="right" style={rightStyle}>
-            <code>
-                <section>
+            <section>
+                <code>
                     <div style={introStyle} >
                         <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}>
                             <span className="accent">{"<< "}</span>
@@ -125,8 +133,15 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
                         
                     </div>
                     
-                </section>
-            </code>
+                </code>
+            </section>
+
+            <section style={{position: "fixed", bottom: "30px", right: "36px", opacity: toTopButtonShow, transition: `opacity ${toTopButtonShow}s`, fontSize: "18px"}}>
+                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bi bi-arrow-up-circle" >
+                     
+                </Link>
+
+            </section>
   
         </aside>
     );

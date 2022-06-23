@@ -110,7 +110,7 @@ function App() {
         <Header hidden={headerHidden} scrollPosition={scrollPosition} windowHeight={windowHeight} windowWidth={windowWidth}/>
 
         { windowWidth < 940 ? <></> :
-          <div className="noMobile">
+          <div id="top" className="noMobile">
             <Left scrollPosition={scrollPosition} footerExpand={footerExpand} />
    
             <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />

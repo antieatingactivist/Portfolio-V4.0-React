@@ -86,9 +86,10 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
 
     useEffect(() => {
         setToTopButtonShow(0);
+        console.log(introHidden);
         setTimeout(() => {
             setToTopButtonShow(1);
-        }, 1000);
+        }, 2000);
     }, [introHidden, aboutHidden]);
 
     return (
@@ -136,7 +137,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
                 </code>
             </section>
 
-            <section style={{position: "fixed", bottom: "30px", right: "36px", opacity: toTopButtonShow, transition: `opacity ${toTopButtonShow}s`, fontSize: "18px"}}>
+            <section style={{position: "fixed", bottom: "30px", right: "36px", opacity: introHidden ? toTopButtonShow : 0, transition: `opacity ${toTopButtonShow}s`, fontSize: "18px"}}>
                 <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bi bi-arrow-up-circle" >
                      
                 </Link>

@@ -19,6 +19,10 @@ export default function About({ windowWidth }: Props) {
             <p>
                 My name is Garrett Corbin and I am a Developer from Richmond, Virginia and currently reside in Oakland, California. I develop interactive websites as well as other applications.
             </p>
+          
+            <p>
+                All of the projects listed below including the portfolio page itself are 100% my own work with the exception of collaborations, which are clearly marked with the collaborators credited on GitHub.
+            </p>
             <div style={{display: 'flex', justifyContent: windowWidth < 500 ? 'center' : 'flex-start'}}>
                 <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer">Visit my GitHub</a>
                 <a href={resume} target="_blank" rel="noopener noreferrer">See my Resume</a>

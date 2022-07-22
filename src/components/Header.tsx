@@ -36,7 +36,7 @@ export default function Header({hidden, scrollPosition, windowHeight, windowWidt
 
     if (hidden) {
 
-        style.top = '-100px';
+        style.top = '-39px';
         
     }
     if (noBorder) {

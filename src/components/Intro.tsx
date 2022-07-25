@@ -14,13 +14,14 @@ export default function Intro({windowWidth}: Props) {
         paddingTop: 'calc(45vh - 140px)',      
     }
     const h1Style: any = {
-        
+        position: 'relative',
         transition: 'opacity 1.5s',
         transitionDelay: '.1s',
         opacity: introOpacity,
         lineHeight: 1,
         display: 'inline',
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
+        zIndex: '1'
     }
     const spanStyle: any = {
         transition: 'left .4s cubic-bezier(.4,.43,0,1.23)',
@@ -52,7 +53,7 @@ export default function Intro({windowWidth}: Props) {
             <h1 style={h1Style}>Hi,</h1><h1 style={{...h1Style, transitionDelay: '1s'}}>I'm Garrett.</h1>
             <h1 style={{transition: 'transform .1s', transitionDelay: '4s' , transform: skew, whiteSpace: 'nowrap'}}>
                 <span style={spanStyle} className="accent">Developer, </span>
-                <span style={{...spanStyle, transitionDelay: '3.8s',}} className="accent">and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span>
+                <span style={{...spanStyle, transitionDelay: '3.8s'}} className="accent">and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span>
             
             </h1>
 

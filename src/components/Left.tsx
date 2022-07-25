@@ -122,25 +122,25 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     useEffect(() => {
         setTimeout(() => {
             setCount(count+1);
-        },30000)
-            if (!footerExpand && count > 0) {
+        },30000);
+        if (!footerExpand && count > 0) {
 
-                setSectionTransitionDuration('.5s, .1s, .3s');
-                setSpin(720);
-                setHeight(`calc(45vh + ${scrollPosition/-30-50}px)`);
-                setTimeout(() => {
-                    setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
-                },100)
-                setTimeout(() => {
-                    setSectionTransitionDuration('0s, .1s, .3s');
-                    setSpin(0);
-                    
-                },3000);
-                setTimeout(() => {
-                    setSectionTransitionDuration('.5s, .1s, .3s');
+            setSectionTransitionDuration('.5s, .1s, .3s');
+            setSpin(720);
+            setHeight(`calc(45vh + ${scrollPosition/-30-50}px)`);
+            setTimeout(() => {
+                setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
+            },100)
+            setTimeout(() => {
+                setSectionTransitionDuration('0s, .1s, .3s');
+                setSpin(0);
                 
-                },3200)
-            } 
+            },3000);
+            setTimeout(() => {
+                setSectionTransitionDuration('.5s, .1s, .3s');
+            
+            },3200)
+        } 
     },[count]);
 
     useEffect(() => {
@@ -200,15 +200,14 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
                 }
             </section>
             <section style={sectionStyle} ref={sectionRef}>
-              
-                    <>
-                        <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github"> </a>
-                        <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter"> </a>
-                        <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin"> </a>
-                        <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope"> </a>
-                    </>
+                <>
+                    <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github"> </a>
+                    <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter"> </a>
+                    <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin"> </a>
+                    <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope"> </a>
+                </>
             </section>
-        <div id="v-stripe" style={stripeStyle}></div>
+            <div id="v-stripe" style={stripeStyle}></div>
         </aside>
     );
 }

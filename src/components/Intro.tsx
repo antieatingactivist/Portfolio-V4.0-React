@@ -30,7 +30,6 @@ export default function Intro({windowWidth}: Props) {
         top: '-40px',
         left: windowWidth < 500 ? `${spanLeft-50}px` : `${spanLeft}px`,
         fontSize: windowWidth < 500 ? '6vw' : '70%',
-    
     }
     const pStyle: any = {
 

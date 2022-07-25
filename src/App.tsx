@@ -95,7 +95,6 @@ function App() {
       window.addEventListener("scroll", handleScroll);  
     }, 1000);
 
-    
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
@@ -122,8 +121,7 @@ function App() {
           <div ref={introRef} >
             <Intro windowWidth={windowWidth} />
           </div>
-          
-
+      
           <div ref={aboutRef} style={aboutOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
             <About windowWidth={windowWidth}/>
           </div>
@@ -134,7 +132,6 @@ function App() {
           
         </main>
 
-        
         <div ref={footerRef}>
           {windowWidth < 500 ?
             <>
@@ -147,9 +144,6 @@ function App() {
           }  
         </div>
         
-        
-
-      
     </div>
   );
 }

@@ -11,8 +11,6 @@ type Props = {
 
 export default function Header({hidden, scrollPosition, windowHeight, windowWidth}: Props) {
 
-
-
     const noBorder = (scrollPosition < 4);
     const style: any = {
         
@@ -30,10 +28,7 @@ export default function Header({hidden, scrollPosition, windowHeight, windowWidt
         marginTop: "6px", 
         marginLeft: "6px", 
         fontSize: "1.5em",
-
     }
-    
-
     if (hidden) {
 
         style.top = '-39px';

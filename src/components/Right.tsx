@@ -68,7 +68,6 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
         introStyle.marginTop = '-65px';
         aboutStyle.marginTop = '-30px';
         projectBlockStyle.marginTop = `calc(50vh - ${projectData.length * 10}px)`;
-        
     }
 
     useEffect(() => {
@@ -78,10 +77,8 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
             } else {
                 setArrowFlip(1080);
             }
-
         }, 50);
        
-
     }, [introHidden, aboutHidden, onScreenProject]);
 
     useEffect(() => {
@@ -111,39 +108,34 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
                     <div style={projectBlockStyle}>
                         <p>Projects/</p>
                         {projectData.map(project => (
-                                <div key={project.name} style={projectStyle}>
-                                    { project.name===onScreenProject ? 
-                                        <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}>
-                                            <span className="accent">{"<< "}</span>
-                                        </div> : 
-                                        <span className="accent">&nbsp;├─</span>
-                                    } 
-                
-                                    <Link
-                                        
-                                        activeClass="active"
-                                        to={project.name}
-                                        spy={true}
-                                        smooth={true}
-                                        offset={windowHeight/-4}
-                                        duration={500}
-                                    >{project.name}
-                                    </Link>
-                                </div> 
+                            <div key={project.name} style={projectStyle}>
+                                { project.name===onScreenProject ? 
+                                    <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}>
+                                        <span className="accent">{"<< "}</span>
+                                    </div> : 
+                                    <span className="accent">&nbsp;├─</span>
+                                } 
+                                <Link
+                                    
+                                    activeClass="active"
+                                    to={project.name}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={windowHeight/-4}
+                                    duration={500}
+                                >{project.name}
+                                </Link>
+                            </div> 
                         ))}
                         
                     </div>
-                    
                 </code>
             </section>
 
             <section style={{position: "fixed", bottom: "30px", right: "36px", opacity: introHidden ? toTopButtonShow : 0, transition: `opacity ${toTopButtonShow}s`, fontSize: "18px"}}>
-                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bi bi-arrow-up-circle" >
-                     
+                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bi bi-arrow-up-circle" >        
                 </Link>
-
             </section>
-  
         </aside>
     );
   }

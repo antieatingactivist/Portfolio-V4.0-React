@@ -1,23 +1,16 @@
 :root {
   --bgcolor: #060a1c;
   --bgcolortransparent: #060a1cdd;
-  /* --maincolor: #bababa; */
   --maincolor: #ffffff;
   --accentcolor: #8c4040;
   --shadowcolor: #03050c;
 }
 
-
-
-
 body {
-
-
   background-color: var(--bgcolor);
   color: var(--maincolor);
   margin: 0;
   font-family: "Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-
 }
 
 code {
@@ -26,20 +19,15 @@ code {
 }
 
 h1 {
-
   margin: 10px;
   font-size: 60px;
   font-weight: 300;
-  /* line-height: 1; */
-
 }
 
 h2 {
   margin-left: 20px;
   font-weight: 200;
 }
-
-
 
 a {
   transition: all 0.2s;
@@ -91,13 +79,7 @@ main {
   max-width: 800px;
 }
 
-/* main img {
-  margin-left: 50px;
-  width: 500px;
-} */
-
 main a {
-
   transition: color .1s;
   border: 1px solid var(--accentcolor);
   border-radius: 5px;
@@ -112,7 +94,6 @@ main a {
 main a:hover {
   transition: color .5s;
   color: var(--maincolor);
-
 }
 
 footer {
@@ -125,16 +106,10 @@ footer {
 }
 
 
-
-
-
 @media (max-width:940px)  {
     
-
   main {
-
     margin-left: 0px; 
-
   }
 
 } 

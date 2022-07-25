@@ -16,8 +16,6 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
         marginBottom: windowWidth < 500 ? '0vh' : '10vh',
         maxWidth: '600px'
     }
-    
-    
     const imageFrameStyle: any = {
         position: 'relative',
         maxWidth: '90vw',
@@ -41,12 +39,8 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
         maxWidth: '100vw',
         borderRadius: '3px',
         border: '1px solid #33333344',
-        boxShadow: '3px 3px 5px var(--shadowcolor)' ,
-    
-        
+        boxShadow: '3px 3px 5px var(--shadowcolor)' ,   
     }
-   
-    
     const projectRef = useRef() as MutableRefObject<HTMLDivElement>;
     const [projectOffset, setProjectOffset] = useState(0);
     const isHidden = projectOffset < windowHeight/1.5 && projectOffset > -500 ;
@@ -63,8 +57,6 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
     return (
         <section style={ isHidden ? {transition: 'opacity 1.5s', opacity: '1' } : {transition: 'opacity .8s', opacity: '0' }}>
             <div id={project.name} style={projectStyle} ref={projectRef}>
-        
-                
                 <div style={imageFrameStyle}>
                     <h2 style={{marginLeft: windowWidth < 500 ?  0: '-30px' }}>
                         <span className="accent">./</span>{project.name}
@@ -81,8 +73,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
                             <a href={project.demoVideo} target="_blank" rel="noopener noreferrer">Demo Video</a>  
                         }
                     </div>
-                </div>
-                
+                </div> 
             </div>
         </section>
     );

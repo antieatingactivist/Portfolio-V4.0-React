@@ -105,6 +105,11 @@ footer {
   margin-left: 32px;
 }
 
+img {
+  border: 1px solid #99999911;
+  border-radius: 5px;
+}
+
 
 @media (max-width:940px)  {
     

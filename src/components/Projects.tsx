@@ -6,7 +6,7 @@ type Props = {
     scrollPosition: number,
     windowHeight: number,
     windowWidth: number,
-    setOnScreenProject: any
+    setOnScreenProject: Function
 }
 
 export default function Projects({scrollPosition, windowHeight, windowWidth, setOnScreenProject}: Props) {

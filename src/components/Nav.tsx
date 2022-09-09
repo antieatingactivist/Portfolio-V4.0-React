@@ -5,7 +5,7 @@ type Props = {
   windowHeight: number
 }
 
-const navStyle: any = {
+const navStyle: object = {
   position: 'absolute',
   padding: '10px',
   right: 0

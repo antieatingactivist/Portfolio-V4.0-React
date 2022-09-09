@@ -11,12 +11,12 @@ type Props = {
 
 
 export default function Project({project, scrollPosition, windowHeight, windowWidth, setOnScreenProject}: Props) {
-    const projectStyle: any = {
+    const projectStyle: object = {
         position: 'relative',
         marginBottom: windowWidth < 500 ? '0vh' : '10vh',
         maxWidth: '600px'
     }
-    const imageFrameStyle: any = {
+    const imageFrameStyle: object = {
         position: 'relative',
         maxWidth: '90vw',
         paddingLeft: windowWidth < 500 ? 0 : '40px',
@@ -28,7 +28,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
         zIndex: '1',
      
     }
-    const descriptionStyle: any = {
+    const descriptionStyle: object = {
     
         position: 'relative',
         fontSize: '.8em',

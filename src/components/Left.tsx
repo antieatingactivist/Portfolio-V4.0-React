@@ -25,7 +25,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     const [face, setFace] = useState('˙ ͜ʟ˙');
     
 
-    const leftStyle: any = {
+    const leftStyle: object = {
         transitionDuration: leftTransitionDuration,
         transitionProperty: 'top',
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',    
@@ -37,7 +37,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     };
 
 
-    const sectionStyle: any = {
+    const sectionStyle: object = {
         transitionProperty: 'transform, width, margin-left',
         transitionDuration: sectionTransitionDuration,
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',
@@ -59,7 +59,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
         backfaceVisibility: 'hidden',
     };
 
-    const stripeStyle: any = {
+    const stripeStyle: object = {
         transitionProperty: 'height',
         transitionDuration: '3s',
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',

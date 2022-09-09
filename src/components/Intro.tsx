@@ -13,7 +13,7 @@ export default function Intro({windowWidth}: Props) {
     const introStyle = {     
         paddingTop: 'calc(45vh - 140px)',      
     }
-    const h1Style: any = {
+    const h1Style: object = {
         position: 'relative',
         transition: 'opacity 1.5s',
         transitionDelay: '.1s',
@@ -23,7 +23,7 @@ export default function Intro({windowWidth}: Props) {
         whiteSpace: 'nowrap',
         zIndex: '1'
     }
-    const spanStyle: any = {
+    const spanStyle: object = {
         transition: 'left .4s cubic-bezier(.4,.43,0,1.23)',
         transitionDelay: '3.6s',
         position: 'relative',
@@ -31,7 +31,7 @@ export default function Intro({windowWidth}: Props) {
         left: windowWidth < 500 ? `${spanLeft-50}px` : `${spanLeft}px`,
         fontSize: windowWidth < 500 ? '6vw' : '70%',
     }
-    const pStyle: any = {
+    const pStyle: object = {
 
         position: 'relative',
         top: '-50px',

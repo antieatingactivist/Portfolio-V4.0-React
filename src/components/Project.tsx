@@ -26,6 +26,8 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
         backgroundColor: 'var(--bgcolor)',
         boxShadow: windowWidth < 500 ? 'none' : '11px 7px 0 var(--bgcolor), 12px 8px var(--accentcolor), 16px 16px 10px var(--shadowcolor)' ,
         zIndex: '1',
+        display: 'flex',
+        justifyContent: 'center',
      
     }
     const descriptionStyle: object = {
@@ -57,10 +59,10 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
     return (
         <section style={ isHidden ? {transition: 'opacity 1.5s', opacity: '1' } : {transition: 'opacity .8s', opacity: '0' }}>
             <div id={project.name} style={projectStyle} ref={projectRef}>
-                <div style={imageFrameStyle}>
-                    <h2 style={{marginLeft: windowWidth < 500 ?  0: '-30px' }}>
+                    <h2 style={{marginLeft: windowWidth < 500 ?  0: '10px' }}>
                         <span className="accent">./</span>{project.name}
                     </h2>
+                <div style={imageFrameStyle}>
                     <Image src={project.imgSrc} isHidden={isHidden} />
                 </div>
                 <div style={ isHidden ? {...descriptionStyle, transitionDuration: '1.5s', opacity: '1', transitionDelay: '.5s' } : {...descriptionStyle, transitionDuration: '.8s', transitionDelay: '.5s', opacity: '0' } }>

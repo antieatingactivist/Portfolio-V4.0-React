@@ -22,6 +22,13 @@
         "liveLink": "https://quiet-sierra-37143.herokuapp.com/"
     },
     {
+        "name": "Angular Calculator",
+        "description": "This is a project I did while learning the ins and outs of Angular. It is modeled after the MacOS calculator and the goal is to implement all of the behaviors.",
+        "imgSrc": "calculator.png",
+        "gitHub": "https://github.com/antieatingactivist/Angular-Calculator",
+        "liveLink": "https://antieatingactivist.github.io/Angular-Calculator/"
+    },
+    {
         "name": "Workplace Tracker",
         "description": "This is an app for keeping track of Employees, Job Titles, Departments, and Salaries at your business. It uses an elegant command line interface using node.js and inquirer. Data is stored using a mySQL database.",
         "imgSrc": "workplacetracker.png",

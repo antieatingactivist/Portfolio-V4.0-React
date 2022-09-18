@@ -6,8 +6,12 @@ type Props = {
 
 export default function Image({src, isHidden}: Props) {
     let imgStyle = {
-        width: 'calc(100vw - 20px)',
-        maxWidth: '500px',
+        
+        // maxWidth: 'calc(100vw-30px)',
+        height: 'auto',
+        width: 'auto',
+        maxWidth: 'calc(100% - 10px)',
+        maxHeight: '300px',
         filter: `grayscale(${isHidden ? 0 : 1})`,
         transition: 'filter 1s',
         transitionDelay: '2s',

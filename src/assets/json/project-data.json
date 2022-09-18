@@ -23,7 +23,7 @@
     },
     {
         "name": "Angular Calculator",
-        "description": "This is a project I did while learning the ins and outs of Angular. It is modeled after the MacOS calculator and the goal is to implement all of the behaviors.",
+        "description": "This is a project I did while learning the ins and outs of Angular. It is modeled after the MacOS calculator and the goal was to implement all of it's behaviors. It even corrects a NaN error in the application that it was based on",
         "imgSrc": "calculator.png",
         "gitHub": "https://github.com/antieatingactivist/Angular-Calculator",
         "liveLink": "https://antieatingactivist.github.io/Angular-Calculator/"

@@ -173,7 +173,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
         <aside id="left" style={leftStyle}>
             <section style={{...sectionStyle, transform: `rotateX(${rotation}deg) rotateY(${spin + 180}deg) rotateZ(${angle}deg)`}} >
                 { !expandedContact ?
-                    <span style={{fontSize: '16px'}}>{face}</span>
+                    <span style={{fontSize: '16px', whiteSpace: 'nowrap'}}>{face}</span>
                     :
                     <div style={{display: 'flex'}}>
                         

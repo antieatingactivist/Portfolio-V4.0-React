@@ -51,14 +51,6 @@
         "gitHub": "https://github.com/antieatingactivist/weather-widget/",
         "liveLink": "https://antieatingactivist.github.io/weather-widget/"
     },
-    {
-        
-        "name": "Sound Lane",
-        "description": "This project was a collaberation between myself and two other people. Sound Lane uses API calls from AudioDB and Last.fm to populate a page with information and images for your favorite musical artists.",
-        "imgSrc": "soundlane.png",
-        "gitHub": "https://github.com/antieatingactivist/Sound-Lane/",
-        "liveLink": "https://antieatingactivist.github.io/Sound-Lane/"
-    },
     {   
        
         "name": "Platformer Engine",
@@ -96,6 +88,14 @@
         "imgSrc": "hr.png",
         "gitHub": "https://github.com/antieatingactivist/HR-Helping-Hand",
         "demoVideo": "https://antieatingactivist.github.io/HR-Helping-Hand/"
+    },
+    {
+        
+        "name": "Sound Lane",
+        "description": "This project was a collaberation between myself and two other people. Sound Lane uses API calls from AudioDB and Last.fm to populate a page with information and images for your favorite musical artists. Unfortunately one of the APIs has moved to a pay model and this app doesn't work as intended. At the moment, Coldplay is the only artist that returns any data.",
+        "imgSrc": "soundlane.png",
+        "gitHub": "https://github.com/antieatingactivist/Sound-Lane/",
+        "liveLink": "https://antieatingactivist.github.io/Sound-Lane/"
     },
     {
    

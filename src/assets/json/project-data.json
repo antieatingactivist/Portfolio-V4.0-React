@@ -9,7 +9,7 @@
     {
         "name": "Courier Client",
         "description": "The idea for this app was born out of frustration over the type of app I had to use in one of my former jobs, a bicycle courier. I wanted to create an app that was easy to look at and intuitive. The app is built using Angular and is optimised for smartphone use. The backend is built with Node.js and uses the Sequelize ORM to perform CRUD operations on a MySQL database. NOTE: This is a mobile app and is optimized for use on a smartphone.",
-        "imgSrc": "courier.jpg",
+        "imgSrc": "courier.png",
         "gitHub": "https://github.com/antieatingactivist/Courier-client",
         "liveLink": "https://antieatingactivist.github.io/Courier-client/"
     },

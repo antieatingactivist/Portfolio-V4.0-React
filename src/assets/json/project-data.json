@@ -7,6 +7,13 @@
         "demoVideo": "https://antieatingactivist.github.io/RGB-strip-controller/"
     },
     {
+        "name": "Courier Client",
+        "description": "The idea for this app was born out of frustration over the type of app I had to use in one of my former jobs, a bicycle courier. I wanted to create an app that was easy to look at and intuitive. The app is built using Angular and is optimised for smartphone use. The backend is built with Node.js and uses the Sequelize ORM to perform CRUD operations on a MySQL database. NOTE: This is a mobile app and is optimized for use on a smartphone.",
+        "imgSrc": "courier.jpg",
+        "gitHub": "https://github.com/antieatingactivist/Courier-client",
+        "liveLink": "https://antieatingactivist.github.io/Courier-client/"
+    },
+    {
      
         "name": "Tech Blog",
         "description": "This is a full stack blog website that supports multiple users. Users can view comment on other user's posts. The dashboard allows for content creation and deletion. It incorperates a retro Tron-like design using perspective and css instead of static assets. Sequelize is used to interact with a mySQL database to store content and user data and Handlebars is used to render the content. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",

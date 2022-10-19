@@ -73,12 +73,19 @@ function App() {
     }
   }
 
+  const hitCount = () => {
+    fetch('https://visit.home.jgarrettcorbin.com')
+    .then((data) => console.log("works"))
+    .catch((error) => console.error(error))
+  }
+
   useEffect(() => {
     handleRightNav();
     
   }, [scrollPosition]);
 
   useEffect(() => {
+    hitCount();
     
     window.addEventListener("resize", handleResize);
     handleResize();

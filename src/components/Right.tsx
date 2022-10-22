@@ -7,10 +7,11 @@ type Props = {
     windowHeight: number,
     introHidden: boolean,
     aboutHidden: boolean,
+    skillsHidden: boolean,
     onScreenProject: string,
 }
 
-export default function Right( {windowHeight, introHidden, aboutHidden, onScreenProject }: Props ) {
+export default function Right( {windowHeight, introHidden, aboutHidden, skillsHidden, onScreenProject }: Props ) {
     const [arrowFlip, setArrowFlip] = useState(0);
     const [toTopButtonShow, setToTopButtonShow] = useState(0);
 
@@ -41,6 +42,14 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
         transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
     }
 
+    const skillsStyle = {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        marginRight: '10px',
+        marginTop: '60vh',
+        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
+    }
+
     const projectStyle = {
         display: 'flex',
         justifyContent: 'flex-start',
@@ -67,6 +76,13 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
     if (aboutHidden) {
         introStyle.marginTop = '-65px';
         aboutStyle.marginTop = '-30px';
+        projectBlockStyle.marginTop = '100vh'; 
+    }
+
+    if (skillsHidden) {
+        introStyle.marginTop = '-65px';
+        aboutStyle.marginTop = '-30px';
+        skillsStyle.marginTop = '-30px';
         projectBlockStyle.marginTop = `calc(50vh - ${projectData.length * 10}px)`;
     }
 
@@ -104,6 +120,12 @@ export default function Right( {windowHeight, introHidden, aboutHidden, onScreen
                             <span className="accent">{"<< "}</span>
                         </div>
                         <div>About</div>
+                    </div>
+                    <div style={skillsStyle}>
+                        <div style={{...arrowStyle, transform: `rotateX(${arrowFlip}deg)`}}>
+                            <span className="accent">{"<< "}</span>
+                        </div>
+                        <div>Skills</div>
                     </div>
                     <div style={projectBlockStyle}>
                         <p>Projects/</p>

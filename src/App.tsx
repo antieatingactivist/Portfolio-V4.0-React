@@ -9,11 +9,13 @@ import Right from './components/Right';
 import Intro from './components/Intro';
 import Projects from './components/Projects';
 import About from './components/About';
+import Skills from './components/Skills';
 
 
 function App() {
   const introRef = useRef() as MutableRefObject<HTMLDivElement>;
   const aboutRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const skillsRef = useRef() as MutableRefObject<HTMLDivElement>;
   const projectsRef = useRef() as MutableRefObject<HTMLDivElement>;
   const footerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -24,17 +26,20 @@ function App() {
   const [furthestDown, setFurthestDown] = useState<number>(0);
   const [headerHidden, setHeaderHidden] = useState<boolean>(true);  
   const [aboutOffset, setAboutOffest] = useState<number>(0);
+  const [skillsOffset, setSkillsOffest] = useState<number>(0);
   const [projectsOffset, setProjectOffset] = useState<number>(0);
   const [footerOffset, setFooterOffset] = useState<number>(0);
   const [footerExpand, setFooterExpand] = useState<boolean>(false);
   const [introHidden, setIntroHidden] = useState<boolean>(true);  
   const [aboutHidden, setAboutHidden] = useState<boolean>(true);
+  const [skillsHidden, setSkillsHidden] = useState<boolean>(true);
   const [onScreenProject, setOnScreenProject] = useState<string>("");
 
 
   const handleScroll = () => {
     setScrollPosition(window.pageYOffset);
     setAboutOffest(aboutRef.current.getBoundingClientRect().top);
+    setSkillsOffest(skillsRef.current.getBoundingClientRect().top);
     setProjectOffset(projectsRef.current.getBoundingClientRect().top);
     setFooterOffset(footerRef.current.getBoundingClientRect().top);
   };
@@ -58,12 +63,18 @@ function App() {
     } 
     if (aboutOffset >= 300 && introHidden) {
       setIntroHidden(false);
-    } 
-    if (projectsOffset < 100 && !aboutHidden) {
-      setAboutHidden(true);
     }
-    if (projectsOffset >= 300 && aboutHidden) {
+    if (skillsOffset < 100 && !aboutHidden) {
+      setAboutHidden(true);
+    } 
+    if (skillsOffset >= 300 && aboutHidden) {
       setAboutHidden(false);
+    }  
+    if (projectsOffset < 100 && !skillsHidden) {
+      setSkillsHidden(true);
+    }
+    if (projectsOffset >= 300 && skillsHidden) {
+      setSkillsHidden(false);
     }
     if (footerOffset <= windowHeight-50 && !footerExpand) {
       setFooterExpand(true);
@@ -119,7 +130,7 @@ function App() {
           <div id="top" className="noMobile">
             <Left scrollPosition={scrollPosition} footerExpand={footerExpand} />
    
-            <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} onScreenProject={onScreenProject} />
+            <Right windowHeight={windowHeight} introHidden={introHidden} aboutHidden={aboutHidden} skillsHidden={skillsHidden} onScreenProject={onScreenProject} />
           </div>
         }
         
@@ -131,6 +142,10 @@ function App() {
       
           <div ref={aboutRef} style={aboutOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
             <About windowWidth={windowWidth}/>
+          </div>
+
+          <div ref={skillsRef} style={skillsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
+            <Skills windowWidth={windowWidth}/>
           </div>
 
           <div ref={projectsRef} style={projectsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>

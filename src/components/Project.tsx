@@ -1,5 +1,7 @@
 import Image from './Image';
+import Devicons from './Devicons';
 import { useEffect, useRef, useState, MutableRefObject } from 'react';
+import "devicon/devicon.min.css";
 
 type Props = {
     project: any,
@@ -67,6 +69,9 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
                 </div>
                 <div style={ isHidden ? {...descriptionStyle, transitionDuration: '1.5s', opacity: '1', transitionDelay: '.5s' } : {...descriptionStyle, transitionDuration: '.8s', transitionDelay: '.5s', opacity: '0' } }>
                     <p style={ isHidden ? {transitionDuration: '2.5s', opacity: '1', transitionDelay: '1s' } : {transitionDuration: '1.8s', transitionDelay: '1s', opacity: '0' } }>{project.description}</p>
+
+                    <Devicons />
+
                     <div style={{display: 'flex', justifyContent: windowWidth < 500 ? 'center' : 'flex-end'}}>
                         <a href={project.gitHub}  target="_blank" rel="noopener noreferrer">Project on GitHub</a>
                         {project.liveLink ? 
@@ -74,6 +79,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
                             :
                             <a href={project.demoVideo} target="_blank" rel="noopener noreferrer">Demo Video</a>  
                         }
+                        
                     </div>
                 </div> 
             </div>

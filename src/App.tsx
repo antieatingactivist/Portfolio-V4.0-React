@@ -75,8 +75,8 @@ function App() {
 
   const hitCount = () => {
     fetch('https://visit.home.jgarrettcorbin.com')
-    .then((data) => console.log("works"))
-    .catch((error) => console.error(error))
+      .then((data) => console.log("works"))
+      .catch((error) => console.error(error))
   }
 
   useEffect(() => {

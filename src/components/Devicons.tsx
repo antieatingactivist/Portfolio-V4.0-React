@@ -1,4 +1,5 @@
 
+// import { ReactComponent as CssIcon } from '../assets/svg/css3-plain-wordmark.svg'
 type Props = {
     technologies: string[];
     isHidden: boolean;
@@ -6,15 +7,20 @@ type Props = {
 
 export default function Devicons({technologies, isHidden}: Props) {
     const style: object = {
-        position: "absolute" ,
-        display: 'flex', 
-        justifyContent: 'flex-start',
+        position: "absolute",
+        bottom: "10px",
+        left: "10px"
     }
     const iconStyle: object = {
-        fontSize: "35px",
+        fontSize: "30px",
+        color: "var(--accentcolor)",
+        marginRight: "2px"
+
     }
     return (
         <div style={style}>
+            {/* <svg><CssIcon fill="red"/></svg> */}
+
             {technologies?.map(technology => (
                 {
                     "react" : <i className="devicon-react-plain" style={iconStyle}></i>,

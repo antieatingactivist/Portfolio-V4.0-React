@@ -3,6 +3,7 @@ import Devicon from './Devicon';
 import projectData from '../assets/json/project-data.json';
 import technologyDescriptions from '../assets/json/technologies.json';
 import { Link } from "react-scroll";
+import Typewriter from 'typewriter-effect';
 
 type Props = {
     technology: string,
@@ -14,6 +15,7 @@ type Props = {
 export default function Popup({ technology, setIsActive}: Props) {
     const text = technologyDescriptions[technology as keyof typeof technologyDescriptions] 
     const [opacity, setOpacity] = useState<number>(0);
+    const [showLinks, setShowLinks] = useState<boolean>(false);
     const headerStyle = {
         padding: "6px 28px 4px 10px",
         // backgroundColor: "#444444",
@@ -32,7 +34,7 @@ export default function Popup({ technology, setIsActive}: Props) {
         backgroundColor: "var(--bgcolortransparent)",
         borderRadius: '3px',
         border: '1px solid var(--accentcolor)',
-        boxShadow: '8px 8px 15px var(--shadowcolor)' , 
+        boxShadow: '12px 12px 25px var(--shadowcolor)' , 
         zIndex: 100,
         opacity: opacity,
         left: "40px",
@@ -59,6 +61,18 @@ export default function Popup({ technology, setIsActive}: Props) {
     const bodyStyle = {
         margin: "10px"
     }
+    // let typeText = `<br /><span style="color:var(--maincolor)">dsadda</span>`
+    // let typeText = getProjects(projectData);
+
+    // function getProjects(projects: any[]) {
+    //     let output = "";
+    //     projects = projects.filter(project => project.technologies.includes(technology));
+    //     for (let project of projects) {
+    //         output += `<br /><a href="#RGB strip controller">${project.name}</a>`;
+
+    //     }
+    //     return output
+    // }
     function getTitle(technology: string) {
         switch (technology) {
             case "react": return "React.js";
@@ -79,6 +93,7 @@ export default function Popup({ technology, setIsActive}: Props) {
             case "webpack": return "Webpack";
         }
     }
+    
     useEffect(() => {
         setOpacity(1);
     },[]) 
@@ -95,33 +110,72 @@ export default function Popup({ technology, setIsActive}: Props) {
                     <Devicon technology={technology} color={"var(--accentcolor)"}  size="60px" clickable={false} /><br/>
                     <div>
                         <br />
-                        {/* <code>{text}</code> */}
+                        <code>{text}</code>
                         <br /> <br />               
                     </div>
-                    
-                        <code style={{color: "var(--accentcolor)"}}>~/projects/{technology} &gt;&gt; </code><code>ls</code><br />
-                    
-
-                    {projectData.map(project => (  
+                    <div style={{display: "flex"}}>
+                        <code style={{color: "var(--accentcolor)"}}>
+                            <Typewriter
+                                onInit={(typewriter) => {
+                                    typewriter
+                                    .pasteString(`~/projects/${technology} >> `, null)  
+                                    .changeDelay(100)
+                                    .pauseFor(1000) 
+                                    .typeString('<span style="color:var(--maincolor)">ls -a</span>')    
+                                    .pauseFor(1000)
+                                    .callFunction(() => setShowLinks(true))
+                                    
+                                    
+                                    // .typeString(typeText)  
+                                    .start()
+                            
+                                }}
+                                options={{
+                                    delay: 'natural',
+                                    cursor: '',
+                                }}
+                            />
+                        </code>
                         
-                            project.technologies.includes(technology) ?
-                                <>
-                                    <Link
-                                        activeClass="active"
-                                        to={project.name}
-                                        spy={true}
-                                        smooth={true}
-                                        offset={window.innerHeight/-4}
-                                        duration={500}
-                                        onClick={() => setIsActive(false)}
-                                    ><code>{project.name}</code>
-                                    </Link>
-                                    <br />
-                                </> :
-                                <></>
-                        
-                    ))}
-
+                        <br />
+                    </div>
+                    
+                    <div style={{display: showLinks ? "inline" : "none"}}>
+                        {projectData.map(project => (  
+                            
+                                project.technologies.includes(technology) ?
+                                    <>
+                                        <Link
+                                            activeClass="active"
+                                            to={project.name}
+                                            spy={true}
+                                            smooth={true}
+                                            offset={window.innerHeight/-4}
+                                            duration={500}
+                                            onClick={() => setIsActive(false)}
+                                        ><code>{project.name}</code>
+                                        </Link>
+                                        <br />
+                                    </> :
+                                    <></>
+                            
+                        ))}
+                        <code style={{color: "var(--accentcolor)"}}>
+                            <Typewriter
+                                onInit={(typewriter) => {
+                                    typewriter
+                                    .pasteString(`~/projects/${technology} >> `, null) 
+                                    .typeString('<span style="color:var(--maincolor)">█</span>') 
+                                    .start()
+                                }}
+                                options={{
+                                    delay: 'natural',
+                                    cursor: "",
+                                }}
+                            />
+                        </code>
+                    </div>
+                    
 
                  </div>
             

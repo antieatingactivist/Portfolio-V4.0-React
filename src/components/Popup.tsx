@@ -99,7 +99,7 @@ export default function Popup({ technology, setIsActive}: Props) {
                         <br /> <br />               
                     </div>
                     
-                        <code style={{color: "var(--accentcolor)"}}>~/projects/{technology} &gt;&gt; ls</code><br />
+                        <code style={{color: "var(--accentcolor)"}}>~/projects/{technology} &gt;&gt; </code><code>ls</code><br />
                     
 
                     {projectData.map(project => (  

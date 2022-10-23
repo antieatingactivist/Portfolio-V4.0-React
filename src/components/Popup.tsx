@@ -110,7 +110,8 @@ export default function Popup({ technology, setIsActive}: Props) {
                     <Devicon technology={technology} color={"var(--accentcolor)"}  size="60px" clickable={false} /><br/>
                     <div>
                         <br />
-                        <code>{text}</code>
+                        {/* <code>{text}</code> */}
+                        <code>[Lorem Ipsum and stuff will be here soon]</code>
                         <br /> <br />               
                     </div>
                     <div style={{display: "flex"}}>

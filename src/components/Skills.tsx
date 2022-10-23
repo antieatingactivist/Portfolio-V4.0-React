@@ -4,7 +4,7 @@ import Devicon from './Devicon';
 
 const skillsStyle: object = {
     transition: 'all 2s',
-    padding: '40vh 10px 40vh 10px',
+    padding: '40vh 10px 20vh 10px',
     maxWidth: '600px',
 
 }

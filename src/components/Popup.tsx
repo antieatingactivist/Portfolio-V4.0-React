@@ -15,7 +15,7 @@ export default function Popup({ technology, setIsActive}: Props) {
     const text = technologyDescriptions[technology as keyof typeof technologyDescriptions] 
     const [opacity, setOpacity] = useState<number>(0);
     const headerStyle = {
-        padding: "6px 10px 4px 10px",
+        padding: "6px 28px 4px 10px",
         // backgroundColor: "#444444",
         borderBottom: '1px solid var(--accentcolor)',
         display: "flex"
@@ -26,7 +26,7 @@ export default function Popup({ technology, setIsActive}: Props) {
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
         display: "inline",
         position: "absolute",
-        // height: "600px",
+        minHeight: "300px",
         width: "400px",
         color: "#ffffff",
         backgroundColor: "var(--bgcolortransparent)",
@@ -44,7 +44,7 @@ export default function Popup({ technology, setIsActive}: Props) {
     const xStyle: object = {
         color: 'var(--accentcolor)',
         position: "absolute",
-        right: "5px"
+        right: "7px"
     }
     const stripeStyle: object = {
 

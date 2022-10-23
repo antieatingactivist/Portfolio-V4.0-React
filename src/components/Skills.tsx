@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+
 
 import Devicon from './Devicon';
 
@@ -32,9 +32,10 @@ const iconSize = "45px";
 
 type Props = {
     windowHeight: number
+    hidden: boolean
 }
 
-export default function Skills({ windowHeight }: Props) {
+export default function Skills({ windowHeight, hidden }: Props) {
 
 
     return (
@@ -42,43 +43,43 @@ export default function Skills({ windowHeight }: Props) {
             <div style={{position: 'relative', height: '40vh'}}>
                 <div style={{...categoryStyle, marginLeft: "0px", top: "0px"}}>
                     <div style={headerStyle}><code>Languages</code></div>
-                    <div style={bodyStyle}>
+                    {!hidden && <div style={bodyStyle}>
                         <Devicon technology="cplusplus" color={"var(--accentcolor)"} size={iconSize} />
                         <Devicon technology="javascript" color={"var(--accentcolor)"} size={iconSize} />
                         <Devicon technology="typescript" color={"var(--accentcolor)"} size={iconSize} />
                         <Devicon technology="css" color={"var(--accentcolor)"} size={iconSize} />
                         <Devicon technology="html" color={"var(--accentcolor)"} size={iconSize} />
-                    </div>
+                    </div> }
                 </div>
 
                 <div style={{...categoryStyle, marginLeft: "20px", top: "100px"}}>
                 <div style={headerStyle}><code>Front End Technologies</code></div>
-                    <div style={bodyStyle}>
+                    {!hidden && <div style={bodyStyle}>
                         <Devicon technology="react" color={"var(--accentcolor)"}  size={iconSize} />
                         <Devicon technology="angular" color={"var(--accentcolor)"} size={iconSize} />
                         <Devicon technology="handlebars" color={"var(--accentcolor)"} size={iconSize} />
                         <Devicon technology="bootstrap" color={"var(--accentcolor)"} size={iconSize} />
                         <Devicon technology="tailwind" color={"var(--accentcolor)"} size={iconSize} />
-                    </div>
+                    </div> }
                 </div>
 
                 <div style={{...categoryStyle, marginLeft: "40px", top: "200px"}}>
                 <div style={headerStyle}><code>Back End Technologies</code></div>
-                    <div style={bodyStyle}>
+                    {!hidden && <div style={bodyStyle}>
                         <Devicon technology="node" color={"var(--accentcolor)"}  size={iconSize} />
                         <Devicon technology="express" color={"var(--accentcolor)"} size={iconSize} />
                         <Devicon technology="mysql" color={"var(--accentcolor)"} size={iconSize} />
                         <Devicon technology="mongodb" color={"var(--accentcolor)"} size={iconSize} />
-                    </div>
+                    </div> }
                 </div>
 
                 <div style={{...categoryStyle, marginLeft: "60px", top: "300px"}}>
                 <div style={headerStyle}><code>Other Technologies</code></div>
-                    <div style={bodyStyle}>
+                    {!hidden && <div style={bodyStyle}>
                         <Devicon technology="embedded" color={"var(--accentcolor)"} size={iconSize}  />
                         <Devicon technology="webpack" color={"var(--accentcolor)"} size={iconSize} />
 
-                    </div>
+                    </div> }
                 </div>
             </div>
 

@@ -14,7 +14,7 @@ export default function Devicons({technologies, isHidden}: Props) {
     return (
         <span style={style}>
             {
-                technologies?.map( technology => <Devicon technology={technology} /> )
+                technologies?.map( technology => <Devicon technology={technology} clickable={false} /> )
             }
         </span>
     )

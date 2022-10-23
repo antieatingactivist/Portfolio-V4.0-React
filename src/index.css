@@ -80,7 +80,7 @@ main {
   max-width: 800px;
 }
 
-main a {
+.button {
   transition: color .1s;
   border: 1px solid var(--accentcolor);
   border-radius: 5px;
@@ -92,7 +92,7 @@ main a {
   font-weight: 200;
   z-index: 10;
 }
-main a:hover {
+.button:hover {
   transition: color .5s;
   color: var(--maincolor);
 }

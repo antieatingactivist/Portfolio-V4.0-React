@@ -25,23 +25,17 @@ const categoryStyle: object = {
     // paddingBottom: '40px'
     // top: "-100px"
 }
+const bodyStyle = {
+    margin: "20px"
+}
+const iconSize = "45px";
 
 type Props = {
-    windowWidth: number
+    windowHeight: number
 }
 
-export default function Skills({ windowWidth }: Props) {
+export default function Skills({ windowHeight }: Props) {
 
-    const iconStyle: object = {
-        margin: "2px 2px 2px 2px",
-        border: "none",
-        boxShadow: "none"
-    
-    }
-    const bodyStyle = {
-        margin: "20px"
-    }
-    const iconSize = "45px";
 
     return (
         <section style={skillsStyle}>

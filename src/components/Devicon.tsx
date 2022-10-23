@@ -7,9 +7,10 @@ type Props = {
     color?: string;
     size?: string;
     clickable?: boolean;
+    margin?: string;
 }
 
-export default function Devicon({technology, color, size, clickable}: Props) {
+export default function Devicon({technology, color, size, clickable, margin}: Props) {
     const [isHover, setIsHover] = useState(false);
     const [isActive, setIsActive] = useState(false);
 
@@ -45,13 +46,22 @@ export default function Devicon({technology, color, size, clickable}: Props) {
     }
     return (
         <>    
-            {clickable === false ? 
-                <i className={fetchIcon(technology)} style={iconStyle}></i>
-                :
-                <i className={fetchIcon(technology)} style={iconStyle} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} onClick={() => setIsActive(true)}></i>
-                
-            }
-
+            <div style={{display: 'inline', margin: margin}}>
+                <div>
+                    {clickable === false ? 
+                        <i className={fetchIcon(technology)} style={iconStyle}></i>
+                        :
+                        <i className={fetchIcon(technology)} style={iconStyle} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} onClick={() => setIsActive(true)}></i>
+                        
+                    }
+                </div>
+                {clickable === false ? 
+                    <></> :
+                    <div style={{textAlign: "center"}}>
+                        <code style={{fontSize: '.5em'}}>{technology}</code>
+                    </div>
+                }
+            </div>
             {isActive && <Popup technology={technology} setIsActive={setIsActive} />}
         </>
     )

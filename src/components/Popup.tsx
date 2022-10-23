@@ -15,9 +15,10 @@ export default function Popup({ technology, setIsActive}: Props) {
     const text = technologyDescriptions[technology as keyof typeof technologyDescriptions] 
     const [opacity, setOpacity] = useState<number>(0);
     const headerStyle = {
-        padding: "4px",
+        padding: "6px 10px 4px 10px",
         // backgroundColor: "#444444",
         borderBottom: '1px solid var(--accentcolor)',
+        display: "flex"
     }
     const popupStyle: object = {
         transitionProperty: 'opacity',
@@ -31,16 +32,29 @@ export default function Popup({ technology, setIsActive}: Props) {
         backgroundColor: "var(--bgcolortransparent)",
         borderRadius: '3px',
         border: '1px solid var(--accentcolor)',
-        boxShadow: '3px 3px 5px var(--shadowcolor)' , 
+        boxShadow: '8px 8px 15px var(--shadowcolor)' , 
         zIndex: 100,
         opacity: opacity,
         left: "40px",
         top: "-40px",
+        backdropFilter: "blur(8px)",
+        webkitBackdropFilter: "blur(8px)",
+        mozBackdropFilter: "blur(8px)"
     }
     const xStyle: object = {
         color: 'var(--accentcolor)',
         position: "absolute",
         right: "5px"
+    }
+    const stripeStyle: object = {
+
+        borderStyle: 'solid',
+        borderColor: 'var(--accentcolor)',
+        borderWidth: '1px 0 1px 0',
+        height: "12px",
+        width: "100%",
+        margin: "2px 2px 2px 20px",
+        opacity: "0.3",
     }
     const bodyStyle = {
         margin: "10px"
@@ -74,13 +88,14 @@ export default function Popup({ technology, setIsActive}: Props) {
             <div style={popupStyle}>
                  <div style={headerStyle}>
                     <code>{getTitle(technology)}</code>
+                    <div style={stripeStyle}></div>
                     <i className="bi bi-x-square" style={xStyle} onClick={() => setIsActive(false)}></i>
                  </div>
                  <div style={bodyStyle}>
                     <Devicon technology={technology} color={"var(--accentcolor)"}  size="60px" clickable={false} /><br/>
                     <div>
                         <br />
-                        <code>{text}</code>
+                        {/* <code>{text}</code> */}
                         <br /> <br />               
                     </div>
                     

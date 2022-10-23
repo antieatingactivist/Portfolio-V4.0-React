@@ -9,7 +9,8 @@ export default function Devicons({technologies, isHidden}: Props) {
     const style: object = {
         position: "absolute",
         bottom: "10px",
-        left: "10px"
+        left: "10px",
+        display: "flex"
     }
     return (
         <span style={style}>

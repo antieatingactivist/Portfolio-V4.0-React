@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react';
 import Devicon from './Devicon';
 import projectData from '../assets/json/project-data.json';
+import technologyDescriptions from '../assets/json/technologies.json';
 import { Link } from "react-scroll";
 
 type Props = {
     technology: string,
     setIsActive: Function
 }
+  
 
 
 export default function Popup({ technology, setIsActive}: Props) {
-
+    const text = technologyDescriptions[technology as keyof typeof technologyDescriptions] 
     const [opacity, setOpacity] = useState<number>(0);
     const headerStyle = {
         padding: "4px",
@@ -65,9 +67,7 @@ export default function Popup({ technology, setIsActive}: Props) {
     }
     useEffect(() => {
         setOpacity(1);
-    },[])
-
-        
+    },[]) 
     
     return (
             
@@ -78,24 +78,25 @@ export default function Popup({ technology, setIsActive}: Props) {
                  </div>
                  <div style={bodyStyle}>
                     <Devicon technology={technology} color={"var(--accentcolor)"}  size="60px" clickable={false} /><br/>
-
+                    <p>
+                        {text}                 
+                    </p>
 
                     {projectData.map(project => (  
                         
                             project.technologies.includes(technology) ?
                                 <>
-                                {/* <a href="https://"><code>{project.name}</code></a> */}
-                                <Link
-                                    activeClass="active"
-                                    to={project.name}
-                                    spy={true}
-                                    smooth={true}
-                                    offset={window.innerHeight/-4}
-                                    duration={500}
-                                    onClick={() => setIsActive(false)}
-                                ><code>{project.name}</code>
-                                </Link>
-                                <br />
+                                    <Link
+                                        activeClass="active"
+                                        to={project.name}
+                                        spy={true}
+                                        smooth={true}
+                                        offset={window.innerHeight/-4}
+                                        duration={500}
+                                        onClick={() => setIsActive(false)}
+                                    ><code>{project.name}</code>
+                                    </Link>
+                                    <br />
                                 </> :
                                 <></>
                         

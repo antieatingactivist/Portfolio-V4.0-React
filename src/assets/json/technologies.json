@@ -1,6 +1,6 @@
 {
-    "react": "Test Text sdfsd",
-    "embedded": "Test Text sdfsd",
+    "react": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt et magna in pulvinar. Morbi fringilla eu quam quis pellentesque. Fusce nec placerat tellus",
+    "embedded": "Nulla condimentum, nisl at tempor pharetra, sapien justo vehicula leo, sit amet elementum sapien justo iaculis risus. Duis eget leo elit. Aliquam nibh sapien, tincidunt in sem vitae, iaculis congue sem. Vestibulum non dolor aliquet, commodo lorem id, ullamcorper tellus. Duis vitae lorem elit. Donec ut risus vulputate, gravida justo a, feugiat lacus. Cras interdum arcu sit amet urna iaculis dictum. Integer auctor neque a enim pellentesque, quis mattis dolor blandit. Fusce nec justo quis magna consequat placerat in non eros.",
     "cplusplus": "Test Text sdfsd",
     "javascript": "Test Text sdfsd",
     "typescript": "Test Text sdfsd",

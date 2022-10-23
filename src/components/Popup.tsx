@@ -25,7 +25,7 @@ export default function Popup({ technology, setIsActive}: Props) {
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
         display: "inline",
         position: "absolute",
-        height: "600px",
+        // height: "600px",
         width: "400px",
         color: "#ffffff",
         backgroundColor: "var(--bgcolortransparent)",
@@ -78,9 +78,14 @@ export default function Popup({ technology, setIsActive}: Props) {
                  </div>
                  <div style={bodyStyle}>
                     <Devicon technology={technology} color={"var(--accentcolor)"}  size="60px" clickable={false} /><br/>
-                    <p>
-                        {text}                 
-                    </p>
+                    <div>
+                        <br />
+                        <code>{text}</code>
+                        <br /> <br />               
+                    </div>
+                    
+                        <code style={{color: "var(--accentcolor)"}}>~/projects/{technology} &gt;&gt; ls</code><br />
+                    
 
                     {projectData.map(project => (  
                         

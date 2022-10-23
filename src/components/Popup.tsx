@@ -102,7 +102,7 @@ export default function Popup({ technology, setIsActive}: Props) {
             
             <div style={popupStyle}>
                  <div style={headerStyle}>
-                    <code>{getTitle(technology)}</code>
+                    <code style={{whiteSpace: "nowrap"}}>{getTitle(technology)}</code>
                     <div style={stripeStyle}></div>
                     <i className="bi bi-x-square" style={xStyle} onClick={() => setIsActive(false)}></i>
                  </div>

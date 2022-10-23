@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import Devicons from './Devicons';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
+import Devicon from './Devicon';
 
 const skillsStyle: object = {
     transition: 'all 2s',
-    padding: '40vh 10px 0vh 10px',
+    padding: '40vh 10px 40vh 10px',
     maxWidth: '600px',
 
 }
 const headerStyle = {
-    marginTop: 0,
+    padding: "4px",
+    // backgroundColor: "#444444",
+    borderBottom: '1px solid var(--accentcolor)',
 }
 const categoryStyle: object = {
     position: 'absolute',
@@ -17,9 +20,9 @@ const categoryStyle: object = {
     border: '1px solid var(--accentcolor)',
     boxShadow: '3px 3px 5px var(--shadowcolor)' , 
     // margin: "10px",
-    padding: '2px 10px 10px 2px',
+    paddingBottom: "50px",
     width: '500px',
-    paddingBottom: '40px'
+    // paddingBottom: '40px'
     // top: "-100px"
 }
 
@@ -28,57 +31,59 @@ type Props = {
 }
 
 export default function Skills({ windowWidth }: Props) {
-    const [isShown, setIsShown] = useState(false);
 
     const iconStyle: object = {
-        fontSize: "50px",
-        color: isShown ? "var(--accentcolor)" : "white",
-        margin: "6px",
+        margin: "2px 2px 2px 2px",
         border: "none",
         boxShadow: "none"
     
     }
+    const bodyStyle = {
+        margin: "20px"
+    }
+    const iconSize = "45px";
 
     return (
         <section style={skillsStyle}>
             <div style={{position: 'relative', height: '40vh'}}>
                 <div style={{...categoryStyle, marginLeft: "0px", top: "0px"}}>
-                    <p style={headerStyle}>Languages</p>
-                    <div>
-                        <a href=" " className="devicon-cplusplus-plain" style={iconStyle} onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}> </a>
-                        <a href=" " className="devicon-javascript-plain" style={iconStyle}> </a>
-                        <a href=" " className="devicon-typescript-plain" style={iconStyle}> </a>
-                        <a href=" " className="devicon-css3-plain-wordmark" style={iconStyle}> </a>
-                        <a href=" " className="devicon-html5-plain-wordmark" style={iconStyle}> </a>
+                    <div style={headerStyle}><code>Languages</code></div>
+                    <div style={bodyStyle}>
+                        <Devicon technology="cplusplus" color={"var(--accentcolor)"} size={iconSize} />
+                        <Devicon technology="javascript" color={"var(--accentcolor)"} size={iconSize} />
+                        <Devicon technology="typescript" color={"var(--accentcolor)"} size={iconSize} />
+                        <Devicon technology="css" color={"var(--accentcolor)"} size={iconSize} />
+                        <Devicon technology="html" color={"var(--accentcolor)"} size={iconSize} />
                     </div>
                 </div>
 
                 <div style={{...categoryStyle, marginLeft: "20px", top: "100px"}}>
-                <p style={headerStyle}>Front End Technologies</p>
-                    <div>
-                        <a href=" " className="devicon-react-plain" style={iconStyle}> </a>
-                        <a href=" " className="devicon-angularjs-plain" style={iconStyle}> </a>
-                        <a href=" " className="devicon-handlebars-plain" style={iconStyle}> </a>
-                        <a href=" " className="devicon-bootstrap-plain" style={iconStyle}> </a>
-                        <a href=" " className="devicon-tailwindcss-plain" style={iconStyle}> </a>
+                <div style={headerStyle}><code>Front End Technologies</code></div>
+                    <div style={bodyStyle}>
+                        <Devicon technology="react" color={"var(--accentcolor)"}  size={iconSize} />
+                        <Devicon technology="angular" color={"var(--accentcolor)"} size={iconSize} />
+                        <Devicon technology="handlebars" color={"var(--accentcolor)"} size={iconSize} />
+                        <Devicon technology="bootstrap" color={"var(--accentcolor)"} size={iconSize} />
+                        <Devicon technology="tailwind" color={"var(--accentcolor)"} size={iconSize} />
                     </div>
                 </div>
 
                 <div style={{...categoryStyle, marginLeft: "40px", top: "200px"}}>
-                <p style={headerStyle}>Back End Technologies</p>
-                    <div>
-                        <a href=" " className="devicon-nodejs-plain" style={iconStyle}> </a>
-                        <a href=" " className="devicon-express-original" style={iconStyle}> </a>
-                        <a href=" " className="devicon-mysql-plain" style={iconStyle}> </a>
-                        <a href=" " className="devicon-mongodb-plain" style={iconStyle}> </a>
+                <div style={headerStyle}><code>Back End Technologies</code></div>
+                    <div style={bodyStyle}>
+                        <Devicon technology="node" color={"var(--accentcolor)"}  size={iconSize} />
+                        <Devicon technology="express" color={"var(--accentcolor)"} size={iconSize} />
+                        <Devicon technology="mysql" color={"var(--accentcolor)"} size={iconSize} />
+                        <Devicon technology="mongodb" color={"var(--accentcolor)"} size={iconSize} />
                     </div>
                 </div>
 
                 <div style={{...categoryStyle, marginLeft: "60px", top: "300px"}}>
-                <p style={headerStyle}>Other Technologies</p>
-                    <div>
-                        <a href=" " className="devicon-embeddedc-plain-wordmark" style={iconStyle}> </a>
-                        <a href=" " className="devicon-webpack-plain" style={iconStyle}> </a>
+                <div style={headerStyle}><code>Other Technologies</code></div>
+                    <div style={bodyStyle}>
+                        <Devicon technology="embedded" color={"var(--accentcolor)"} size={iconSize}  />
+                        <Devicon technology="webpack" color={"var(--accentcolor)"} size={iconSize} />
+
                     </div>
                 </div>
             </div>

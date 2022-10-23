@@ -1,40 +1,52 @@
 
 // import { ReactComponent as CssIcon } from '../assets/svg/css3-plain-wordmark.svg'
+import React, { useState } from 'react';
+import Popup from './Popup'; 
 type Props = {
     technology: string;
+    color?: string;
+    size?: string;
 }
 
-export default function Devicon({technology}: Props) {
+export default function Devicon({technology, color, size}: Props) {
+    const [isHover, setIsHover] = useState(false);
+    const [isActive, setIsActive] = useState(false);
 
     const iconStyle: object = {
-        fontSize: "30px",
-        color: "var(--accentcolor)",
-        marginRight: "2px"
+        fontSize: size || "30px",
+        color: isHover ? "white" : color || "var(--accentcolor)",
+        margin: "2px",
+        transitionProperty: 'color',
+        transitionDuration: '1s',
+        transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
+    }
 
+
+    function fetchIcon(technology: string) {
+        switch (technology) {
+            case "react": return "devicon-react-plain";
+            case "embedded": return "devicon-embeddedc-plain-wordmark";
+            case "cplusplus": return "devicon-cplusplus-plain";
+            case "javascript": return "devicon-javascript-plain";
+            case "typescript": return "devicon-typescript-plain";
+            case "angular": return "devicon-angularplain";
+            case "mysql": return "devicon-mysql-plain";
+            case "mongodb": return "devicon-mongodb-plain";
+            case "bootstrap": return "devicon-bootstrap-plain";
+            case "tailwind": return "devicon-tailwindcss-plain";
+            case "handlebars": return "devicon-handlebars-plain";
+            case "css": return "devicon-css3-plain-wordmark";
+            case "html": return "devicon-html5-plain-wordmark";
+            case "node": return "devicon-nodejs-plain";
+            case "express": return "devicon-express-original";
+            case "webpack": return "devicon-webpack-plain";
+        }
     }
     return (
-        <>
-            {
-                {
-                    "react" : <i className="devicon-react-plain" style={iconStyle}></i>,
-                    "embedded" : <i className="devicon-embeddedc-plain-wordmark" style={iconStyle}></i>,
-                    "cplusplus" : <i className="devicon-cplusplus-plain" style={iconStyle}></i>,
-                    "javascript" : <i className="devicon-javascript-plain" style={iconStyle}></i>,
-                    "typescript" : <i className="devicon-typescript-plain" style={iconStyle}></i>,
-                    "angular" : <i className="devicon-angularjs-plain" style={iconStyle}></i>,
-                    "mysql" : <i className="devicon-mysql-plain" style={iconStyle}></i>,
-                    "mongodb" : <i className="devicon-mongodb-plain" style={iconStyle}></i>,
-                    "bootstrap" : <i className="devicon-bootstrap-plain" style={iconStyle}></i>,
-                    "tailwind" : <i className="devicon-tailwindcss-plain" style={iconStyle}></i>,
-                    "handlebars" : <i className="devicon-handlebars-plain" style={iconStyle}></i>,
-                    "css" : <i className="devicon-css3-plain-wordmark" style={iconStyle}></i>,
-                    "html" : <i className="devicon-html5-plain-wordmark" style={iconStyle}></i>,
-                    "node" : <i className="devicon-nodejs-plain" style={iconStyle}></i>,
-                    "express" : <i className="devicon-express-original" style={iconStyle}></i>,
-                    "webpack" : <i className="devicon-webpack-plain" style={iconStyle}></i>,
-                }[technology]
-            }
+        <>    
+            <i className={fetchIcon(technology)} style={iconStyle} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} onClick={() => setIsActive(true)}></i>
 
+            {isActive && <Popup isActive={isActive} setIsActive={setIsActive} />}
         </>
     )
 }

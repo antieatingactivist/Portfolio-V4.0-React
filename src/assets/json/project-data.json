@@ -91,7 +91,7 @@
         "imgSrc": "quizinator.png",
         "gitHub": "https://github.com/antieatingactivist/quizinator/",
         "liveLink": "https://stark-scrubland-48398.herokuapp.com/",
-        "technologies": ["handlebars", "javascript", "mysql", "tailwind", "html", "css"]
+        "technologies": ["node", "express", "handlebars", "javascript", "mysql", "tailwind", "html", "css"]
     },
     {
         "name": "Socialite API",

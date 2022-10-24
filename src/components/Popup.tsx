@@ -21,8 +21,8 @@ export default function Popup({ technology, setIsActive}: Props) {
     }
     const popupStyle: object = {
         transitionProperty: 'opacity, top',
-        transitionDuration: '.5s, .02s',
-        transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
+        transitionDuration: '.5s',
+        transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',
         display: "inline",
         position: "absolute",
         minHeight: "300px",
@@ -34,7 +34,7 @@ export default function Popup({ technology, setIsActive}: Props) {
         boxShadow: '12px 12px 25px var(--shadowcolor)' , 
         zIndex: 100,
         opacity: opacity,
-        left: `${40}px`,
+        left: `40px`,
         top: `${-40 * opacity}px`,
         backdropFilter: "blur(8px)",
         webkitBackdropFilter: "blur(8px)",

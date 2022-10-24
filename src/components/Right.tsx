@@ -46,7 +46,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
         display: 'flex',
         justifyContent: 'flex-end',
         marginRight: '10px',
-        marginTop: '60vh',
+        marginTop: '50vh',
         transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
     }
 
@@ -69,20 +69,20 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
 
     }
     if (introHidden) {
-        introStyle.marginTop = '-35px';
+        introStyle.marginTop = '-25px';
         projectBlockStyle.marginTop = '100vh';
     }
   
     if (aboutHidden) {
-        introStyle.marginTop = '-65px';
-        aboutStyle.marginTop = '-30px';
+        introStyle.marginTop = '-25px';
+        aboutStyle.marginTop = '-10px';
         projectBlockStyle.marginTop = '100vh'; 
     }
 
     if (skillsHidden) {
-        introStyle.marginTop = '-65px';
-        aboutStyle.marginTop = '-30px';
-        skillsStyle.marginTop = '-30px';
+        introStyle.marginTop = '-55px';
+        aboutStyle.marginTop = '-40px';
+        skillsStyle.marginTop = '-40px';
         projectBlockStyle.marginTop = `calc(50vh - ${projectData.length * 10}px)`;
     }
 

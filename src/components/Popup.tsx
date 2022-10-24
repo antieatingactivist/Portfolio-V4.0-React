@@ -10,21 +10,18 @@ type Props = {
     setIsActive: Function
 }
   
-
-
 export default function Popup({ technology, setIsActive}: Props) {
-    const text = technologyDescriptions[technology as keyof typeof technologyDescriptions] 
+    const technologyDescription = technologyDescriptions[technology as keyof typeof technologyDescriptions] 
     const [opacity, setOpacity] = useState<number>(0);
     const [showLinks, setShowLinks] = useState<boolean>(false);
     const headerStyle = {
         padding: "6px 28px 4px 10px",
-        // backgroundColor: "#444444",
         borderBottom: '1px solid var(--accentcolor)',
         display: "flex"
     }
     const popupStyle: object = {
-        transitionProperty: 'opacity',
-        transitionDuration: '.5s',
+        transitionProperty: 'opacity, top',
+        transitionDuration: '.5s, .02s',
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
         display: "inline",
         position: "absolute",
@@ -37,8 +34,8 @@ export default function Popup({ technology, setIsActive}: Props) {
         boxShadow: '12px 12px 25px var(--shadowcolor)' , 
         zIndex: 100,
         opacity: opacity,
-        left: "40px",
-        top: "-40px",
+        left: `${40}px`,
+        top: `${-40 * opacity}px`,
         backdropFilter: "blur(8px)",
         webkitBackdropFilter: "blur(8px)",
         mozBackdropFilter: "blur(8px)"
@@ -61,18 +58,7 @@ export default function Popup({ technology, setIsActive}: Props) {
     const bodyStyle = {
         margin: "10px"
     }
-    // let typeText = `<br /><span style="color:var(--maincolor)">dsadda</span>`
-    // let typeText = getProjects(projectData);
 
-    // function getProjects(projects: any[]) {
-    //     let output = "";
-    //     projects = projects.filter(project => project.technologies.includes(technology));
-    //     for (let project of projects) {
-    //         output += `<br /><a href="#RGB strip controller">${project.name}</a>`;
-
-    //     }
-    //     return output
-    // }
     function getTitle(technology: string) {
         switch (technology) {
             case "react": return "React.js";
@@ -93,25 +79,26 @@ export default function Popup({ technology, setIsActive}: Props) {
             case "webpack": return "Webpack";
         }
     }
+    function close() {
+        setOpacity(0);
+        setTimeout(() => setIsActive(false), 200)
+    }
     
     useEffect(() => {
         setOpacity(1);
     },[]) 
     
     return (
-            
             <div style={popupStyle}>
                  <div style={headerStyle}>
                     <code style={{whiteSpace: "nowrap"}}>{getTitle(technology)}</code>
                     <div style={stripeStyle}></div>
-                    <i className="bi bi-x-square" style={xStyle} onClick={() => setIsActive(false)}></i>
+                    <i className="bi bi-x-square" style={xStyle} onClick={() => close()}></i>
                  </div>
                  <div style={bodyStyle}>
                     <Devicon technology={technology} color={"var(--accentcolor)"}  size="60px" clickable={false} /><br/>
                     <div>
-                        <br />
-                        {/* <code>{text}</code> */}
-                        <code>[Lorem Ipsum and stuff will be here soon]</code>
+                        <code>{technologyDescription}</code>
                         <br /> <br />               
                     </div>
                     <div style={{display: "flex"}}>
@@ -124,12 +111,8 @@ export default function Popup({ technology, setIsActive}: Props) {
                                     .pauseFor(1000) 
                                     .typeString('<span style="color:var(--maincolor)">ls -a</span>')    
                                     .pauseFor(1000)
-                                    .callFunction(() => setShowLinks(true))
-                                    
-                                    
-                                    // .typeString(typeText)  
+                                    .callFunction(() => setShowLinks(true)) 
                                     .start()
-                            
                                 }}
                                 options={{
                                     delay: 'natural',
@@ -137,14 +120,12 @@ export default function Popup({ technology, setIsActive}: Props) {
                                 }}
                             />
                         </code>
-                        
                         <br />
                     </div>
                     
                     <div style={{display: showLinks ? "inline" : "none"}}>
                         {projectData.map(project => (  
-                            
-                                project.technologies.includes(technology) ?
+                                project.technologies.includes(technology) &&
                                     <>
                                         <Link
                                             activeClass="active"
@@ -154,18 +135,17 @@ export default function Popup({ technology, setIsActive}: Props) {
                                             offset={window.innerHeight/-4}
                                             duration={500}
                                             onClick={() => setIsActive(false)}
-                                        ><code>{project.name}</code>
+                                        >
+                                            <code>{project.name}</code>
                                         </Link>
                                         <br />
-                                    </> :
-                                    <></>
-                            
+                                    </>     
                         ))}
                         <code style={{color: "var(--accentcolor)"}}>
                             <Typewriter
                                 onInit={(typewriter) => {
                                     typewriter
-                                    .pasteString(`~/projects/${technology} >> `, null) 
+                                    .pasteString(`<br />~/projects/${technology} >> `, null) 
                                     .typeString('<span style="color:var(--maincolor)">█</span>') 
                                     .start()
                                 }}
@@ -176,12 +156,7 @@ export default function Popup({ technology, setIsActive}: Props) {
                             />
                         </code>
                     </div>
-                    
-
                  </div>
-            
-            
             </div>
-        
     )
 }

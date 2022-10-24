@@ -99,7 +99,7 @@
         "imgSrc": "socialite.png",
         "gitHub": "https://github.com/antieatingactivist/Socialite-API",
         "demoVideo": "https://antieatingactivist.github.io/Socialite-API/",
-        "technologies": ["node", "mongodb", "javascript"]
+        "technologies": ["node", "express", "mongodb", "javascript"]
     },
     {
         "name": "HR helping Hand",

@@ -17,7 +17,7 @@ This is the 4th and possibly final candidate for my professional portfolio. It's
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Typescript](https://www.typescriptlang.org)
 * [Bootstrap Icons](https://icons.getbootstrap.com)
-* [Devicon] (https://devicon.dev)
+* [Devicon](https://devicon.dev)
 
 
 ## Deployed Link

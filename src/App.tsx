@@ -144,17 +144,17 @@ function App() {
           <div ref={aboutRef} style={aboutOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
             <About windowWidth={windowWidth}/>
           </div>
-
+          
           <div ref={skillsRef} style={skillsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
-            <Skills windowHeight={windowHeight} hidden={skillsHidden}/>
+            {  windowWidth >= 500 && <Skills windowHeight={windowHeight} hidden={skillsHidden}/> }
           </div>
-
+          
           <div ref={projectsRef} style={projectsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
             <Projects scrollPosition={scrollPosition} windowHeight={windowHeight} windowWidth={windowWidth} setOnScreenProject={setOnScreenProject} />
           </div>
           
         </main>
-
+        
         <div ref={footerRef}>
           {windowWidth < 500 ?
             <>

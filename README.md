@@ -30,5 +30,5 @@ This is the 4th and possibly final candidate for my professional portfolio. It's
 Garrett Corbin
 
 - [https://jgarrettcorbin.com](https://jgarrettcorbin.com)
-- [https://github.com/antieatingactivist/](https://github.com/)
+- [https://github.com/platevoltage/](https://github.com/)
 - [https://www.linkedin.com/in/garrett-corbin-7a7777227/](https://www.linkedin.com/)

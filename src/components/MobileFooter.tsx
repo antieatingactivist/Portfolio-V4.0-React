@@ -10,7 +10,7 @@ export default function MobileFooter() {
             <div>
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
-                    <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github">
+                    <a href="https://github.com/platevoltage/" target="_blank" rel="noopener noreferrer" className="bi bi-github">
                         <span style={{fontSize: '1em'}}> &nbsp; Check out some of my work on GitHub.</span> 
                     </a>
                     <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter">
@@ -26,7 +26,7 @@ export default function MobileFooter() {
                 </div>
                 <div style={{fontSize: '1em', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center'}}>
                     <p>This site was built by Garrett Corbin in 2022 using React.js and Typescript.</p>
-                    <a href="https://github.com/antieatingactivist/portfolio-v4.0-react" target="_blank" rel="noopener noreferrer">View the source code on GitHub</a>
+                    <a href="https://github.com/platevoltage/portfolio-v4.0-react" target="_blank" rel="noopener noreferrer">View the source code on GitHub</a>
                 </div>
                 
             </div>

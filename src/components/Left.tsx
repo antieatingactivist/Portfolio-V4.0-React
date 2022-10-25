@@ -178,7 +178,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
                     <div style={{display: 'flex'}}>
                         
                         <div style={{display: 'flex', flexDirection: 'column', width: '50%' }}>
-                            <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github">
+                            <a href="https://github.com/platevoltage/" target="_blank" rel="noopener noreferrer" className="bi bi-github">
                                 <span style={{fontSize: '.6em'}}> &nbsp; Check out some of my work on GitHub.</span> 
                             </a>
                             <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter">
@@ -194,14 +194,14 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
                         </div>
                         <div style={{fontSize: '.6em', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center'}}>
                             <p>This site was built by Garrett Corbin in 2022 using React.js and Typescript.</p>
-                            <a href="https://github.com/antieatingactivist/portfolio-v4.0-react" target="_blank" rel="noopener noreferrer">View the source code on GitHub</a>
+                            <a href="https://github.com/platevoltage/portfolio-v4.0-react" target="_blank" rel="noopener noreferrer">View the source code on GitHub</a>
                         </div>
                     </div>
                 }
             </section>
             <section style={sectionStyle} ref={sectionRef}>
                 <>
-                    <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github"> </a>
+                    <a href="https://github.com/platevoltage/" target="_blank" rel="noopener noreferrer" className="bi bi-github"> </a>
                     <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter"> </a>
                     <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin"> </a>
                     <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope"> </a>

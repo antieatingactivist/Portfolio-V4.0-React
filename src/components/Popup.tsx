@@ -21,15 +21,15 @@ export default function Popup({ technology, setIsActive}: Props) {
     }
     const popupStyle: object = {
         transitionProperty: 'opacity, top',
-        transitionDuration: '.5s, .02s',
-        transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
+        transitionDuration: '.5s',
+        transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',
         display: "inline",
         position: "absolute",
         minHeight: "300px",
         width: "400px",
         color: "#ffffff",
         backgroundColor: "var(--bgcolortransparent)",
-        borderRadius: '3px',
+        borderRadius: '5px',
         border: '1px solid var(--accentcolor)',
         boxShadow: '12px 12px 25px var(--shadowcolor)' , 
         zIndex: 100,

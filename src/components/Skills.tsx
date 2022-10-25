@@ -26,7 +26,7 @@ const stripeStyle: object = {
 const categoryStyle: object = {
     position: 'absolute',
     backgroundColor: 'var(--bgcolor)',
-    borderRadius: '3px',
+    borderRadius: '5px',
     border: '1px solid var(--accentcolor)',
     boxShadow: '3px 3px 5px var(--shadowcolor)' , 
     // margin: "10px",

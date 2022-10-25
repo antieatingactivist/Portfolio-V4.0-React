@@ -32,7 +32,6 @@ export default function Intro({windowWidth}: Props) {
         fontSize: windowWidth < 500 ? '6vw' : '70%',
     }
     const pStyle: object = {
-
         position: 'relative',
         top: '-50px',
         left: windowWidth < 500 ? '0' :'60px',
@@ -43,7 +42,6 @@ export default function Intro({windowWidth}: Props) {
         setIntroOpacity(1);
         setSpanLeft(50);
         setSkew('skewX(0deg)');
- 
     }, []);
 
     return (

@@ -12,8 +12,7 @@ type Props = {
 export default function Header({hidden, scrollPosition, windowHeight, windowWidth}: Props) {
 
     const noBorder = (scrollPosition < 4);
-    const style: any = {
-        
+    const style: any = { 
         display: 'flex',
         flexDirection: (windowWidth < 500 ? 'column' : 'row'),
         top: '0px',
@@ -30,17 +29,14 @@ export default function Header({hidden, scrollPosition, windowHeight, windowWidt
         fontSize: "1.5em",
     }
     if (hidden) {
-
-        style.top = '-39px';
-        
+        style.top = '-39px';   
     }
     if (noBorder) {
         style.borderColor = '#00000000';
         style.boxShadow = 'none';
         style.backgroundColor = '#00000000';
     }
-
-
+    
     return (
         <header style={style}>
             <div style={titleStyle}>

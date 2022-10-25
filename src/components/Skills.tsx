@@ -14,7 +14,6 @@ const headerStyle = {
     display: 'flex',
 }
 const stripeStyle: object = {
-
     borderStyle: 'solid',
     borderColor: 'var(--accentcolor)',
     borderWidth: '1px 0 1px 0',
@@ -29,12 +28,8 @@ const categoryStyle: object = {
     borderRadius: '5px',
     border: '1px solid var(--accentcolor)',
     boxShadow: '3px 3px 5px var(--shadowcolor)' , 
-    // margin: "10px",
     paddingBottom: "20px",
     width: '500px',
-
-    // paddingBottom: '40px'
-    // top: "-100px"
 }
 const bodyStyle = {
     margin: "20px",
@@ -58,7 +53,6 @@ export default function Skills({ windowHeight, hidden }: Props) {
                     <div style={headerStyle}>
                         <code>Languages</code>
                         <div style={stripeStyle}></div>
-                    
                     </div>
                     {!hidden && <div style={bodyStyle}>
                         <Devicon technology="cplusplus" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />

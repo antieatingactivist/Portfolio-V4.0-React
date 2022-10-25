@@ -1,8 +1,5 @@
-
 import Project from './Project';
 import projectData from '../assets/json/project-data.json';
-
-
 
 type Props = {
     scrollPosition: number,

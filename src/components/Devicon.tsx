@@ -1,6 +1,4 @@
-
-// import { ReactComponent as CssIcon } from '../assets/svg/css3-plain-wordmark.svg'
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Popup from './Popup'; 
 type Props = {
     technology: string;
@@ -22,7 +20,6 @@ export default function Devicon({technology, color, size, clickable, margin}: Pr
         transitionDuration: '1s',
         transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
     }
-
 
     function fetchIcon(technology: string) {
         switch (technology) {
@@ -52,7 +49,6 @@ export default function Devicon({technology, color, size, clickable, margin}: Pr
                         <i className={fetchIcon(technology)} style={iconStyle}></i>
                         :
                         <i className={fetchIcon(technology)} style={iconStyle} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} onClick={() => setIsActive(true)}></i>
-                        
                     }
                 </div>
                 {clickable === false ? 

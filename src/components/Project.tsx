@@ -4,11 +4,19 @@ import { useEffect, useRef, useState, MutableRefObject } from 'react';
 import "devicon/devicon.min.css";
 
 type Props = {
-    project: any,
+    project: { 
+        name: string, 
+        description: string
+        imgSrc: string, 
+        gitHub: string, 
+        demoVideo?: string,
+        liveLink?: string,
+        technologies: string[]
+    },
     scrollPosition: number,
     windowHeight: number,
     windowWidth: number,
-    setOnScreenProject: any,
+    setOnScreenProject: Function,
 }
 
 
@@ -79,7 +87,6 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
                             :
                             <a className="button" href={project.demoVideo} target="_blank" rel="noopener noreferrer">Demo Video</a>  
                         }
-                        
                     </div>
                 </div> 
             </div>

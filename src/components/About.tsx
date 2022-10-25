@@ -1,5 +1,6 @@
 import Image from './Image';
 import resume from "../assets/pdf/resume.pdf";
+
 const aboutStyle = {
     transition: 'all 2s',
     padding: '40vh 10px 0vh 10px',

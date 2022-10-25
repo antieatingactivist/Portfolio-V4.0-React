@@ -8,7 +8,7 @@ export default function MobileFooter() {
     return (
         <section id="contact" style={sectionStyle}>
             <div>
-                        
+
                 <div style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
                     <a href="https://github.com/antieatingactivist/" target="_blank" rel="noopener noreferrer" className="bi bi-github">
                         <span style={{fontSize: '1em'}}> &nbsp; Check out some of my work on GitHub.</span> 

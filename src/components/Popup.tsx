@@ -46,7 +46,6 @@ export default function Popup({ technology, setIsActive}: Props) {
         right: "7px"
     }
     const stripeStyle: object = {
-
         borderStyle: 'solid',
         borderColor: 'var(--accentcolor)',
         borderWidth: '1px 0 1px 0',

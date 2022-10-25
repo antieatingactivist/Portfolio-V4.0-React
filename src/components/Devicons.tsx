@@ -12,6 +12,7 @@ export default function Devicons({technologies, isHidden}: Props) {
         left: "10px",
         display: "flex"
     }
+    
     return (
         <span style={style}>
             {

@@ -1,4 +1,3 @@
-
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState, useRef, MutableRefObject } from "react";
 import Header from './components/Header';
@@ -35,7 +34,6 @@ function App() {
   const [skillsHidden, setSkillsHidden] = useState<boolean>(true);
   const [onScreenProject, setOnScreenProject] = useState<string>("");
 
-
   const handleScroll = () => {
     setScrollPosition(window.pageYOffset);
     setAboutOffest(aboutRef.current.getBoundingClientRect().top);
@@ -43,7 +41,6 @@ function App() {
     setProjectOffset(projectsRef.current.getBoundingClientRect().top);
     setFooterOffset(footerRef.current.getBoundingClientRect().top);
   };
-
 
   const handleResize = () => {
     setWindowHeight(window.innerHeight);
@@ -120,8 +117,6 @@ function App() {
     };
   }, []);
 
-  
-
   return (
     <div className="App">
       
@@ -136,7 +131,6 @@ function App() {
         }
         
         <main>
-          
           <div ref={introRef} >
             <Intro windowWidth={windowWidth} />
           </div>
@@ -151,8 +145,7 @@ function App() {
           
           <div ref={projectsRef} style={projectsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
             <Projects scrollPosition={scrollPosition} windowHeight={windowHeight} windowWidth={windowWidth} setOnScreenProject={setOnScreenProject} />
-          </div>
-          
+          </div>  
         </main>
         
         <div ref={footerRef}>

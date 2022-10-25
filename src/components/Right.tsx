@@ -30,8 +30,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
         justifyContent: 'flex-end',
         marginRight: '10px',
         marginTop: '50vh',
-        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
-        
+        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',   
     }
 
     const aboutStyle = {
@@ -137,8 +136,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
                                     </div> : 
                                     <span className="accent">&nbsp;├─</span>
                                 } 
-                                <Link
-                                    
+                                <Link                  
                                     activeClass="active"
                                     to={project.name}
                                     spy={true}

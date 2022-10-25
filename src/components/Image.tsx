@@ -6,8 +6,6 @@ type Props = {
 
 export default function Image({src, isHidden}: Props) {
     let imgStyle = {
-        
-        // maxWidth: 'calc(100vw-30px)',
         height: 'auto',
         width: 'auto',
         maxWidth: 'calc(100% - 10px)',

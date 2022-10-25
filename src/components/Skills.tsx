@@ -1,40 +1,5 @@
-
-
 import Devicon from './Devicon';
 
-const skillsStyle: object = {
-    transition: 'all 2s',
-    padding: '40vh 10px 20vh 10px',
-    maxWidth: '600px',
-
-}
-const headerStyle = {
-    padding: "6px 10px 4px 10px",
-    borderBottom: '1px solid var(--accentcolor)',
-    display: 'flex',
-}
-const stripeStyle: object = {
-    borderStyle: 'solid',
-    borderColor: 'var(--accentcolor)',
-    borderWidth: '1px 0 1px 0',
-    height: "12px",
-    width: "100%",
-    margin: "2px 2px 2px 20px",
-    opacity: "0.3",
-}
-const categoryStyle: object = {
-    position: 'absolute',
-    backgroundColor: 'var(--bgcolor)',
-    borderRadius: '5px',
-    border: '1px solid var(--accentcolor)',
-    boxShadow: '3px 3px 5px var(--shadowcolor)' , 
-    paddingBottom: "20px",
-    width: '500px',
-}
-const bodyStyle = {
-    margin: "20px",
-    display: "flex"
-}
 const iconSize = "45px";
 const iconMargin= "10px"
 
@@ -44,6 +9,42 @@ type Props = {
 }
 
 export default function Skills({ windowHeight, hidden }: Props) {
+    const skillsStyle: object = {
+        transition: 'all 1s',
+        padding: '40vh 10px 20vh 10px',
+        maxWidth: '600px',
+        minHeight: "600px"
+    }
+    const headerStyle = {
+        padding: "6px 10px 4px 10px",
+        borderBottom: '1px solid var(--accentcolor)',
+        display: 'flex',
+    }
+    const stripeStyle: object = {
+        borderStyle: 'solid',
+        borderColor: 'var(--accentcolor)',
+        borderWidth: '1px 0 1px 0',
+        height: "12px",
+        width: "100%",
+        margin: "2px 2px 2px 20px",
+        opacity: "0.3",
+    }
+    const categoryStyle: object = {
+        transition: 'all 2s',
+        position: 'absolute',
+        backgroundColor: 'var(--bgcolor)',
+        borderRadius: '5px',
+        border: '1px solid var(--accentcolor)',
+        boxShadow: '3px 3px 5px var(--shadowcolor)' , 
+        paddingBottom: "20px",
+        width: '500px',
+        opacity: hidden ? 0 : 1
+    }
+    const bodyStyle = {
+        margin: "20px",
+        display: "flex",
+    }
+
 
 
     return (
@@ -63,7 +64,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
                     </div> }
                 </div>
 
-                <div style={{...categoryStyle, marginLeft: "20px", top: "130px"}}>
+                <div style={{...categoryStyle, marginLeft: "20px", top: "130px", transitionDelay: ".3s"}}>
                 <div style={headerStyle}>
                     <code style={{whiteSpace: "nowrap"}}>Front End Technologies</code>
                     <div style={stripeStyle}></div>
@@ -77,7 +78,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
                     </div> }
                 </div>
 
-                <div style={{...categoryStyle, marginLeft: "40px", top: "260px"}}>
+                <div style={{...categoryStyle, marginLeft: "40px", top: "260px", transitionDelay: ".6s"}}>
                 <div style={headerStyle}>
                     <code style={{whiteSpace: "nowrap"}}>Back End Technologies</code>
                     <div style={stripeStyle}></div>
@@ -90,7 +91,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
                     </div> }
                 </div>
 
-                <div style={{...categoryStyle, marginLeft: "60px", top: "390px"}}>
+                <div style={{...categoryStyle, marginLeft: "60px", top: "390px", transitionDelay: ".9s"}}>
                 <div style={headerStyle}>
                     <code style={{whiteSpace: "nowrap"}}>Other Technologies</code>
                     <div style={stripeStyle}></div>

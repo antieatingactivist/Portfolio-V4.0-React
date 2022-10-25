@@ -53,7 +53,7 @@ function App() {
     } 
     if(scrollPosition < furthestDown-100) {
         setFurthestDown(scrollPosition);
-        setHeaderHidden(false); 
+        setHeaderHidden(false);
     } 
     if (aboutOffset < 100 && !introHidden) {
       setIntroHidden(true);
@@ -139,8 +139,8 @@ function App() {
             <About windowWidth={windowWidth}/>
           </div>
           
-          <div ref={skillsRef} style={skillsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>
-            {  windowWidth >= 500 && <Skills windowHeight={windowHeight} hidden={skillsHidden}/> }
+          <div ref={skillsRef}>
+            {  windowWidth >= 500 && <Skills windowHeight={windowHeight} hidden={skillsOffset>=windowHeight/2.5 || skillsHidden}/> }
           </div>
           
           <div ref={projectsRef} style={projectsOffset<windowHeight/2.5 ? {transition: 'opacity 1.5s', opacity: '1'} : {transition: 'opacity .8s', opacity: '0'}}>

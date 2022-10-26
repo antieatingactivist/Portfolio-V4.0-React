@@ -32,7 +32,7 @@ export default function Popup({ technology, setIsActive}: Props) {
         borderRadius: '5px',
         border: '1px solid var(--accentcolor)',
         boxShadow: '12px 12px 25px var(--shadowcolor)' , 
-        zIndex: 100,
+        zIndex: 10,
         opacity: opacity,
         left: `${40}px`,
         top: `${-40 * opacity}px`,

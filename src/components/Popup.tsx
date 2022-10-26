@@ -44,7 +44,8 @@ export default function Popup({ technology, setIsActive}: Props) {
     const xStyle: object = {
         color: 'var(--accentcolor)',
         position: "absolute",
-        right: "7px"
+        right: "7px",
+        cursor: "pointer",
     }
     const stripeStyle: object = {
         borderStyle: 'solid',
@@ -93,7 +94,7 @@ export default function Popup({ technology, setIsActive}: Props) {
                  <div style={headerStyle}>
                     <code style={{whiteSpace: "nowrap"}}>{getTitle(technology)}</code>
                     <div style={stripeStyle}></div>
-                    <a href =" " className="bi bi-x-square" style={xStyle} onClick={() => close()}></a>
+                    <i className="bi bi-x-square" style={xStyle} onClick={() => close()}></i>
                  </div>
                  <div style={bodyStyle}>
                     <Devicon technology={technology} color={"var(--accentcolor)"}  size="60px" clickable={false} /><br/>

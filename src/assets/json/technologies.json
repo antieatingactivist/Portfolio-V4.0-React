@@ -10,9 +10,9 @@
     "bootstrap": "For most of my personal projects, I opt to use my own CSS, but on occasion, using Bootstrap can help with getting an MVP out quicker.",
     "tailwind": "Athough I usually choose Bootstrap when opting to use a CSS framework, Tailwind is a great alternative.",
     "handlebars": "Handlebars is the first templating language that I learned. It has been valuable for getting me familiar with Angular.",
-    "css": "[Lorem Ipsum and stuff will be here soon]",
-    "html": "[Lorem Ipsum and stuff will be here soon]",
-    "node": "[Lorem Ipsum and stuff will be here soon]",
-    "express": "[Lorem Ipsum and stuff will be here soon]",
-    "webpack": "[Lorem Ipsum and stuff will be here soon]"
+    "css": "I enjoy the flexibility of CSS. While I understand where CSS frameworks come into play, I often choose to use vanilla CSS when the maximun amount of flexibility is desired.",
+    "html": "I actually started learning HTML in the 7th grade. I had a couple of very rough Geocities pages dedicated to my favorite bands of the time. Fast forward many years, and we are at HTML 5.",
+    "node": "My backend engine of choice.",
+    "express": "My framework of choice for API routing.",
+    "webpack": "Webpack is involved in most of the front end frameworks that I've used, but it also comes in handy for compiling multi-file projects."
 }

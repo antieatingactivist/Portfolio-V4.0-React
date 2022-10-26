@@ -50,7 +50,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
     return (
         <section style={skillsStyle}>
             <div style={{position: 'relative', height: '40vh'}}>
-                <div style={{...categoryStyle, left: hidden ? "-500px" : "0px", top: "0px"}}>
+                <div style={{...categoryStyle, left: hidden ? "-1500px" : "0px", top: "0px"}}>
                     <div style={headerStyle}>
                         <code>Languages</code>
                         <div style={stripeStyle}></div>
@@ -64,7 +64,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
                     </div> }
                 </div>
 
-                <div style={{...categoryStyle, left: hidden ? "-500px" : "18px", top: "130px", transitionDelay: ".3s, .3s"}}>
+                <div style={{...categoryStyle, left: hidden ? "-1500px" : "18px", top: "130px", transitionDelay: ".3s, .3s"}}>
                 <div style={headerStyle}>
                     <code style={{whiteSpace: "nowrap"}}>Front End Technologies</code>
                     <div style={stripeStyle}></div>
@@ -78,7 +78,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
                     </div> }
                 </div>
 
-                <div style={{...categoryStyle, left:  hidden ? "-500px" : "50px", top: "260px", transitionDelay: ".6s"}}>
+                <div style={{...categoryStyle, left:  hidden ? "-1500px" : "50px", top: "260px", transitionDelay: ".6s"}}>
                 <div style={headerStyle}>
                     <code style={{whiteSpace: "nowrap"}}>Back End Technologies</code>
                     <div style={stripeStyle}></div>
@@ -91,7 +91,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
                     </div> }
                 </div>
 
-                <div style={{...categoryStyle, left:  hidden ? "-500px" : "100px", top: "390px", transitionDelay: ".9s"}}>
+                <div style={{...categoryStyle, left:  hidden ? "-1500px" : "100px", top: "390px", transitionDelay: ".9s"}}>
                 <div style={headerStyle}>
                     <code style={{whiteSpace: "nowrap"}}>Other Technologies</code>
                     <div style={stripeStyle}></div>

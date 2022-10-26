@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import { useEffect, useState } from 'react';
 import Devicon from './Devicon';
 import projectData from '../assets/json/project-data.json';
@@ -92,7 +93,7 @@ export default function Popup({ technology, setIsActive}: Props) {
                  <div style={headerStyle}>
                     <code style={{whiteSpace: "nowrap"}}>{getTitle(technology)}</code>
                     <div style={stripeStyle}></div>
-                    <i className="bi bi-x-square" style={xStyle} onClick={() => close()}></i>
+                    <a href =" " className="bi bi-x-square" style={xStyle} onClick={() => close()}></a>
                  </div>
                  <div style={bodyStyle}>
                     <Devicon technology={technology} color={"var(--accentcolor)"}  size="60px" clickable={false} /><br/>

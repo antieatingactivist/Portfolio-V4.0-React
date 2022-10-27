@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.731eec17.css",
-    "main.js": "/static/js/main.90baaa8d.js",
+    "main.js": "/static/js/main.5a92d4d6.js",
     "static/media/workplacetracker.png": "/static/media/workplacetracker.a75a1c447bc706ef98ea.png",
     "static/media/quizinator.png": "/static/media/quizinator.1f85a57bfcd1bf66857a.png",
     "static/media/devicon.svg?biu5f3": "/static/media/devicon.f715b4139afc5236a6e6.svg",
@@ -23,16 +23,16 @@
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.e559bf06bc84fd9525e6.woff",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.ea98e12d2d58747f9fc5.woff2",
     "static/media/photo.jpg": "/static/media/photo.39c13fed959621bb0976.jpg",
+    "static/media/resume.pdf": "/static/media/resume.1023e98eebade68bb811.pdf",
     "static/media/tetris.png": "/static/media/tetris.9d34f496eeb5b2f596b0.png",
-    "static/media/resume.pdf": "/static/media/resume.ace976fd0741320ee6e6.pdf",
     "static/media/platformer.png": "/static/media/platformer.02cd3d1b5f1fe2867297.png",
     "static/media/calculator.png": "/static/media/calculator.7be6d6b95b5097bf8afe.png",
     "index.html": "/index.html",
     "main.731eec17.css.map": "/static/css/main.731eec17.css.map",
-    "main.90baaa8d.js.map": "/static/js/main.90baaa8d.js.map"
+    "main.5a92d4d6.js.map": "/static/js/main.5a92d4d6.js.map"
   },
   "entrypoints": [
     "static/css/main.731eec17.css",
-    "static/js/main.90baaa8d.js"
+    "static/js/main.5a92d4d6.js"
   ]
 }

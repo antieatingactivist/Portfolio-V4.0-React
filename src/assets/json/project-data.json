@@ -1,7 +1,7 @@
 [
     {
         "name": "RGB strip controller",
-        "description": "This is a web app built with React that communicates with an ESP8266 microcontroller to operate addressable RGBW led strips. Adafruit's Neopixel library is used to communicate with the strips. I am currently working on this project.",
+        "description": "This is a web app built with React that communicates with an ESP8266 microcontroller to operate addressable RGBW led strips. Adafruit's Neopixel library is used to communicate with the strips.",
         "imgSrc": "rgb.png",
         "gitHub": "https://github.com/platevoltage/RGB-strip-controller",
         "demoVideo": "https://platevoltage.github.io/RGB-strip-controller/",
@@ -13,7 +13,7 @@
         "imgSrc": "courier.png",
         "gitHub": "https://github.com/platevoltage/Courier-client",
         "liveLink": "https://platevoltage.github.io/Courier-client/",
-        "technologies": ["angular", "node", "express", "mysql","typescript", "javascript", "bootstrap", "html", "css"]
+        "technologies": ["angular", "node", "express", "mysql", "typescript", "javascript", "bootstrap", "html", "css"]
     },
     {
      

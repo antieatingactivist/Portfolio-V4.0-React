@@ -11,7 +11,7 @@ type Props = {
 export default function Skills({ windowHeight, hidden }: Props) {
     const skillsStyle: object = {
         transition: 'all .1s',
-        padding: '40vh 10px 20vh 10px',
+        padding: '35vh 10px 20vh 10px',
         maxWidth: '600px',
         minHeight: "600px"
     }

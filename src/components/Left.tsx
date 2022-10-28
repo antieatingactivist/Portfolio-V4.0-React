@@ -33,7 +33,8 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
         top: height,
         display: 'flex',
         flexDirection: 'column',
-        zIndex: 1    
+        zIndex: 1
+        
     };
 
 

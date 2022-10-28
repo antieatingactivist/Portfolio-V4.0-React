@@ -82,7 +82,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
         introStyle.marginTop = '-55px';
         aboutStyle.marginTop = '-40px';
         skillsStyle.marginTop = '-40px';
-        projectBlockStyle.marginTop = `calc(50vh - ${projectData.length * 10}px)`;
+        projectBlockStyle.marginTop = `calc(50vh - ${projectData.length * 8}px)`;
     }
 
     useEffect(() => {
@@ -152,9 +152,11 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
                 </code>
             </section>
 
-            <section style={{position: "fixed", bottom: "30px", right: "36px", opacity: introHidden ? toTopButtonShow : 0, transition: `opacity ${toTopButtonShow}s`, fontSize: "18px"}}>
-                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bi bi-arrow-up-circle" >        
-                </Link>
+            <section style={{position: "fixed", bottom: "30px", right: "36px", opacity: introHidden ? toTopButtonShow : 0, transition: `opacity ${toTopButtonShow}s`, fontSize: "20px", border: "1px solid var(--accentcolor)", borderRadius: "12px", maxHeight: "20px", maxWidth: "20px", textAlign: "center", paddingBottom: "1px"}}>
+           
+                    <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bi bi-arrow-up-short" >        
+                    </Link>
+                
             </section>
         </aside>
     );

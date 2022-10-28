@@ -20,6 +20,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     const [width, setWidth] = useState('25px');
     const [left, setLeft] = useState('-54px');
     const [expandedContact, setExpandedContact] = useState(false);
+    const [enableExpandedFooter, setEnableExpandedFooter] = useState(false);
     const [leftTransitionDuration, setLeftTransitionDuration] = useState('3s');
     const [sectionTransitionDuration, setSectionTransitionDuration] = useState('.3s, .1s, .3s');
     const [face, setFace] = useState('˙ ͜ʟ˙');
@@ -116,6 +117,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
         }, 8000);
         setTimeout(() => {
             setSectionTransitionDuration('.5s, .1s, .3s');
+            setEnableExpandedFooter(true);
         }, 8200);
 
     }, []);
@@ -145,14 +147,14 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     },[count]);
 
     useEffect(() => {
-        if (!footerExpand) {
+        if (!footerExpand && enableExpandedFooter) {
             setWidth('25px');
             setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
             setExpandedContact(false); 
             setAngle(0);
             setRotation(0);
         }
-        if (footerExpand)  {
+        if (footerExpand && enableExpandedFooter)  {
             setHeight(`calc(100vh - ${sectionRef.current.getBoundingClientRect().bottom - sectionRef.current.getBoundingClientRect().y + 20}px)`);
             setTimeout(() => {
                 setAngle(180);

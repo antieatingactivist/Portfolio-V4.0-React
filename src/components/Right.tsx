@@ -94,15 +94,14 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
             }
         }, 50);
        
-    }, [introHidden, aboutHidden, onScreenProject]);
+    }, [introHidden, aboutHidden, skillsHidden, onScreenProject]);
 
     useEffect(() => {
         setToTopButtonShow(0);
-        console.log(introHidden);
         setTimeout(() => {
             setToTopButtonShow(1);
-        }, 2000);
-    }, [introHidden, aboutHidden]);
+        }, 1000);
+    }, [introHidden, aboutHidden, skillsHidden]);
 
     return (
         <aside id="right" style={rightStyle}>

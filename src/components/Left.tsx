@@ -184,8 +184,8 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
                             <a href="https://github.com/platevoltage/" target="_blank" rel="noopener noreferrer" className="bi bi-github">
                                 <span style={{fontSize: '.6em'}}> &nbsp; Check out some of my work on GitHub.</span> 
                             </a>
-                            <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter">
-                                <span style={{fontSize: '.6em'}}> &nbsp; @platevoltage on Twitter.</span> 
+                            <a href="https://discordapp.com/users/866847350059827201" target="_blank" rel="noopener noreferrer" className="bi bi-discord">
+                                <span style={{fontSize: '.6em'}}> &nbsp; @platevoltage on Discord.</span> 
                             </a>
                             <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin">
                                 <span style={{fontSize: '.6em'}}> &nbsp; Connect with me on Linkedin.</span> 
@@ -205,7 +205,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
             <section style={sectionStyle} ref={sectionRef}>
                 <>
                     <a href="https://github.com/platevoltage/" target="_blank" rel="noopener noreferrer" className="bi bi-github"> </a>
-                    <a href="https://twitter.com/platevoltage" target="_blank" rel="noopener noreferrer" className="bi bi-twitter"> </a>
+                    <a href="https://discordapp.com/users/866847350059827201" target="_blank" rel="noopener noreferrer" className="bi bi-discord"> </a>
                     <a href="https://www.linkedin.com/in/garrett-corbin-7a7777227/" target="_blank" rel="noopener noreferrer" className="bi bi-linkedin"> </a>
                     <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope"> </a>
                 </>

@@ -7,7 +7,7 @@
     "angular": "As of 2022, this full fledged framework is a new addition to my repertoire. It is also my choice for building new front end projects.",
     "mysql": "This is my prefered database technology. I usually opt to use an ORM such as Sequelize for CRUD operations, but using SQL queries are within my capabilites.",
     "mongodb": "MongoDB is usually not my choice for a database when starting a new project, but I have used technologies such as Mongoose to perform CRUD operations.",
-    "bootstrap": "For most of my personal projects, I opt to use my own CSS, but on occasion, using Bootstrap can help with getting an MVP out quicker.",
+    "bootstrap": "For most of my personal projects, I opt to use my own CSS, but on occasion, using Bootstrap can help with getting an MVP out more quickly.",
     "tailwind": "Athough I usually choose Bootstrap when opting to use a CSS framework, Tailwind is a great alternative.",
     "handlebars": "Handlebars is the first templating language that I learned. It has been valuable for getting me familiar with Angular.",
     "css": "I enjoy the flexibility of CSS. While I understand where CSS frameworks come into play, I often choose to use vanilla CSS when the maximun amount of flexibility is desired.",

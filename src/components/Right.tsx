@@ -151,7 +151,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
                 </code>
             </section>
 
-            <section style={{position: "fixed", bottom: "30px", right: "36px", opacity: introHidden ? toTopButtonShow : 0, transition: `opacity ${toTopButtonShow}s`, fontSize: "20px", border: "1px solid var(--accentcolor)", borderRadius: "12px", maxHeight: "20px", maxWidth: "20px", textAlign: "center", paddingBottom: "1px"}}>
+            <section style={{position: "fixed", bottom: "30px", right: "36px", opacity: introHidden ? toTopButtonShow : 0, transition: `opacity ${toTopButtonShow}s`, fontSize: "20px", border: "1px solid var(--accentcolor)", borderRadius: "12px", maxHeight: "20px", maxWidth: "20px", textAlign: "center", paddingBottom: "0px", lineHeight: "0px"}}>
            
                     <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bi bi-arrow-up-short" >        
                     </Link>

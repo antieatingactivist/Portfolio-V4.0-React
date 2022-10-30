@@ -1,4 +1,4 @@
-
+import { useEffect, useState } from "react";
 import Nav from './Nav';
 
 type Props = {
@@ -8,10 +8,9 @@ type Props = {
     windowWidth: number;
 }
 
-
 export default function Header({hidden, scrollPosition, windowHeight, windowWidth}: Props) {
-
-    const noBorder = (scrollPosition < 4);
+    const [isBooted, setIsBooted] = useState(false);
+    const noBorder = (scrollPosition < 4) && isBooted;
     const style: any = { 
         display: 'flex',
         flexDirection: (windowWidth < 500 ? 'column' : 'row'),
@@ -36,6 +35,12 @@ export default function Header({hidden, scrollPosition, windowHeight, windowWidt
         style.boxShadow = 'none';
         style.backgroundColor = '#00000000';
     }
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsBooted(true);
+        }, 1400);
+    },[])
     
     return (
         <header style={style}>

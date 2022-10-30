@@ -77,8 +77,8 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
                 </div>
                 <div style={ isHidden ? {...descriptionStyle, transitionDuration: '1.5s', opacity: '1', transitionDelay: '.5s' } : {...descriptionStyle, transitionDuration: '.8s', transitionDelay: '.5s', opacity: '0' } }>
                     <p style={ isHidden ? {transitionDuration: '2.5s', opacity: '1', transitionDelay: '1s' } : {transitionDuration: '1.8s', transitionDelay: '1s', opacity: '0' } }>{project.description}</p>
-
-                    {isHidden && (windowWidth >= 500) && <Devicons technologies={project.technologies} />}
+                    
+                    {isHidden &&  <Devicons technologies={project.technologies} mobile={windowWidth >= 500}/>}
 
                     <div style={{display: 'flex', justifyContent: windowWidth < 500 ? 'center' : 'flex-end'}}>
                         <a className="button" href={project.gitHub}  target="_blank" rel="noopener noreferrer">Project on GitHub</a>

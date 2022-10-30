@@ -2,10 +2,9 @@ import Devicon from './Devicon';
 
 type Props = {
     technologies: string[];
-    isHidden?: boolean;
 }
 
-export default function Devicons({technologies, isHidden}: Props) {
+export default function Devicons({technologies}: Props) {
     const style: object = {
         position: "absolute",
         bottom: "10px",

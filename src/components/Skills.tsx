@@ -48,7 +48,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
 
 
     return (
-        <section style={skillsStyle}>
+        <section style={skillsStyle} id="skills">
             <div style={{position: 'relative', height: '40vh'}}>
                 <div style={{...categoryStyle, left: hidden ? "-1500px" : "0px", top: "0px"}}>
                     <div style={headerStyle}>

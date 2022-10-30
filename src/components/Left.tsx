@@ -25,11 +25,11 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     const [sectionTransitionDuration, setSectionTransitionDuration] = useState('.3s, .1s, .3s');
     const [face, setFace] = useState('˙ ͜ʟ˙');
     
-
+    const transitionCurve = "cubic-bezier(0,.11,0,1)";
     const leftStyle: object = {
         transitionDuration: leftTransitionDuration,
         transitionProperty: 'top',
-        transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',    
+        transitionTimingFunction: transitionCurve,    
         position: 'fixed',
         top: height,
         display: 'flex',
@@ -42,7 +42,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     const sectionStyle: object = {
         transitionProperty: 'transform, width, margin-left',
         transitionDuration: sectionTransitionDuration,
-        transitionTimingFunction: 'cubic-bezier(0,.11,0,1)',
+        transitionTimingFunction: transitionCurve,
         position: 'absolute',
         display: 'flex',
         flexDirection: 'column',
@@ -64,7 +64,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     const stripeStyle: object = {
         transitionProperty: 'height',
         transitionDuration: '3s',
-        transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
+        transitionTimingFunction: `${transitionCurve}, ease-in`,
         position: 'relative',
         display: stripeHide ? 'none' : 'block',
         width: '2px',
@@ -99,7 +99,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
         }, 3000);
         setTimeout(() => {
             setFace('˙0˙');
-            setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
+            setHeight(`calc(45vh + ${scrollPosition/-40}px)`);
             setStripeHide(false);
         }, 3100);
         setTimeout(() => {
@@ -191,14 +191,15 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
                                 <span style={{fontSize: '.6em'}}> &nbsp; Connect with me on Linkedin.</span> 
                             </a>
                             <a href="mailto:jgarrettcorbin@gmail.com" className="bi bi-envelope">
-                            <span style={{fontSize: '.6em'}}> &nbsp; jgarrettcorbin@gmail.com</span> 
+                                <span style={{fontSize: '.6em'}}> &nbsp; jgarrettcorbin@gmail.com</span> 
                             </a>
-
                         </div>
+
                         <div style={{fontSize: '.6em', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center'}}>
                             <p>This site was built by Garrett Corbin in 2021/22 <br/>using React.js and Typescript.</p>
                             <a href="https://github.com/platevoltage/portfolio-v4.0-react" target="_blank" rel="noopener noreferrer">View the source code on GitHub</a>
                         </div>
+
                     </div>
                 }
             </section>

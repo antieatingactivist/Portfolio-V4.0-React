@@ -2,7 +2,8 @@ import { Link } from "react-scroll";
 import resume from "../assets/pdf/resume.pdf";
 
 type Props = {
-  windowHeight: number
+  windowHeight: number,
+  mobile: boolean
 }
 
 const navStyle: object = {
@@ -16,21 +17,32 @@ const regular = {
   cursor: 'pointer'
 }
 
-export default function Nav({windowHeight}: Props) {
+export default function Nav({windowHeight, mobile}: Props) {
     
     return (
 
         <nav style={navStyle}>
           <code>
+          {!mobile && <>
             <Link
-              style={regular}
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={windowHeight/-4}
-              duration={500}
-            ><span className="accent">./</span>About</Link>
+                style={regular}
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={windowHeight/-4}
+                duration={500}
+              ><span className="accent">./</span>About</Link>
+              <Link
+                style={regular}
+                activeClass="active"
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={windowHeight/5}
+                duration={500}
+              ><span className="accent">./</span>Skills</Link>
+            </>}
             <Link
               style={regular}
               activeClass="active"

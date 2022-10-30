@@ -15,8 +15,9 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
     const [arrowFlip, setArrowFlip] = useState(0);
     const [toTopButtonShow, setToTopButtonShow] = useState(0);
 
+    const transitionCurve = "cubic-bezier(.4,.43,0,1.23)";
     const rightStyle: any = {
-        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
+        transition: `all 0.5s ${transitionCurve}`,
         position: 'fixed',
         top: '0',
         right: '20px',
@@ -30,7 +31,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
         justifyContent: 'flex-end',
         marginRight: '10px',
         marginTop: '50vh',
-        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',   
+        transition: `all 0.5s ${transitionCurve}`,   
     }
 
     const aboutStyle = {
@@ -38,7 +39,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
         justifyContent: 'flex-end',
         marginRight: '10px',
         marginTop: '50vh',
-        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
+        transition: `all 0.5s ${transitionCurve}`,
     }
 
     const skillsStyle = {
@@ -46,7 +47,7 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
         justifyContent: 'flex-end',
         marginRight: '10px',
         marginTop: '50vh',
-        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
+        transition: `all 0.5s ${transitionCurve}`,
     }
 
     const projectStyle = {
@@ -54,16 +55,16 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
         justifyContent: 'flex-start',
         marginRight: '10px',
         marginTop: '6px',
-        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)',
+        transition: `all 0.5s ${transitionCurve}`,
     }
 
     const projectBlockStyle = {
         
         marginTop: '50vh',
-        transition: 'all 0.5s cubic-bezier(.4,.43,0,1.23)'
+        transition: `all 0.5s ${transitionCurve}`
     }
     const arrowStyle = {
-        transition: 'all 1.5s cubic-bezier(.4,.43,0,1.23)',
+        transition: `all 1.5s ${transitionCurve}`,
         marginRight: '8px',
 
     }

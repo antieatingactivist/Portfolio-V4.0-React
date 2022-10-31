@@ -14,7 +14,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     const [spin, setSpin] = useState(540);
     const [angle, setAngle] = useState(0);
     const [rotation, setRotation] = useState(0);
-    const [height, setHeight] = useState(`calc(45vh + ${scrollPosition/-30}px)`);
+    const [height, setHeight] = useState(`calc(45vh + ${scrollPosition/-50}px)`);
     const [stripeHeight, setStripeHeight] = useState('0px');
     const [stripeHide, setStripeHide] = useState(true);
     const [width, setWidth] = useState('25px');
@@ -99,7 +99,7 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
         }, 3000);
         setTimeout(() => {
             setFace('˙0˙');
-            setHeight(`calc(45vh + ${scrollPosition/-40}px)`);
+            setHeight(`calc(45vh + ${scrollPosition/-50}px)`);
             setStripeHide(false);
         }, 3100);
         setTimeout(() => {
@@ -130,9 +130,9 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
 
             setSectionTransitionDuration('.5s, .1s, .3s');
             setSpin(720);
-            setHeight(`calc(45vh + ${scrollPosition/-30-50}px)`);
+            setHeight(`calc(45vh + ${scrollPosition/-50-50}px)`);
             setTimeout(() => {
-                setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
+                setHeight(`calc(45vh + ${scrollPosition/-50}px)`);
             },100)
             setTimeout(() => {
                 setSectionTransitionDuration('0s, .1s, .3s');
@@ -147,12 +147,14 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     },[count]);
 
     useEffect(() => {
-        if (!footerExpand && enableExpandedFooter) {
+        if (!footerExpand) {
             setWidth('25px');
-            setHeight(`calc(45vh + ${scrollPosition/-30}px)`);
+            setHeight(`calc(45vh + ${scrollPosition/-50}px)`);
             setExpandedContact(false); 
-            setAngle(0);
-            setRotation(0);
+            if (enableExpandedFooter) {
+                setAngle(0);
+                setRotation(0);
+            }
         }
         if (footerExpand && enableExpandedFooter)  {
             setHeight(`calc(100vh - ${sectionRef.current.getBoundingClientRect().bottom - sectionRef.current.getBoundingClientRect().y + 20}px)`);

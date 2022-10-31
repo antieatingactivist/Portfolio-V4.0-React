@@ -126,14 +126,5 @@
         "gitHub": "https://github.com/platevoltage/Portfolio-V2.0/",
         "liveLink": "https://platevoltage.github.io/Portfolio-V2.0/",
         "technologies": ["javascript", "html", "css"]
-    },
-    {
-   
-        "name": "Portfolio-V1",
-        "description": "Here it is. My first crack at a portfolio. All dynamic elements are implemented using only CSS and is fully mobile responsive.",
-        "imgSrc": "portfolio1.png",
-        "gitHub": "https://github.com/platevoltage/portfolio/",
-        "liveLink": "https://platevoltage.github.io/portfolio/",
-        "technologies": ["html", "css"]
     }
 ]

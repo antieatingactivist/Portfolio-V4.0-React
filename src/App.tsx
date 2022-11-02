@@ -82,7 +82,7 @@ function App() {
   }
 
   const hitCount = () => {
-    fetch('https://visit.home.jgarrettcorbin.com')
+    fetch('https://visit.home.jgarrettcorbin.com/hit')
       .then((data) => console.log("works"))
       .catch((error) => console.error(error))
   }

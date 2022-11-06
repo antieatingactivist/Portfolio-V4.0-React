@@ -1,11 +1,12 @@
-import Image from './Image';
+import Image from "./Image";
 import resume from "../assets/pdf/resume.pdf";
+import { CSSProperties } from "react";
 
-const aboutStyle = {
-    transition: 'all 2s',
-    padding: '40vh 10px 0vh 10px',
-    maxWidth: '600px'
-}
+const aboutStyle: CSSProperties = {
+    transition: "all 2s",
+    padding: "40vh 10px 0vh 10px",
+    maxWidth: "600px"
+};
 
 type Props = {
     windowWidth: number
@@ -24,10 +25,10 @@ export default function About({ windowWidth }: Props) {
             <p>
                 All of the projects listed below including the portfolio page itself are 100% my own work with the exception of collaborations, which are clearly marked with the collaborators credited on GitHub.
             </p>
-            <div style={{display: 'flex', justifyContent: windowWidth < 500 ? 'center' : 'flex-start'}}>
+            <div style={{display: "flex", justifyContent: windowWidth < 500 ? "center" : "flex-start"}}>
                 <a className="button" href="https://github.com/platevoltage/" target="_blank" rel="noopener noreferrer">Visit my GitHub</a>
                 <a className="button" href={resume} target="_blank" rel="noopener noreferrer">See my Resume</a>
             </div>
         </section>
     );
-  }
+}

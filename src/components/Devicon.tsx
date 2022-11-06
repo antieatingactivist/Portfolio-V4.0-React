@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import Popup from './Popup'; 
+import { useState } from "react";
+import Popup from "./Popup"; 
 type Props = {
     technology: string;
     color?: string;
@@ -16,34 +16,34 @@ export default function Devicon({technology, color, size, clickable, margin}: Pr
         fontSize: size || "30px",
         color: isHover ? "white" : color || "var(--accentcolor)",
         margin: "2px",
-        transitionProperty: 'color',
-        transitionDuration: '1s',
-        transitionTimingFunction: 'cubic-bezier(0,.11,0,1), ease-in',
-    }
+        transitionProperty: "color",
+        transitionDuration: "1s",
+        transitionTimingFunction: "cubic-bezier(0,.11,0,1), ease-in",
+    };
 
     function fetchIcon(technology: string) {
         switch (technology) {
-            case "react": return "devicon-react-plain";
-            case "embedded": return "devicon-embeddedc-plain-wordmark";
-            case "cplusplus": return "devicon-cplusplus-plain";
-            case "javascript": return "devicon-javascript-plain";
-            case "typescript": return "devicon-typescript-plain";
-            case "angular": return "devicon-angularjs-plain";
-            case "mysql": return "devicon-mysql-plain";
-            case "mongodb": return "devicon-mongodb-plain";
-            case "bootstrap": return "devicon-bootstrap-plain";
-            case "tailwind": return "devicon-tailwindcss-plain";
-            case "handlebars": return "devicon-handlebars-plain";
-            case "css": return "devicon-css3-plain-wordmark";
-            case "html": return "devicon-html5-plain-wordmark";
-            case "node": return "devicon-nodejs-plain";
-            case "express": return "devicon-express-original";
-            case "webpack": return "devicon-webpack-plain";
+        case "react": return "devicon-react-plain";
+        case "embedded": return "devicon-embeddedc-plain-wordmark";
+        case "cplusplus": return "devicon-cplusplus-plain";
+        case "javascript": return "devicon-javascript-plain";
+        case "typescript": return "devicon-typescript-plain";
+        case "angular": return "devicon-angularjs-plain";
+        case "mysql": return "devicon-mysql-plain";
+        case "mongodb": return "devicon-mongodb-plain";
+        case "bootstrap": return "devicon-bootstrap-plain";
+        case "tailwind": return "devicon-tailwindcss-plain";
+        case "handlebars": return "devicon-handlebars-plain";
+        case "css": return "devicon-css3-plain-wordmark";
+        case "html": return "devicon-html5-plain-wordmark";
+        case "node": return "devicon-nodejs-plain";
+        case "express": return "devicon-express-original";
+        case "webpack": return "devicon-webpack-plain";
         }
     }
     return (
         <>    
-            <div style={{display: 'inline', margin: margin}}>
+            <div style={{display: "inline", margin: margin}}>
                 <div>
                     {clickable === false ? 
                         <i className={fetchIcon(technology)} style={iconStyle}></i>
@@ -54,11 +54,11 @@ export default function Devicon({technology, color, size, clickable, margin}: Pr
                 {clickable === false ? 
                     <></> :
                     <div style={{textAlign: "center"}}>
-                        <code style={{fontSize: '.5em'}}>{technology}</code>
+                        <code style={{fontSize: ".5em"}}>{technology}</code>
                     </div>
                 }
             </div>
             {isActive && <Popup technology={technology} setIsActive={setIsActive} />}
         </>
-    )
+    );
 }

@@ -1,4 +1,4 @@
-import Devicon from './Devicon';
+import Devicon from "./Devicon";
 
 type Props = {
     technologies: string[];
@@ -12,7 +12,7 @@ export default function Devicons({technologies, mobile}: Props) {
         bottom: "10px",
         left: "10px",
         display: "flex"
-    }
+    };
     
     return (
         <span style={style}>
@@ -20,5 +20,5 @@ export default function Devicons({technologies, mobile}: Props) {
                 technologies?.map( technology => <Devicon technology={technology} clickable={false} /> )
             }
         </span>
-    )
+    );
 }

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
-import projectData from '../assets/json/project-data.json';
+import { CSSProperties, useEffect, useState } from "react";
+import projectData from "../assets/json/project-data.json";
 import { Link } from "react-scroll";
 
 type Props = {
@@ -16,73 +16,73 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
     const [toTopButtonShow, setToTopButtonShow] = useState(0);
 
     const transitionCurve = "cubic-bezier(.4,.43,0,1.23)";
-    const rightStyle: any = {
+    const rightStyle: CSSProperties = {
         transition: `all 0.5s ${transitionCurve}`,
-        position: 'fixed',
-        top: '0',
-        right: '20px',
-        display: 'flex',
-        flexDirection: 'column',
+        position: "fixed",
+        top: "0",
+        right: "20px",
+        display: "flex",
+        flexDirection: "column",
         zIndex: 1
     };
 
     const introStyle = {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        marginRight: '10px',
-        marginTop: '50vh',
+        display: "flex",
+        justifyContent: "flex-end",
+        marginRight: "10px",
+        marginTop: "50vh",
         transition: `all 0.5s ${transitionCurve}`,   
-    }
+    };
 
     const aboutStyle = {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        marginRight: '10px',
-        marginTop: '50vh',
+        display: "flex",
+        justifyContent: "flex-end",
+        marginRight: "10px",
+        marginTop: "50vh",
         transition: `all 0.5s ${transitionCurve}`,
-    }
+    };
 
     const skillsStyle = {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        marginRight: '10px',
-        marginTop: '50vh',
+        display: "flex",
+        justifyContent: "flex-end",
+        marginRight: "10px",
+        marginTop: "50vh",
         transition: `all 0.5s ${transitionCurve}`,
-    }
+    };
 
     const projectStyle = {
-        display: 'flex',
-        justifyContent: 'flex-start',
-        marginRight: '10px',
-        marginTop: '6px',
+        display: "flex",
+        justifyContent: "flex-start",
+        marginRight: "10px",
+        marginTop: "6px",
         transition: `all 0.5s ${transitionCurve}`,
-    }
+    };
 
     const projectBlockStyle = {
         
-        marginTop: '50vh',
+        marginTop: "50vh",
         transition: `all 0.5s ${transitionCurve}`
-    }
+    };
     const arrowStyle = {
         transition: `all 1.5s ${transitionCurve}`,
-        marginRight: '8px',
+        marginRight: "8px",
 
-    }
+    };
     if (introHidden) {
-        introStyle.marginTop = '-25px';
-        projectBlockStyle.marginTop = '100vh';
+        introStyle.marginTop = "-25px";
+        projectBlockStyle.marginTop = "100vh";
     }
   
     if (aboutHidden) {
-        introStyle.marginTop = '-25px';
-        aboutStyle.marginTop = '-10px';
-        projectBlockStyle.marginTop = '100vh'; 
+        introStyle.marginTop = "-25px";
+        aboutStyle.marginTop = "-10px";
+        projectBlockStyle.marginTop = "100vh"; 
     }
 
     if (skillsHidden) {
-        introStyle.marginTop = '-55px';
-        aboutStyle.marginTop = '-40px';
-        skillsStyle.marginTop = '-40px';
+        introStyle.marginTop = "-55px";
+        aboutStyle.marginTop = "-40px";
+        skillsStyle.marginTop = "-40px";
         projectBlockStyle.marginTop = `calc(50vh - ${projectData.length * 8}px)`;
     }
 
@@ -154,10 +154,10 @@ export default function Right( {windowHeight, introHidden, aboutHidden, skillsHi
 
             <section style={{position: "fixed", bottom: "30px", right: "36px", opacity: introHidden ? toTopButtonShow : 0, transition: `opacity ${toTopButtonShow}s`, fontSize: "20px", border: "1px solid var(--accentcolor)", borderRadius: "12px", maxHeight: "20px", maxWidth: "20px", textAlign: "center", paddingBottom: "0px", lineHeight: "0px"}}>
            
-                    <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bi bi-arrow-up-short" >        
-                    </Link>
+                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="bi bi-arrow-up-short" >        
+                </Link>
                 
             </section>
         </aside>
     );
-  }
+}

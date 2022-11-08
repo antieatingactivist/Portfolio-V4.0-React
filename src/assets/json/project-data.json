@@ -5,7 +5,7 @@
         "imgSrc": "visitor.png",
         "gitHub": "https://github.com/platevoltage/Visitor-Profiler",
         "liveLink": "https://visitor-tracker.home.jgarrettcorbin.com/hit",
-        "technologies": ["react", "typescript", "node", "mysql", "express", "html", "css"]
+        "technologies": ["react", "typescript", "node", "mysql", "sequelize", "express", "html", "css"]
     },
     {
         "name": "RGB strip controller",
@@ -21,7 +21,7 @@
         "imgSrc": "courier.png",
         "gitHub": "https://github.com/platevoltage/Courier-client",
         "liveLink": "https://platevoltage.github.io/Courier-client/",
-        "technologies": ["angular", "node", "express", "mysql", "typescript", "javascript", "bootstrap", "html", "css"]
+        "technologies": ["angular", "node", "express", "mysql", "sequelize", "typescript", "javascript", "bootstrap", "html", "css"]
     },
     {
      
@@ -30,7 +30,7 @@
         "imgSrc": "techblog.png",
         "gitHub": "https://github.com/platevoltage/Tech-Blog",
         "liveLink": "https://guarded-springs-42532.herokuapp.com/",
-        "technologies": ["handlebars", "node", "express", "mysql","javascript", "html", "css"]
+        "technologies": ["handlebars", "node", "express", "mysql", "sequelize", "javascript", "html", "css"]
     },
     {
         "name": "Story Factory",
@@ -99,7 +99,7 @@
         "imgSrc": "quizinator.png",
         "gitHub": "https://github.com/platevoltage/quizinator/",
         "liveLink": "https://stark-scrubland-48398.herokuapp.com/",
-        "technologies": ["node", "express", "handlebars", "javascript", "mysql", "tailwind", "html", "css"]
+        "technologies": ["node", "express", "handlebars", "javascript", "mysql", "sequelize", "tailwind", "html", "css"]
     },
     {
         "name": "Socialite API",
@@ -120,7 +120,7 @@
     {
         
         "name": "Sound Lane",
-        "description": "This project was a collaberation between myself and two other people. Sound Lane uses API calls from AudioDB and Last.fm to populate a page with information and images for your favorite musical artists. Unfortunately one of the APIs has moved to a pay model and this app doesn't work as intended. At the moment, Coldplay is the only artist that returns any data.",
+        "description": "This project was a collaboration between myself and two other people. Sound Lane uses API calls from AudioDB and Last.fm to populate a page with information and images for your favorite musical artists. Unfortunately one of the APIs has moved to a pay model and this app doesn't work as intended. At the moment, Coldplay is the only artist that returns any data.",
         "imgSrc": "soundlane.png",
         "gitHub": "https://github.com/platevoltage/Sound-Lane/",
         "liveLink": "https://platevoltage.github.io/Sound-Lane/",

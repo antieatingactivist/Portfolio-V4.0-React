@@ -89,6 +89,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
                         <Devicon technology="express" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="mysql" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="mongodb" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
+                        <Devicon technology="sequelize" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                     </div> }
                 </div>
 

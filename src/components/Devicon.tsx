@@ -39,6 +39,7 @@ export default function Devicon({technology, color, size, clickable, margin}: Pr
         case "node": return "devicon-nodejs-plain";
         case "express": return "devicon-express-original";
         case "webpack": return "devicon-webpack-plain";
+        case "sequelize": return "devicon-sequelize-plain";
         }
     }
     return (

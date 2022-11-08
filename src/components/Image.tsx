@@ -14,7 +14,6 @@ export default function Image({src, isHidden}: Props) {
         transition: "filter 1s",
         transitionDelay: "2s",
     };
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const image = require(`../assets/images/${src}`);
-    return <img src={image} alt="project" style={imgStyle}/>;
+
+    return <img src={`${process.env.PUBLIC_URL}/images/${src}`} alt="project" style={imgStyle}/>;
 }

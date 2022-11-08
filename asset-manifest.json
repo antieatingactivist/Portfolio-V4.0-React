@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.731eec17.css",
-    "main.js": "/static/js/main.a050ca2a.js",
+    "main.js": "/static/js/main.ede1255c.js",
     "static/media/workplacetracker.png": "/static/media/workplacetracker.a75a1c447bc706ef98ea.png",
     "static/media/quizinator.png": "/static/media/quizinator.1f85a57bfcd1bf66857a.png",
     "static/media/devicon.svg?biu5f3": "/static/media/devicon.f715b4139afc5236a6e6.svg",
@@ -15,6 +15,7 @@
     "static/media/devicon.eot?biu5f3": "/static/media/devicon.afa70020fddd5e5a3260.eot",
     "static/media/devicon.woff?biu5f3": "/static/media/devicon.96fdfd136e8a467e1861.woff",
     "static/media/devicon.ttf?biu5f3": "/static/media/devicon.b25739c2b9d15a53d60c.ttf",
+    "static/media/visitor.png": "/static/media/visitor.47adee8b117aaa9dd950.png",
     "static/media/weather.png": "/static/media/weather.8b7df73295192f847d0d.png",
     "static/media/socialite.png": "/static/media/socialite.27797671e76854347d9c.png",
     "static/media/rgb.png": "/static/media/rgb.1954764dd18331df61ee.png",
@@ -29,10 +30,10 @@
     "static/media/calculator.png": "/static/media/calculator.7be6d6b95b5097bf8afe.png",
     "index.html": "/index.html",
     "main.731eec17.css.map": "/static/css/main.731eec17.css.map",
-    "main.a050ca2a.js.map": "/static/js/main.a050ca2a.js.map"
+    "main.ede1255c.js.map": "/static/js/main.ede1255c.js.map"
   },
   "entrypoints": [
     "static/css/main.731eec17.css",
-    "static/js/main.a050ca2a.js"
+    "static/js/main.ede1255c.js"
   ]
 }

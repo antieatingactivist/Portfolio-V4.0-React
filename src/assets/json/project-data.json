@@ -1,7 +1,7 @@
 [
     {
         "name": "Visitor Tracker",
-        "description": "A simple node app that collects header data from visitors, and gets the location of the visitors with API call to https://ipdata.co via Axios. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
+        "description": "A simple node app that collects header data from visitors, and gets the location of the visitors with API call to https://ipdata.co via Axios. The backend runs on Node.js and uses the Express framework along with the Sequelize ORM for communicating with a MySQL database. The front end is built with React and Typescript. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
         "imgSrc": "visitor.png",
         "gitHub": "https://github.com/platevoltage/Visitor-Profiler",
         "liveLink": "https://visitor-tracker.home.jgarrettcorbin.com/hit",

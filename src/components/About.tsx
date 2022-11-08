@@ -1,5 +1,5 @@
 import Image from "./Image";
-import resume from "../assets/pdf/resume.pdf";
+// import resume from "../assets/pdf/resume.pdf";
 import { CSSProperties } from "react";
 
 const aboutStyle: CSSProperties = {
@@ -27,7 +27,7 @@ export default function About({ windowWidth }: Props) {
             </p>
             <div style={{display: "flex", justifyContent: windowWidth < 500 ? "center" : "flex-start"}}>
                 <a className="button" href="https://github.com/platevoltage/" target="_blank" rel="noopener noreferrer">Visit my GitHub</a>
-                <a className="button" href={resume} target="_blank" rel="noopener noreferrer">See my Resume</a>
+                <a className="button" href={`${process.env.PUBLIC_URL}/pdf/resume.pdf`} target="_blank" rel="noopener noreferrer">See my Resume</a>
             </div>
         </section>
     );

@@ -1,6 +1,5 @@
 import { CSSProperties } from "react";
 import { Link } from "react-scroll";
-import resume from "../assets/pdf/resume.pdf";
 
 type Props = {
   windowHeight: number,
@@ -61,7 +60,7 @@ export default function Nav({windowHeight, mobile}: Props) {
                     smooth={true}
                     duration={1500}
                 ><span className="accent">./</span>Contact</Link>
-                <a style={regular} href={resume} target="_blank" rel="noopener noreferrer"><span className="accent">./</span>Resume</a>
+                <a style={regular} href={`${process.env.PUBLIC_URL}/pdf/resume.pdf`} target="_blank" rel="noopener noreferrer"><span className="accent">./</span>Resume</a>
             </code>   
         </nav>
     );

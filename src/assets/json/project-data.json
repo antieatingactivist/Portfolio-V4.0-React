@@ -17,7 +17,7 @@
     },
     {
         "name": "Courier Client",
-        "description": "The idea for this app was born out of frustration over the type of app I had to use in one of my former jobs, a bicycle courier. I wanted to create an app that was easy to look at and intuitive. The app is built using Angular and is optimised for smartphone use. The backend is built with Node.js and uses the Sequelize ORM to perform CRUD operations on a MySQL database. NOTE: This is a mobile app and is optimized for use on a smartphone.",
+        "description": "The idea for this app was born out of frustration over the type of app I had to use in one of my former jobs, a bicycle courier. I wanted to create an app that was easy to look at and intuitive. The app is built using Angular and is optimized for smartphone use. The backend is built with Node.js and uses the Sequelize ORM to perform CRUD operations on a MySQL database. NOTE: This is a mobile app and is optimized for use on a smartphone.",
         "imgSrc": "courier.png",
         "gitHub": "https://github.com/platevoltage/Courier-client",
         "liveLink": "https://platevoltage.github.io/Courier-client/",
@@ -26,7 +26,7 @@
     {
      
         "name": "Tech Blog",
-        "description": "This is a full stack blog website that supports multiple users. Users can view comment on other user's posts. The dashboard allows for content creation and deletion. It incorperates a retro Tron-like design using perspective and css instead of static assets. Sequelize is used to interact with a mySQL database to store content and user data and Handlebars is used to render the content. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
+        "description": "This is a full stack blog website that supports multiple users. Users can view comment on other user's posts. The dashboard allows for content creation and deletion. It incorporates a retro Tron-like design using perspective and css instead of static assets. Sequelize is used to interact with a mySQL database to store content and user data and Handlebars is used to render the content. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
         "imgSrc": "techblog.png",
         "gitHub": "https://github.com/platevoltage/Tech-Blog",
         "liveLink": "https://guarded-springs-42532.herokuapp.com/",
@@ -34,7 +34,7 @@
     },
     {
         "name": "Story Factory",
-        "description": "A writing game with a time attack game that lets you build stories with friends or strangers. This was the final project in my coding boot camp and was a collaberation with 2 other talented developers. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
+        "description": "A writing game with a time attack game that lets you build stories with friends or strangers. This was the final project in my coding boot camp and was a collaboration with 2 other talented developers. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
         "imgSrc": "storyfactory.png",
         "gitHub": "https://github.com/platevoltage/Story-Factory",
         "liveLink": "https://quiet-sierra-37143.herokuapp.com/",
@@ -59,7 +59,7 @@
     {
      
         "name": "Bender's Quiz",
-        "description": "An expandable and customizable quiz app with a fun theme courtesey of everyone's favorite lazy robot, Bender. It features animations and a leaderboard that makes use of Local Storage to keep scores between games. Questions and answers are kept in an Object making it easy to change the content to your needs, but by default asks questions on Javascript basics",
+        "description": "An expandable and customizable quiz app with a fun theme courtesy of everyone's favorite lazy robot, Bender. It features animations and a leader board that makes use of Local Storage to keep scores between games. Questions and answers are kept in an Object making it easy to change the content to your needs, but by default asks questions on Javascript basics",
         "imgSrc": "bender.png",
         "gitHub": "https://github.com/platevoltage/benders-javascript-quiz/",
         "liveLink": "https://platevoltage.github.io/benders-javascript-quiz/",
@@ -68,7 +68,7 @@
     {   
        
         "name": "Weather Widget",
-        "description": "A simple, yet easy on the eye weather app. With the help of the Open Weather Map API it displays current weather conditions as well as the five day weather forcast. Moment.js is incorperated for time and date functions. Local Storage is used to store recent searches and to refresh your last search each time the app is launched. Lastly, this app utilizes Bootstrap Icons for weather condition graphics.",
+        "description": "A simple, yet easy on the eye weather app. With the help of the Open Weather Map API it displays current weather conditions as well as the five day weather forecast. Moment.js is incorporated for time and date functions. Local Storage is used to store recent searches and to refresh your last search each time the app is launched. Lastly, this app utilizes Bootstrap Icons for weather condition graphics.",
         "imgSrc": "weather.png",
         "gitHub": "https://github.com/platevoltage/weather-widget/",
         "liveLink": "https://platevoltage.github.io/weather-widget/",
@@ -77,7 +77,7 @@
     {   
        
         "name": "Platformer Engine",
-        "description": "A canvas based Mario Bros style platforming engine. I make extensive use of Classes to create instances of enemies, platforms, walls, and blocks. The app uses ES6 and is compliled with Webpack. The Arrow keys are used for movement and the space bar is for jumping.",
+        "description": "A canvas based Mario Bros style platforming engine. I make extensive use of Classes to create instances of enemies, platforms, walls, and blocks. The app uses ES6 and is compiled with Webpack. The Arrow keys are used for movement and the space bar is for jumping.",
         "imgSrc": "platformer.png",
         "gitHub": "https://github.com/platevoltage/platformer/",
         "liveLink": "https://platevoltage.github.io/platformer/",
@@ -86,7 +86,7 @@
     {   
        
         "name": "Tetris",
-        "description": "This relatively simple Javascript based Tetris app was the product my love for games and my impatience. I build this between the time I signed up for my Bootcamp and the time that classes started. It uses a single canvas element and uses a grid of objects that are manipulated to create the game play.",
+        "description": "This relatively simple Javascript based Tetris app was the product my love for games and my impatience. I build this between the time I signed up for my boot camp and the time that classes started. It uses a single canvas element and uses a grid of objects that are manipulated to create the game play.",
         "imgSrc": "tetris.png",
         "gitHub": "https://github.com/platevoltage/tetris/",
         "liveLink": "https://platevoltage.github.io/tetris/",
@@ -95,7 +95,7 @@
     {   
     
         "name": "Quizinator",
-        "description": "This project is a full stack application and a collaberation between myself and two others. It is a quiz sharing app platform letting the user create their own quizzes as well as try their hand at quizzes that others have created. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
+        "description": "This project is a full stack application and a collaboration between myself and two others. It is a quiz sharing app platform letting the user create their own quizzes as well as try their hand at quizzes that others have created. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
         "imgSrc": "quizinator.png",
         "gitHub": "https://github.com/platevoltage/quizinator/",
         "liveLink": "https://stark-scrubland-48398.herokuapp.com/",

@@ -1,5 +1,13 @@
 [
     {
+        "name": "Visitor Tracker",
+        "description": "A simple node app that collects header data from visitors, and gets the location of the visitors with API call to https://ipdata.co via Axios. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
+        "imgSrc": "visitor.png",
+        "gitHub": "https://github.com/platevoltage/Visitor-Profiler",
+        "liveLink": "https://visitor-tracker.home.jgarrettcorbin.com/hit",
+        "technologies": ["react", "typescript", "node", "mysql", "express", "html", "css"]
+    },
+    {
         "name": "RGB strip controller",
         "description": "This is a web app built with React that communicates with an ESP8266 microcontroller to operate addressable RGBW led strips. Adafruit's Neopixel library is used to communicate with the strips.",
         "imgSrc": "rgb.png",

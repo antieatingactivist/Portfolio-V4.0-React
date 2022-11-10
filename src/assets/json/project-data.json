@@ -42,11 +42,11 @@
     },
     {
         "name": "Angular Calculator",
-        "description": "This is a project I did while learning the ins and outs of Angular. It is modeled after the MacOS calculator and the goal was to implement all of it's behaviors. It even corrects a NaN error in the application that it was based on",
+        "description": "This is a project I did while learning the ins and outs of Angular. It is modeled after the MacOS calculator and the goal was to implement all of it's behaviors. It even corrects a NaN error in the application that it was based on. Electron was used to build a native MacOS app from this web application (available on GitHub).",
         "imgSrc": "calculator.png",
         "gitHub": "https://github.com/platevoltage/Angular-Calculator",
         "liveLink": "https://platevoltage.github.io/Angular-Calculator/",
-        "technologies": ["angular", "typescript", "html", "css"]
+        "technologies": ["angular", "typescript", "html", "css", "electron"]
     },
     {
         "name": "Workplace Tracker",

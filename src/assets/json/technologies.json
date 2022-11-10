@@ -15,5 +15,6 @@
     "node": "My backend engine of choice.",
     "express": "My framework of choice for API routing.",
     "webpack": "Webpack is involved in most of the front end frameworks that I've used, but it also comes in handy for compiling multi-file projects.",
-    "sequelize": "I absolutely love using the Sequelize object relational mapper to handle SQL database operations."
+    "sequelize": "I absolutely love using the Sequelize object relational mapper to handle SQL database operations.",
+    "electron": "A great option for building desktop apps with web technologies"
 }

@@ -50,6 +50,14 @@
         "technologies": ["react", "node", "express", "mongodb", "javascript", "html", "css"]
     },
     {
+        "name": "Machine Stats",
+        "description": "This MacOS app uses Intel Power Gadget to display CPU stats such as temperature, frequency, and utilization. It runs in the menubar and displays a per core utilization graph beside the CPU package temperature.",
+        "imgSrc": "stats.png",
+        "gitHub": "https://github.com/platevoltage/machine-stats",
+        
+        "technologies": ["node", "electron", "typescript", "react"]
+    },
+    {
         "name": "Angular Calculator",
         "description": "This is a project I did while learning the ins and outs of Angular. It is modeled after the MacOS calculator and the goal was to implement all of it's behaviors. It even corrects a NaN error in the application that it was based on. Electron was used to build a native MacOS app from this web application (available on GitHub).",
         "imgSrc": "calculator.png",

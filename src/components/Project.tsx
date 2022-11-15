@@ -82,11 +82,10 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
 
                     <div style={{display: "flex", justifyContent: windowWidth < 500 ? "center" : "flex-end"}}>
                         <a className="button" href={project.gitHub}  target="_blank" rel="noopener noreferrer">Project on GitHub</a>
-                        {project.liveLink ? 
-                            <a className="button" href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Link</a>
-                            :
-                            <a className="button" href={project.demoVideo} target="_blank" rel="noopener noreferrer">Demo Video</a>  
-                        }
+                        {project.liveLink && <a className="button" href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Link</a>}
+                            
+                        {project.demoVideo && <a className="button" href={project.demoVideo} target="_blank" rel="noopener noreferrer">Demo Video</a>}  
+                        
                     </div>
                 </div> 
             </div>

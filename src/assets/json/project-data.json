@@ -25,6 +25,15 @@
     },
     {
      
+        "name": "Transmission Thin Client",
+        "description": "Built with Electron, this app neatly packages your Transmission Web Interface into a standalone package with support for opening torrent files by double-clicking, or drag and drop.",
+        "imgSrc": "transmission.png",
+        "gitHub": "https://github.com/platevoltage/Transmission-thin-client",
+
+        "technologies": ["node", "electron", "typescript", "css"]
+    },
+    {
+     
         "name": "Youtube SmartTV Emu",
         "description": "A cross platform app built with Electron that opens an instance of the Smart TV version of Youtube. In my home I use an Ubuntu machine as a media server as well as a media center. Setting up Chrome to disguise itself as a smartTV is an unpleasant experience, so I made a standalone app available for Mac, Windows, and Linux to display the TV version of Youtube without the hassle.",
         "imgSrc": "youtube.png",

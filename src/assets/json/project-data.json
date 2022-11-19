@@ -72,7 +72,7 @@
         "imgSrc": "calculator.png",
         "gitHub": "https://github.com/platevoltage/Angular-Calculator",
         "liveLink": "https://platevoltage.github.io/Angular-Calculator/",
-        "technologies": ["angular", "typescript", "html", "css", "electron"]
+        "technologies": ["angular", "typescript", "html", "css", "electron", "macos"]
     },
     {
         "name": "Workplace Tracker",

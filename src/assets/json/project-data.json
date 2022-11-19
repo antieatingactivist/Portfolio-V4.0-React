@@ -30,7 +30,7 @@
         "imgSrc": "transmission.png",
         "gitHub": "https://github.com/platevoltage/Transmission-thin-client",
 
-        "technologies": ["node", "electron", "typescript", "css"]
+        "technologies": ["node", "electron", "typescript", "css", "macos", "windows", "linux"]
     },
     {
      
@@ -39,7 +39,7 @@
         "imgSrc": "youtube.png",
         "gitHub": "https://github.com/platevoltage/youtube-smarttv-emu",
 
-        "technologies": ["node", "electron", "typescript"]
+        "technologies": ["node", "electron", "typescript", "macos", "windows", "linux"]
     },
     {
      
@@ -64,7 +64,7 @@
         "imgSrc": "stats.png",
         "gitHub": "https://github.com/platevoltage/machine-stats",
         
-        "technologies": ["node", "electron", "typescript", "react"]
+        "technologies": ["node", "electron", "typescript", "react", "macos"]
     },
     {
         "name": "Angular Calculator",

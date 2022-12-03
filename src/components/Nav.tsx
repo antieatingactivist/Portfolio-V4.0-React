@@ -49,7 +49,7 @@ export default function Nav({windowHeight, mobile}: Props) {
                     to="projects"
                     spy={true}
                     smooth={true}
-                    offset={windowHeight/-4}
+                    offset={windowHeight/-5}
                     duration={500}
                 ><span className="accent">./</span>Projects</Link>
                 <Link

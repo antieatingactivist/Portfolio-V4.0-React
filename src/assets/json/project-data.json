@@ -44,18 +44,18 @@
     {
      
         "name": "Tech Blog",
-        "description": "This is a full stack blog website that supports multiple users. Users can view comment on other user's posts. The dashboard allows for content creation and deletion. It incorporates a retro Tron-like design using perspective and css instead of static assets. Sequelize is used to interact with a mySQL database to store content and user data and Handlebars is used to render the content. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
+        "description": "This is a full stack blog website that supports multiple users. Users can view comment on other user's posts. The dashboard allows for content creation and deletion. It incorporates a retro Tron-like design using perspective and css instead of static assets. Sequelize is used to interact with a mySQL database to store content and user data and Handlebars is used to render the content. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
         "imgSrc": "techblog.png",
         "gitHub": "https://github.com/platevoltage/Tech-Blog",
-        "liveLink": "https://guarded-springs-42532.herokuapp.com/",
+        "liveLink": "https://tech-blog.home.jgarrettcorbin.com",
         "technologies": ["handlebars", "node", "express", "mysql", "sequelize", "javascript", "html", "css"]
     },
     {
         "name": "Story Factory",
-        "description": "A writing game with a time attack game that lets you build stories with friends or strangers. This was the final project in my coding boot camp and was a collaboration with 2 other talented developers. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
+        "description": "A writing game with a time attack game that lets you build stories with friends or strangers. This was the final project in my coding boot camp and was a collaboration with 2 other talented developers. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
         "imgSrc": "storyfactory.png",
         "gitHub": "https://github.com/platevoltage/Story-Factory",
-        "liveLink": "https://quiet-sierra-37143.herokuapp.com/",
+        "liveLink": "https://story-factory.home.jgarrettcorbin.com",
         "technologies": ["react", "node", "express", "mongodb", "javascript", "html", "css"]
     },
     {
@@ -121,10 +121,10 @@
     {   
     
         "name": "Quizinator",
-        "description": "This project is a full stack application and a collaboration between myself and two others. It is a quiz sharing app platform letting the user create their own quizzes as well as try their hand at quizzes that others have created. This project is deployed on Heroku, so 20 seconds might be required for the dyno to wake up.",
+        "description": "This project is a full stack application and a collaboration between myself and two others. It is a quiz sharing app platform letting the user create their own quizzes as well as try their hand at quizzes that others have created. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
         "imgSrc": "quizinator.png",
         "gitHub": "https://github.com/platevoltage/quizinator/",
-        "liveLink": "https://stark-scrubland-48398.herokuapp.com/",
+        "liveLink": "https://quizinator.home.jgarrettcorbin.com",
         "technologies": ["node", "express", "handlebars", "javascript", "mysql", "sequelize", "tailwind", "html", "css"]
     },
     {

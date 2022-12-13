@@ -52,7 +52,7 @@
     },
     {
         "name": "Story Factory",
-        "description": "A writing game with a time attack game that lets you build stories with friends or strangers. This was the final project in my coding boot camp and was a collaboration with 2 other talented developers. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
+        "description": "A time attack writing game that lets you build stories with friends or strangers. This was the final project in my coding boot camp and was a collaboration with 2 other talented developers. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
         "imgSrc": "storyfactory.png",
         "gitHub": "https://github.com/platevoltage/Story-Factory",
         "liveLink": "https://story-factory.home.jgarrettcorbin.com",

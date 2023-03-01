@@ -1,4 +1,5 @@
 [
+    
     {
         "name": "Visitor Tracker",
         "description": "A simple node app that collects header data from visitors, and gets the location of the visitors with API call to https://ipdata.co via Axios. The backend runs on Node.js and uses the Express framework along with the Sequelize ORM for communicating with a MySQL database. The front end is built with React and Typescript. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
@@ -22,6 +23,13 @@
         "gitHub": "https://github.com/platevoltage/Courier-client",
         "liveLink": "https://platevoltage.github.io/Courier-client/",
         "technologies": ["angular", "node", "express", "mysql", "sequelize", "typescript", "javascript", "bootstrap", "html", "css"]
+    },
+    {
+        "name": "Rubber Pelican",
+        "description": "The goal of this device is to be functionally equivalent to the USB rubberDucky by Hak5. Unlike the rubber ducky, the payload is interpreted by a built in duckyscript interpreter and doesn't require compilation. Furthermore, payloads can be run from a web interface. To run this project, open it up with VSCode with the PlatformIO extension, and upload to an ESP32S2 device (native USB required).",
+        "imgSrc": "pelican.png",
+        "gitHub": "https://github.com/platevoltage/rubber-pelican",
+        "technologies": ["embedded", "react", "typescript", "cplusplus", "html", "css"]
     },
     {
      

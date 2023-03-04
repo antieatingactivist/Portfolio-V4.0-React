@@ -102,6 +102,7 @@ export default function Skills({ windowHeight, hidden }: Props) {
                         <Devicon technology="embedded" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin}  />
                         <Devicon technology="webpack" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="electron" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
+                        <Devicon technology="aws" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
 
                     </div> }
                 </div>

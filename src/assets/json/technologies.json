@@ -2,13 +2,13 @@
     "react": "This is my first component based front end \"framework\", and the framework that I chose to build this portfolio. It's also my go-to for building component based projects quickly.",
     "embedded": "Building embedded devices is what got me interested in programming in the first place. My first dev board was the Arduino Uno R3. From there I started building devices around the enclosed Atmel 328p chip.",
     "cplusplus": "C++ is technically my first language, but isn't my strongest by far. I took a C++ class in high school, but years later I picked up my first Arduino. I credit Arduino and the somewhat simplified C++ used with it for being my gateway into programming seriously.",
-    "javascript": "This is my bread and butter language. The transistion from C++ was very easy, as is getting work done in this extremely versatile language.",
+    "javascript": "This is my bread and butter language. The transition from C++ was very easy, as is getting work done in this extremely versatile language.",
     "typescript": "A welcomed upgrade to Javascript in my opinion. I started to get serious with Typescript while learning Angular.",
     "angular": "As of 2022, this full fledged framework is a new addition to my repertoire. It is also my choice for building new front end projects when I anticipate the a large and complex app.",
-    "mysql": "This is my prefered database technology. I usually opt to use an ORM such as Sequelize for CRUD operations, but using SQL queries are within my capabilites.",
+    "mysql": "This is my preferred database technology. I usually opt to use an ORM such as Sequelize for CRUD operations, but using SQL queries are within my capability.",
     "mongodb": "MongoDB is usually not my choice for a database when starting a new project, but I have used technologies such as Mongoose to perform CRUD operations.",
     "bootstrap": "For most of my personal projects, I opt to use my own CSS, but on occasion, using Bootstrap can help with getting an MVP out more quickly.",
-    "tailwind": "Athough I usually choose Bootstrap when opting to use a CSS framework, Tailwind is a great alternative.",
+    "tailwind": "Although I usually choose Bootstrap when opting to use a CSS framework, Tailwind is a great alternative.",
     "handlebars": "Handlebars is the first templating language that I learned. It has been valuable for getting me familiar with Angular.",
     "css": "I enjoy the flexibility of CSS. While I understand where CSS frameworks come into play, I often choose to use vanilla CSS when the maximun amount of flexibility is desired.",
     "html": "I actually started learning HTML in the 7th grade. I had a couple of very rough Geocities pages dedicated to my favorite bands of the time. Fast forward many years, and we are at HTML 5.",
@@ -16,5 +16,7 @@
     "express": "My framework of choice for API routing.",
     "webpack": "Webpack is involved in most of the front end frameworks that I've used, but it also comes in handy for compiling multi-file projects.",
     "sequelize": "I absolutely love using the Sequelize object relational mapper to handle SQL database operations.",
-    "electron": "A great option for building desktop apps with web technologies"
+    "electron": "A great option for building desktop apps with web technologies",
+    "aws": "The service that I use to host my full stack applications"
+
 }

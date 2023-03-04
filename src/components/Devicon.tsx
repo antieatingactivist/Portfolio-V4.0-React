@@ -44,6 +44,7 @@ export default function Devicon({technology, color, size, clickable, margin}: Pr
         case "macos": return "devicon-apple-original";
         case "windows": return "devicon-windows8-original";
         case "linux": return "devicon-linux-plain";
+        case "aws": return "devicon-amazonwebservices-original";
         }
     }
     return (

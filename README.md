@@ -25,7 +25,7 @@ This is the 4th and possibly final candidate for my professional portfolio. It's
 * [https://jgarrettcorbin.com](https://jgarrettcorbin.com)
 
 
-## Authors
+## Author
 
 Garrett Corbin
 

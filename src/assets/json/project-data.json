@@ -22,7 +22,7 @@
         "imgSrc": "courier.png",
         "gitHub": "https://github.com/platevoltage/Courier-client",
         "liveLink": "https://platevoltage.github.io/Courier-client/",
-        "technologies": ["angular", "node", "express", "mysql", "sequelize", "typescript", "javascript", "bootstrap", "html", "css"]
+        "technologies": ["angular", "node", "express", "mysql", "sequelize", "typescript", "bootstrap", "html", "css"]
     },
     {
         "name": "Rubber Pelican",

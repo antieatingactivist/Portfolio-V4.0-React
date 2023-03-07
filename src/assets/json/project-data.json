@@ -33,6 +33,16 @@
     },
     {
      
+        "name": "ESP32 Partition Calculator",
+        "description": "A tool to help calculate partition sizes and offsets for the ESP 32. I built this because there was no web based tool for this task. The tool runs entirely client side and can save a ready to use partitions.csv",
+        "imgSrc": "esp32.png",
+        "gitHub": "https://github.com/platevoltage/esp32-partition-calculator/",
+        "liveLink": "https://esp32.jgarrettcorbin.com",
+
+        "technologies": ["typescript", "html", "css"]
+    },
+    {
+     
         "name": "Transmission Thin Client",
         "description": "Built with Electron, this app neatly packages your Transmission Web Interface into a standalone package with support for opening torrent files by double-clicking, or drag and drop.",
         "imgSrc": "transmission.png",

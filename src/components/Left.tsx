@@ -79,7 +79,6 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     };
 
     useEffect(() => {
-        
         setTimeout(() => {
             setLeft("-20px");
             setAngle(20);

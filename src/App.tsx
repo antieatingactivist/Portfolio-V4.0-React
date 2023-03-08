@@ -33,6 +33,9 @@ function App() {
     const [aboutHidden, setAboutHidden] = useState<boolean>(true);
     const [skillsHidden, setSkillsHidden] = useState<boolean>(true);
     const [onScreenProject, setOnScreenProject] = useState<string>("");
+    const [loadContent, setLoadContent] = useState<boolean>(false);
+
+
 
     const handleScroll = () => {
         setScrollPosition(window.pageYOffset);
@@ -83,7 +86,7 @@ function App() {
 
     const hitCount = () => {
         fetch("https://visit.home.jgarrettcorbin.com/hit")
-            .then((data) => console.log("works"))
+            .then((_) => console.log("visit logged"))
             .catch((error) => console.error(error));
     };
 
@@ -110,6 +113,9 @@ function App() {
             setHeaderHidden(false);
             window.addEventListener("scroll", handleScroll);  
         }, 1000);
+        setTimeout(() => {
+            setLoadContent(true);
+        }, 2000);
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -136,26 +142,26 @@ function App() {
                 </div>
       
                 <div ref={aboutRef} style={aboutOffset<windowHeight/2.5 ? {transition: "opacity 1.5s", opacity: "1"} : {transition: "opacity .8s", opacity: "0"}}>
-                    <About windowWidth={windowWidth}/>
+                    { loadContent && <About windowWidth={windowWidth}/> }
                 </div>
           
                 <div ref={skillsRef}>
-                    {  windowWidth >= 500 && <Skills windowHeight={windowHeight} hidden={skillsOffset>=windowHeight/2.5 || skillsHidden}/> }
+                    {  loadContent && windowWidth >= 500 && <Skills windowHeight={windowHeight} hidden={skillsOffset>=windowHeight/2.5 || skillsHidden}/> }
                 </div>
           
                 <div ref={projectsRef} style={projectsOffset<windowHeight/2.5 ? {transition: "opacity 1.5s", opacity: "1"} : {transition: "opacity .8s", opacity: "0"}}>
-                    <Projects scrollPosition={scrollPosition} windowHeight={windowHeight} windowWidth={windowWidth} setOnScreenProject={setOnScreenProject} />
+                    { loadContent && <Projects scrollPosition={scrollPosition} windowHeight={windowHeight} windowWidth={windowWidth} setOnScreenProject={setOnScreenProject} /> }
                 </div>  
             </main>
         
             <div ref={footerRef}>
                 {windowWidth < 500 ?
                     <>
-                        <MobileFooter />
+                        { loadContent && <MobileFooter /> }
                     </>
                     :
                     <>
-                        {footerExpand ? <></> : <Footer/>}
+                        {loadContent && footerExpand ? <></> : <Footer/>}
                     </>
                 }  
             </div>

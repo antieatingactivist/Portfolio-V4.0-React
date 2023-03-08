@@ -25,7 +25,7 @@ export default function Intro({windowWidth}: Props) {
     };
     const spanStyle: CSSProperties = {
         transition: "left .4s cubic-bezier(.4,.43,0,1.23)",
-        transitionDelay: "3.6s",
+        // transitionDelay: "3.6s",
         position: "relative",
         top: "-40px",
         left: windowWidth < 500 ? `${spanLeft-50}px` : `${spanLeft}px`,
@@ -40,17 +40,19 @@ export default function Intro({windowWidth}: Props) {
     
     useEffect(() => {
         setIntroOpacity(1);
-        setSpanLeft(50);
-        setSkew("skewX(0deg)");
+        setTimeout(() => {
+            setSpanLeft(50);
+            setSkew("skewX(0deg)");
+        }, 3600);
     }, []);
 
     return (
         <section id="intro" style={introStyle}>
         
             <h1 style={h1Style}>Hi,</h1><h1 style={{...h1Style, transitionDelay: "1s"}}>I'm Garrett.</h1>
-            <h1 style={{transition: "transform .1s", transitionDelay: "4s" , transform: skew, whiteSpace: "nowrap"}}>
+            <h1 style={{transition: "transform .1s", transitionDelay: ".4s" , transform: skew, whiteSpace: "nowrap"}}>
                 <span style={spanStyle} className="accent">Developer, </span>
-                <span style={{...spanStyle, transitionDelay: "3.8s"}} className="accent">and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span>
+                <span style={{...spanStyle}} className="accent">and&nbsp;builder&nbsp;of&nbsp;many&nbsp;things.</span>
             
             </h1>
 

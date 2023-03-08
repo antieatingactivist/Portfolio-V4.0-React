@@ -33,7 +33,7 @@
     },
     {
      
-        "name": "ESP32 Partition Calculator",
+        "name": "ESP32 Partition Calc",
         "description": "A tool to help calculate partition sizes and offsets for the ESP 32. I built this because there was no web based tool for this task. The tool runs entirely client side and can save a ready to use partitions.csv",
         "imgSrc": "esp32.png",
         "gitHub": "https://github.com/platevoltage/esp32-partition-calculator/",

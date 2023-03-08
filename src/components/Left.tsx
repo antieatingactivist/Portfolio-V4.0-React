@@ -79,46 +79,54 @@ export default function Left( {scrollPosition, footerExpand }: Props ) {
     };
 
     useEffect(() => {
-        setTimeout(() => {
-            setLeft("-20px");
-            setAngle(20);
-        }, 1000);
-        setTimeout(() => {
-            setFace("˙ ͜ʟ¯");
-        }, 1800);
-        setTimeout(() => {
-            setFace("˙ ͜ʟ˙");
-        }, 2000);
-        setTimeout(() => {
-            setSectionTransitionDuration(".3s, .1s, .3s");
+        if (performance.now() < 1000) {
+            setTimeout(() => {
+                setLeft("-20px");
+                setAngle(20);
+            }, 1000);
+            setTimeout(() => {
+                setFace("˙ ͜ʟ¯");
+            }, 1800);
+            setTimeout(() => {
+                setFace("˙ ͜ʟ˙");
+            }, 2000);
+            setTimeout(() => {
+                setSectionTransitionDuration(".3s, .1s, .3s");
+                setSpin(0);
+                setAngle(0);
+                setLeft("16px");
+                setHeight("calc(10vh)");  
+            }, 3000);
+            setTimeout(() => {
+                setFace("˙0˙");
+                setHeight(`calc(45vh + ${scrollPosition/-50}px)`);
+                setStripeHide(false);
+            }, 3100);
+            setTimeout(() => {
+                setStripeHeight("100vh");
+            }, 3200);
+            setTimeout(() => {
+                setLeftTransitionDuration(".5s");
+                setSectionTransitionDuration("3s, .1s, .3s");
+                setSpin(7200);
+            }, 3600);
+            setTimeout(() => {
+                setFace("˙ ͜ʟ˙");
+                setSectionTransitionDuration("0s, .1s, .3s");
+                setSpin(0);
+            }, 8000);
+            setTimeout(() => {
+                setSectionTransitionDuration(".5s, .1s, .3s");
+                setEnableExpandedFooter(true);
+            }, 8200);
+        } else {
+            setLeft("16px");
             setSpin(0);
             setAngle(0);
-            setLeft("16px");
-            setHeight("calc(10vh)");  
-        }, 3000);
-        setTimeout(() => {
-            setFace("˙0˙");
-            setHeight(`calc(45vh + ${scrollPosition/-50}px)`);
             setStripeHide(false);
-        }, 3100);
-        setTimeout(() => {
             setStripeHeight("100vh");
-        }, 3200);
-        setTimeout(() => {
-            setLeftTransitionDuration(".5s");
-            setSectionTransitionDuration("3s, .1s, .3s");
-            setSpin(7200);
-        }, 3600);
-        setTimeout(() => {
-            setFace("˙ ͜ʟ˙");
-            setSectionTransitionDuration("0s, .1s, .3s");
-            setSpin(0);
-        }, 8000);
-        setTimeout(() => {
-            setSectionTransitionDuration(".5s, .1s, .3s");
             setEnableExpandedFooter(true);
-        }, 8200);
-
+        }
     }, []);
 
     useEffect(() => {

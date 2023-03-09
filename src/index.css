@@ -6,8 +6,11 @@
   --shadowcolor: #03050c;
 }
 
+/* html {
+  overscroll-behavior: none;
+} */
+
 body {
-  
   background-color: var(--bgcolor);
   color: var(--maincolor);
   margin: 0;
@@ -71,6 +74,7 @@ header div {
 }
 
 main {
+
   display: flex;
   flex-direction: column;
   position: relative;

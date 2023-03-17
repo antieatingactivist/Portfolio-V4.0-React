@@ -57,11 +57,11 @@ export default function Skills({ windowHeight, hidden }: Props) {
                         <div style={stripeStyle}></div>
                     </div>
                     {!hidden && <div style={bodyStyle}>
-                        <Devicon technology="cplusplus" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="javascript" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="typescript" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="css" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="html" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
+                        <Devicon technology="cplusplus" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                     </div> }
                 </div>
 
@@ -88,8 +88,8 @@ export default function Skills({ windowHeight, hidden }: Props) {
                         <Devicon technology="node" color={"var(--accentcolor)"}  size={iconSize} margin={iconMargin}/>
                         <Devicon technology="express" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="mysql" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
-                        <Devicon technology="mongodb" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="sequelize" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
+                        <Devicon technology="mongodb" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                     </div> }
                 </div>
 
@@ -99,10 +99,10 @@ export default function Skills({ windowHeight, hidden }: Props) {
                         <div style={stripeStyle}></div>
                     </div>
                     {!hidden && <div style={bodyStyle}>
+                        <Devicon technology="aws" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
+                        <Devicon technology="electron" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
                         <Devicon technology="embedded" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin}  />
                         <Devicon technology="webpack" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
-                        <Devicon technology="electron" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
-                        <Devicon technology="aws" color={"var(--accentcolor)"} size={iconSize} margin={iconMargin} />
 
                     </div> }
                 </div>

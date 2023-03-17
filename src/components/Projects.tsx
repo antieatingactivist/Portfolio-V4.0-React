@@ -12,7 +12,7 @@ type Props = {
 export default function Projects({scrollPosition, windowHeight, windowWidth, setOnScreenProject}: Props) {
 
     const projectsStyle: CSSProperties = {
-        transition: "all 2s",
+        transition: "all 1s",
         padding: windowWidth < 500 ? "10vh 10px 20vh 10px" : "10vh 10px 20vh 10px"
     };
   

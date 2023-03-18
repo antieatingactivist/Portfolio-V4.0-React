@@ -76,7 +76,7 @@ export default function Project({project, scrollPosition, windowHeight, windowWi
                     <Image src={project.imgSrc} isHidden={isHidden} />
                 </div>
                 <div style={ isHidden ? {...descriptionStyle, transitionDuration: "1s", opacity: "1", transitionDelay: "0s" } : {...descriptionStyle, transitionDuration: ".8s", transitionDelay: ".5s", opacity: "0" } }>
-                    <p style={ isHidden ? {transitionDuration: "2.5s", opacity: "1", transitionDelay: ".5s" } : {transitionDuration: "1.2s", transitionDelay: ".5s", opacity: "0" } }>{project.description}</p>
+                    <p style={ isHidden ? {transitionDuration: "1.5s", opacity: "1", transitionDelay: ".5s" } : {transitionDuration: "1.2s", transitionDelay: ".5s", opacity: "0" } }>{project.description}</p>
                     
                     {isHidden &&  <Devicons technologies={project.technologies} mobile={windowWidth >= 500}/>}
 

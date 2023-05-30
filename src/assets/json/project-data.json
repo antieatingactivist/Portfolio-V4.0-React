@@ -147,7 +147,7 @@
     },
     {
         "name": "Socialite API",
-        "description": "This is a backend for a social media site called Socialite. It Express.js to serve up data from MongoDB through the Mongoose ODM. REST routes are included for adding Users, Users befriending other users, making posts called \"Thoughts\", and adding comments called \"Reactions\"",
+        "description": "This is a backend for a social media site called Socialite. It uses Express.js to serve up data from MongoDB through the Mongoose ODM. REST routes are included for adding Users, Users befriending other users, making posts called \"Thoughts\", and adding comments called \"Reactions\"",
         "imgSrc": "socialite.png",
         "gitHub": "https://github.com/platevoltage/Socialite-API",
         "demoVideo": "https://platevoltage.github.io/Socialite-API/",

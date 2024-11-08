@@ -1,182 +1,252 @@
 [
-    
-    {
-        "name": "Visitor Tracker",
-        "description": "A simple node app that collects header data from visitors, and gets the location of the visitors with API call to https://ipdata.co via Axios. The backend runs on Node.js and uses the Express framework along with the Sequelize ORM for communicating with a MySQL database. The front end is built with React and Typescript. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
-        "imgSrc": "visitor.png",
-        "gitHub": "https://github.com/platevoltage/Visitor-Profiler",
-        "liveLink": "https://visitor-tracker.home.jgarrettcorbin.com/hit",
-        "technologies": ["react", "typescript", "node", "mysql", "sequelize", "express", "html", "css"]
-    },
-    {
-        "name": "RGB strip controller",
-        "description": "This is a WIFI enabled web app built with React that communicates with an ESP8266 or ESP32 microcontroller to operate addressable RGBW led strips. Adafruit's Neopixel library is used to communicate with the strips.",
-        "imgSrc": "rgb.png",
-        "gitHub": "https://github.com/platevoltage/RGB-strip-controller",
-        "liveLink": "https://platevoltage.github.io/RGB-strip-controller/",
-        "technologies": ["embedded", "react", "javascript", "cplusplus",  "html", "css"]
-    },
-    {
-        "name": "Courier Client",
-        "description": "The idea for this app was born out of frustration over the type of app I had to use in one of my former jobs, a bicycle courier. I wanted to create an app that was easy to look at and intuitive. The app is built using Angular and is optimized for smartphone use. The backend is built with Node.js and uses the Sequelize ORM to perform CRUD operations on a MySQL database. NOTE: This is a mobile app and is optimized for use on a smartphone.",
-        "imgSrc": "courier.png",
-        "gitHub": "https://github.com/platevoltage/Courier-client",
-        "liveLink": "https://platevoltage.github.io/Courier-client/",
-        "technologies": ["angular", "node", "express", "mysql", "sequelize", "typescript", "bootstrap", "html", "css"]
-    },
-    {
-        "name": "Rubber Pelican",
-        "description": "The goal of this device is to be functionally equivalent to the USB rubberDucky by Hak5. Unlike the rubber ducky, the payload is interpreted by a built in duckyscript interpreter and doesn't require compilation. Furthermore, payloads can be run from a web interface. To run this project, open it up with VSCode with the PlatformIO extension, and upload to an ESP32S2 device (native USB required).",
-        "imgSrc": "pelican.png",
-        "gitHub": "https://github.com/platevoltage/rubber-pelican",
-        "technologies": ["embedded", "react", "typescript", "cplusplus", "html", "css"]
-    },
-    {
-     
-        "name": "ESP32 Partition Calc",
-        "description": "A tool to help calculate partition sizes and offsets for the ESP 32. I built this because there was no web based tool for this task. The tool runs entirely client side and can save a ready to use partitions.csv",
-        "imgSrc": "esp32.png",
-        "gitHub": "https://github.com/platevoltage/esp32-partition-calculator/",
-        "liveLink": "https://esp32.jgarrettcorbin.com",
+  {
+    "name": "Visitor Tracker",
+    "description": "A simple node app that collects header data from visitors, and gets the location of the visitors with API call to https://ipdata.co via Axios. The backend runs on Node.js and uses the Express framework along with the Sequelize ORM for communicating with a MySQL database. The front end is built with React and Typescript. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
+    "imgSrc": "visitor.png",
+    "gitHub": "https://github.com/platevoltage/Visitor-Profiler",
+    "liveLink": "https://visitor-tracker.home.jgarrettcorbin.com/hit",
+    "technologies": [
+      "react",
+      "typescript",
+      "node",
+      "mysql",
+      "sequelize",
+      "express",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "name": "RGB strip controller",
+    "description": "This is a WIFI enabled web app built with React that communicates with an ESP8266 or ESP32 microcontroller to operate addressable RGBW led strips. Adafruit's Neopixel library is used to communicate with the strips.",
+    "imgSrc": "rgb.png",
+    "gitHub": "https://github.com/platevoltage/RGB-strip-controller",
+    "liveLink": "https://platevoltage.github.io/RGB-strip-controller/",
+    "technologies": [
+      "embedded",
+      "react",
+      "javascript",
+      "cplusplus",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "name": "Courier Client",
+    "description": "The idea for this app was born out of frustration over the type of app I had to use in one of my former jobs, a bicycle courier. I wanted to create an app that was easy to look at and intuitive. The app is built using Angular and is optimized for smartphone use. The backend is built with Node.js and uses the Sequelize ORM to perform CRUD operations on a MySQL database. NOTE: This is a mobile app and is optimized for use on a smartphone.",
+    "imgSrc": "courier.png",
+    "gitHub": "https://github.com/platevoltage/Courier-client",
+    "liveLink": "https://platevoltage.github.io/Courier-client/",
+    "technologies": [
+      "angular",
+      "node",
+      "express",
+      "mysql",
+      "sequelize",
+      "typescript",
+      "bootstrap",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "name": "Rubber Pelican",
+    "description": "The goal of this device is to be functionally equivalent to the USB rubberDucky by Hak5. Unlike the rubber ducky, the payload is interpreted by a built in duckyscript interpreter and doesn't require compilation. Furthermore, payloads can be run from a web interface. To run this project, open it up with VSCode with the PlatformIO extension, and upload to an ESP32S2 device (native USB required).",
+    "imgSrc": "pelican.png",
+    "gitHub": "https://github.com/platevoltage/rubber-pelican",
+    "technologies": [
+      "embedded",
+      "react",
+      "typescript",
+      "cplusplus",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "name": "ESP32 Partition Calc",
+    "description": "A tool to help calculate partition sizes and offsets for the ESP 32. I built this because there was no web based tool for this task. The tool runs entirely client side and can save a ready to use partitions.csv",
+    "imgSrc": "esp32.png",
+    "gitHub": "https://github.com/platevoltage/esp32-partition-calculator/",
+    "liveLink": "https://esp32.jgarrettcorbin.com",
 
-        "technologies": ["typescript", "html", "css"]
-    },
-    {
-     
-        "name": "Transmission Thin Client",
-        "description": "Built with Electron, this app neatly packages your Transmission Web Interface into a standalone package with support for opening torrent files by double-clicking, or drag and drop.",
-        "imgSrc": "transmission.png",
-        "gitHub": "https://github.com/platevoltage/Transmission-thin-client",
+    "technologies": ["typescript", "html", "css"]
+  },
+  {
+    "name": "Transmission Thin Client",
+    "description": "Built with Electron, this app neatly packages your Transmission Web Interface into a standalone package with support for opening torrent files by double-clicking, or drag and drop.",
+    "imgSrc": "transmission.png",
+    "gitHub": "https://github.com/platevoltage/Transmission-thin-client",
 
-        "technologies": ["node", "electron", "typescript", "css", "macos", "windows", "linux"]
-    },
-    {
-     
-        "name": "Youtube SmartTV Emu",
-        "description": "A cross platform app built with Electron that opens an instance of the Smart TV version of Youtube. In my home I use an Ubuntu machine as a media server as well as a media center. Setting up Chrome to disguise itself as a smartTV is an unpleasant experience, so I made a standalone app available for Mac, Windows, and Linux to display the TV version of Youtube without the hassle.",
-        "imgSrc": "youtube.png",
-        "gitHub": "https://github.com/platevoltage/youtube-smarttv-emu",
+    "technologies": [
+      "node",
+      "electron",
+      "typescript",
+      "css",
+      "macos",
+      "windows",
+      "linux"
+    ]
+  },
+  {
+    "name": "Youtube SmartTV Emu",
+    "description": "A cross platform app built with Electron that opens an instance of the Smart TV version of Youtube. In my home I use an Ubuntu machine as a media server as well as a media center. Setting up Chrome to disguise itself as a smartTV is an unpleasant experience, so I made a standalone app available for Mac, Windows, and Linux to display the TV version of Youtube without the hassle.",
+    "imgSrc": "youtube.png",
+    "gitHub": "https://github.com/platevoltage/youtube-smarttv-emu",
 
-        "technologies": ["node", "electron", "typescript", "macos", "windows", "linux"]
-    },
-    {
-     
-        "name": "Tech Blog",
-        "description": "This is a full stack blog website that supports multiple users. Users can view comment on other user's posts. The dashboard allows for content creation and deletion. It incorporates a retro Tron-like design using perspective and css instead of static assets. Sequelize is used to interact with a mySQL database to store content and user data and Handlebars is used to render the content. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
-        "imgSrc": "techblog.png",
-        "gitHub": "https://github.com/platevoltage/Tech-Blog",
-        "liveLink": "https://tech-blog.home.jgarrettcorbin.com",
-        "technologies": ["handlebars", "node", "express", "mysql", "sequelize", "javascript", "html", "css"]
-    },
-    {
-        "name": "Story Factory",
-        "description": "A time attack writing game that lets you build stories with friends or strangers. This was the final project in my coding boot camp and was a collaboration with 2 other talented developers. Hosted on AWS EC2",
-        "imgSrc": "storyfactory.png",
-        "gitHub": "https://github.com/platevoltage/Story-Factory",
-        "liveLink": "https://story-factory.ec2.jgarrettcorbin.com",
-        "technologies": ["react", "node", "express", "mongodb", "javascript", "html", "css", "aws"]
-    },
-    {
-        "name": "Machine Stats",
-        "description": "This MacOS app uses Intel Power Gadget to display CPU stats such as temperature, frequency, and utilization. It runs in the menubar and displays a per core utilization graph beside the CPU package temperature.",
-        "imgSrc": "stats.png",
-        "gitHub": "https://github.com/platevoltage/machine-stats",
-        
-        "technologies": ["node", "electron", "typescript", "react", "macos"]
-    },
-    {
-        "name": "Angular Calculator",
-        "description": "This is a project I did while learning the ins and outs of Angular. It is modeled after the MacOS calculator and the goal was to implement all of it's behaviors. It even corrects a NaN error in the application that it was based on. Electron was used to build a native MacOS app from this web application (available on GitHub).",
-        "imgSrc": "calculator.png",
-        "gitHub": "https://github.com/platevoltage/Angular-Calculator",
-        "liveLink": "https://platevoltage.github.io/Angular-Calculator/",
-        "technologies": ["angular", "typescript", "html", "css", "electron", "macos"]
-    },
-    {
-        "name": "Workplace Tracker",
-        "description": "This is an app for keeping track of Employees, Job Titles, Departments, and Salaries at your business. It uses an elegant command line interface using node.js and inquirer. Data is stored using a mySQL database.",
-        "imgSrc": "workplacetracker.png",
-        "gitHub": "https://github.com/platevoltage/Workplace-Tracker",
-        "demoVideo": "https://platevoltage.github.io/Workplace-Tracker/",
-        "technologies": ["node", "mysql", "javascript"]
-    },
-    {
-     
-        "name": "Bender's Quiz",
-        "description": "An expandable and customizable quiz app with a fun theme courtesy of everyone's favorite lazy robot, Bender. It features animations and a leader board that makes use of Local Storage to keep scores between games. Questions and answers are kept in an Object making it easy to change the content to your needs, but by default asks questions on Javascript basics",
-        "imgSrc": "bender.png",
-        "gitHub": "https://github.com/platevoltage/benders-javascript-quiz/",
-        "liveLink": "https://platevoltage.github.io/benders-javascript-quiz/",
-        "technologies": ["javascript", "html", "css"]
-    },
-    {   
-       
-        "name": "Weather Widget",
-        "description": "A simple, yet easy on the eye weather app. With the help of the Open Weather Map API it displays current weather conditions as well as the five day weather forecast. Moment.js is incorporated for time and date functions. Local Storage is used to store recent searches and to refresh your last search each time the app is launched. Lastly, this app utilizes Bootstrap Icons for weather condition graphics.",
-        "imgSrc": "weather.png",
-        "gitHub": "https://github.com/platevoltage/weather-widget/",
-        "liveLink": "https://platevoltage.github.io/weather-widget/",
-        "technologies": ["javascript", "html", "css"]
-    },
-    {   
-       
-        "name": "Platformer Engine",
-        "description": "A canvas based Mario Bros style platforming engine. I make extensive use of Classes to create instances of enemies, platforms, walls, and blocks. The app uses ES6 and is compiled with Webpack. The Arrow keys are used for movement and the space bar is for jumping.",
-        "imgSrc": "platformer.png",
-        "gitHub": "https://github.com/platevoltage/platformer/",
-        "liveLink": "https://platevoltage.github.io/platformer/",
-        "technologies": ["javascript", "webpack", "html", "css"]
-    },
-    {   
-       
-        "name": "Tetris",
-        "description": "This relatively simple Javascript based Tetris app was the product my love for games and my impatience. I build this between the time I signed up for my boot camp and the time that classes started. It uses a single canvas element and uses a grid of objects that are manipulated to create the game play.",
-        "imgSrc": "tetris.png",
-        "gitHub": "https://github.com/platevoltage/tetris/",
-        "liveLink": "https://platevoltage.github.io/tetris/",
-        "technologies": ["javascript", "html", "css"]
-    },
-    {   
-    
-        "name": "Quizinator",
-        "description": "This project is a full stack application and a collaboration between myself and two others. It is a quiz sharing app platform letting the user create their own quizzes as well as try their hand at quizzes that others have created. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
-        "imgSrc": "quizinator.png",
-        "gitHub": "https://github.com/platevoltage/quizinator/",
-        "liveLink": "https://quizinator.home.jgarrettcorbin.com",
-        "technologies": ["node", "express", "handlebars", "javascript", "mysql", "sequelize", "tailwind", "html", "css"]
-    },
-    {
-        "name": "Socialite API",
-        "description": "This is a backend for a social media site called Socialite. It uses Express.js to serve up data from MongoDB through the Mongoose ODM. REST routes are included for adding Users, Users befriending other users, making posts called \"Thoughts\", and adding comments called \"Reactions\"",
-        "imgSrc": "socialite.png",
-        "gitHub": "https://github.com/platevoltage/Socialite-API",
-        "demoVideo": "https://platevoltage.github.io/Socialite-API/",
-        "technologies": ["node", "express", "mongodb", "javascript"]
-    },
-    {
-        "name": "HR helping Hand",
-        "description": "A tool to help a product manager build an html representing their team using node.js and inquirer. The user is prompted with questions about themself, and their team. An html file is generated with cards for each of your team members.",
-        "imgSrc": "hr.png",
-        "gitHub": "https://github.com/platevoltage/HR-Helping-Hand",
-        "demoVideo": "https://platevoltage.github.io/HR-Helping-Hand/",
-        "technologies": ["node", "javascript", "html", "css"]
-    },
-    {
-        
-        "name": "Sound Lane",
-        "description": "This project was a collaboration between myself and two other people. Sound Lane uses API calls from AudioDB and Last.fm to populate a page with information and images for your favorite musical artists. Unfortunately one of the APIs has moved to a pay model and this app doesn't work as intended. At the moment, Coldplay is the only artist that returns any data.",
-        "imgSrc": "soundlane.png",
-        "gitHub": "https://github.com/platevoltage/Sound-Lane/",
-        "liveLink": "https://platevoltage.github.io/Sound-Lane/",
-        "technologies": ["javascript", "html", "css"]
-    },
-    {
-   
-        "name": "Portfolio-V2",
-        "description": "This is my second attempt at a portfolio. I realized a few days into this project that maybe the idea I had in my head was a bit too ambitious. I make use of perspective quite a bit in this page.",
-        "imgSrc": "portfolio2.png",
-        "gitHub": "https://github.com/platevoltage/Portfolio-V2.0/",
-        "liveLink": "https://platevoltage.github.io/Portfolio-V2.0/",
-        "technologies": ["javascript", "html", "css"]
-    }
+    "technologies": [
+      "node",
+      "electron",
+      "typescript",
+      "macos",
+      "windows",
+      "linux"
+    ]
+  },
+  {
+    "name": "Tech Blog",
+    "description": "This is a full stack blog website that supports multiple users. Users can view comment on other user's posts. The dashboard allows for content creation and deletion. It incorporates a retro Tron-like design using perspective and css instead of static assets. Sequelize is used to interact with a mySQL database to store content and user data and Handlebars is used to render the content. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
+    "imgSrc": "techblog.png",
+    "gitHub": "https://github.com/platevoltage/Tech-Blog",
+    "liveLink": "https://tech-blog.home.jgarrettcorbin.com",
+    "technologies": [
+      "handlebars",
+      "node",
+      "express",
+      "mysql",
+      "sequelize",
+      "javascript",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "name": "Story Factory",
+    "description": "A time attack writing game that lets you build stories with friends or strangers. This was the final project in my coding boot camp and was a collaboration with 2 other talented developers.",
+    "imgSrc": "storyfactory.png",
+    "gitHub": "https://github.com/platevoltage/Story-Factory",
+    "liveLink": "https://story-factory.home.jgarrettcorbin.com",
+    "technologies": [
+      "react",
+      "node",
+      "express",
+      "mongodb",
+      "javascript",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "name": "Machine Stats",
+    "description": "This MacOS app uses Intel Power Gadget to display CPU stats such as temperature, frequency, and utilization. It runs in the menubar and displays a per core utilization graph beside the CPU package temperature.",
+    "imgSrc": "stats.png",
+    "gitHub": "https://github.com/platevoltage/machine-stats",
+
+    "technologies": ["node", "electron", "typescript", "react", "macos"]
+  },
+  {
+    "name": "Angular Calculator",
+    "description": "This is a project I did while learning the ins and outs of Angular. It is modeled after the MacOS calculator and the goal was to implement all of it's behaviors. It even corrects a NaN error in the application that it was based on. Electron was used to build a native MacOS app from this web application (available on GitHub).",
+    "imgSrc": "calculator.png",
+    "gitHub": "https://github.com/platevoltage/Angular-Calculator",
+    "liveLink": "https://platevoltage.github.io/Angular-Calculator/",
+    "technologies": [
+      "angular",
+      "typescript",
+      "html",
+      "css",
+      "electron",
+      "macos"
+    ]
+  },
+  {
+    "name": "Workplace Tracker",
+    "description": "This is an app for keeping track of Employees, Job Titles, Departments, and Salaries at your business. It uses an elegant command line interface using node.js and inquirer. Data is stored using a mySQL database.",
+    "imgSrc": "workplacetracker.png",
+    "gitHub": "https://github.com/platevoltage/Workplace-Tracker",
+    "demoVideo": "https://platevoltage.github.io/Workplace-Tracker/",
+    "technologies": ["node", "mysql", "javascript"]
+  },
+  {
+    "name": "Bender's Quiz",
+    "description": "An expandable and customizable quiz app with a fun theme courtesy of everyone's favorite lazy robot, Bender. It features animations and a leader board that makes use of Local Storage to keep scores between games. Questions and answers are kept in an Object making it easy to change the content to your needs, but by default asks questions on Javascript basics",
+    "imgSrc": "bender.png",
+    "gitHub": "https://github.com/platevoltage/benders-javascript-quiz/",
+    "liveLink": "https://platevoltage.github.io/benders-javascript-quiz/",
+    "technologies": ["javascript", "html", "css"]
+  },
+  {
+    "name": "Weather Widget",
+    "description": "A simple, yet easy on the eye weather app. With the help of the Open Weather Map API it displays current weather conditions as well as the five day weather forecast. Moment.js is incorporated for time and date functions. Local Storage is used to store recent searches and to refresh your last search each time the app is launched. Lastly, this app utilizes Bootstrap Icons for weather condition graphics.",
+    "imgSrc": "weather.png",
+    "gitHub": "https://github.com/platevoltage/weather-widget/",
+    "liveLink": "https://platevoltage.github.io/weather-widget/",
+    "technologies": ["javascript", "html", "css"]
+  },
+  {
+    "name": "Platformer Engine",
+    "description": "A canvas based Mario Bros style platforming engine. I make extensive use of Classes to create instances of enemies, platforms, walls, and blocks. The app uses ES6 and is compiled with Webpack. The Arrow keys are used for movement and the space bar is for jumping.",
+    "imgSrc": "platformer.png",
+    "gitHub": "https://github.com/platevoltage/platformer/",
+    "liveLink": "https://platevoltage.github.io/platformer/",
+    "technologies": ["javascript", "webpack", "html", "css"]
+  },
+  {
+    "name": "Tetris",
+    "description": "This relatively simple Javascript based Tetris app was the product my love for games and my impatience. I build this between the time I signed up for my boot camp and the time that classes started. It uses a single canvas element and uses a grid of objects that are manipulated to create the game play.",
+    "imgSrc": "tetris.png",
+    "gitHub": "https://github.com/platevoltage/tetris/",
+    "liveLink": "https://platevoltage.github.io/tetris/",
+    "technologies": ["javascript", "html", "css"]
+  },
+  {
+    "name": "Quizinator",
+    "description": "This project is a full stack application and a collaboration between myself and two others. It is a quiz sharing app platform letting the user create their own quizzes as well as try their hand at quizzes that others have created. NOTE: This app is being hosted on my personal server. If for some reason it is unreachable, please let me know.",
+    "imgSrc": "quizinator.png",
+    "gitHub": "https://github.com/platevoltage/quizinator/",
+    "liveLink": "https://quizinator.home.jgarrettcorbin.com",
+    "technologies": [
+      "node",
+      "express",
+      "handlebars",
+      "javascript",
+      "mysql",
+      "sequelize",
+      "tailwind",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "name": "Socialite API",
+    "description": "This is a backend for a social media site called Socialite. It uses Express.js to serve up data from MongoDB through the Mongoose ODM. REST routes are included for adding Users, Users befriending other users, making posts called \"Thoughts\", and adding comments called \"Reactions\"",
+    "imgSrc": "socialite.png",
+    "gitHub": "https://github.com/platevoltage/Socialite-API",
+    "demoVideo": "https://platevoltage.github.io/Socialite-API/",
+    "technologies": ["node", "express", "mongodb", "javascript"]
+  },
+  {
+    "name": "HR helping Hand",
+    "description": "A tool to help a product manager build an html representing their team using node.js and inquirer. The user is prompted with questions about themself, and their team. An html file is generated with cards for each of your team members.",
+    "imgSrc": "hr.png",
+    "gitHub": "https://github.com/platevoltage/HR-Helping-Hand",
+    "demoVideo": "https://platevoltage.github.io/HR-Helping-Hand/",
+    "technologies": ["node", "javascript", "html", "css"]
+  },
+  {
+    "name": "Sound Lane",
+    "description": "This project was a collaboration between myself and two other people. Sound Lane uses API calls from AudioDB and Last.fm to populate a page with information and images for your favorite musical artists. Unfortunately one of the APIs has moved to a pay model and this app doesn't work as intended. At the moment, Coldplay is the only artist that returns any data.",
+    "imgSrc": "soundlane.png",
+    "gitHub": "https://github.com/platevoltage/Sound-Lane/",
+    "liveLink": "https://platevoltage.github.io/Sound-Lane/",
+    "technologies": ["javascript", "html", "css"]
+  },
+  {
+    "name": "Portfolio-V2",
+    "description": "This is my second attempt at a portfolio. I realized a few days into this project that maybe the idea I had in my head was a bit too ambitious. I make use of perspective quite a bit in this page.",
+    "imgSrc": "portfolio2.png",
+    "gitHub": "https://github.com/platevoltage/Portfolio-V2.0/",
+    "liveLink": "https://platevoltage.github.io/Portfolio-V2.0/",
+    "technologies": ["javascript", "html", "css"]
+  }
 ]
